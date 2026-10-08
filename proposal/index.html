@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA — Sovereign Industrial AI B2B Ecosystem | Executive Consortium Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Fresh Modern Light Canvas */
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-surface-elevated: #f1f5f9;
+            --bg-surface-hover: #e2e8f0;
+
+            --border-subtle: #e2e8f0;
+            --border-medium: #cbd5e1;
+            --border-focus: #94a3b8;
+
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --text-tertiary: #64748b;
+
+            /* AURA 4 Blocks Color Identity */
+            --b1-primary: #4f46e5;
+            --b1-bg: #eef2ff;
+            --b1-border: #c7d2fe;
+            --b1-text: #3730a3;
+
+            --b2-primary: #0284c7;
+            --b2-bg: #e0f2fe;
+            --b2-border: #bae6fd;
+            --b2-text: #075985;
+
+            --b3-primary: #059669;
+            --b3-bg: #ecfdf5;
+            --b3-border: #a7f3d0;
+            --b3-text: #065f46;
+
+            --b4-primary: #d97706;
+            --b4-bg: #fffbeb;
+            --b4-border: #fde68a;
+            --b4-text: #92400e;
+
+            --accent-emerald: #10b981;
+            --accent-widening: #7c3aed;
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+            --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+
+            --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(148, 163, 184, 0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 90%, rgba(100, 116, 139, 0.05), transparent);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        /* TOP NAVIGATION BAR */
+        .top-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar-content {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #4f46e5, #0284c7);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+
+        .brand-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .brand-text span {
+            color: var(--text-tertiary);
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-left: 0.4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--b1-primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-secondary {
+            padding: 0.55rem 1.1rem;
+            background: #ffffff;
+            border: 1px solid var(--border-medium);
+            color: var(--text-primary);
+            border-radius: var(--radius-sm);
+            font-size: 0.825rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-surface-hover);
+            border-color: var(--b1-primary);
+            color: var(--b1-primary);
+        }
+
+        .btn-primary {
+            padding: 0.55rem 1.25rem;
+            background: linear-gradient(135deg, #4f46e5, #0284c7);
+            border: none;
+            color: #ffffff;
+            border-radius: var(--radius-sm);
+            font-size: 0.825rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+        }
+
+        /* HERO PROPOSAL HEADER */
+        header.proposal-hero {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.75rem;
+            margin-bottom: 2.25rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        header.proposal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #0284c7, #059669, #d97706);
+        }
+
+        .hero-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.35rem 0.9rem;
+            background: var(--b1-bg);
+            border: 1px solid var(--b1-border);
+            color: var(--b1-text);
+            border-radius: 999px;
+            font-size: 0.775rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.85rem;
+        }
+
+        .hero-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 980px;
+            line-height: 1.65;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-body);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--b1-primary);
+        }
+
+        .stat-label {
+            font-size: 0.825rem;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-top: 0.15rem;
+        }
+
+        /* SECTION CARDS */
+        .section-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            margin-bottom: 2.25rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        .section-header-left {
+            max-width: 850px;
+        }
+
+        .section-num-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.775rem;
+            font-weight: 700;
+            color: var(--b1-primary);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .section-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.35rem;
+            line-height: 1.6;
+        }
+
+        /* TOGGLE BUTTON BAR */
+        .view-toggle-bar {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: var(--bg-body);
+            padding: 0.3rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .toggle-btn {
+            padding: 0.45rem 0.85rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.775rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .toggle-btn.active {
+            background: #ffffff;
+            color: var(--b1-primary);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-medium);
+        }
+
+        /* DIAGRAM CONTAINER (High Tech Viewport) */
+        .diagram-container {
+            width: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 2px solid #cbd5e1;
+            background: #0f172a;
+            margin-top: 1rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+        }
+
+        .diagram-container img {
+            width: 100%;
+            height: auto;
+            max-height: 720px;
+            object-fit: contain;
+            display: block;
+            transition: opacity 0.25s ease;
+        }
+
+        /* THREE LAYER SUMMARY GRID */
+        .architecture-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .arch-summary-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .arch-summary-card.federated { border-top: 4px solid var(--b2-primary); }
+        .arch-summary-card.boundary { border-top: 4px solid #e11d48; }
+        .arch-summary-card.local { border-top: 4px solid var(--b4-primary); }
+
+        .arch-summary-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .arch-summary-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* MODULE BLOCKS GRID */
+        .blocks-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .block-module-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .block-module-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .block-module-card.b1 { border-top: 5px solid var(--b1-primary); }
+        .block-module-card.b2 { border-top: 5px solid var(--b2-primary); }
+        .block-module-card.b3 { border-top: 5px solid var(--b3-primary); }
+        .block-module-card.b4 { border-top: 5px solid var(--b4-primary); }
+
+        .block-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.725rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .b1 .block-tag { color: var(--b1-primary); }
+        .b2 .block-tag { color: var(--b2-primary); }
+        .b3 .block-tag { color: var(--b3-primary); }
+        .b4 .block-tag { color: var(--b4-primary); }
+
+        .block-module-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .block-module-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .block-partners-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .block-partner-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.825rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 0.4rem 0.6rem;
+            background: var(--bg-surface-elevated);
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .block-partner-role {
+            font-weight: 400;
+            color: var(--text-tertiary);
+        }
+
+        .partner-keyword {
+            font-size: 0.725rem;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            margin-left: 0.35rem;
+            font-style: italic;
+        }
+
+        .wp-badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .b1 .wp-badge { background: var(--b1-bg); color: var(--b1-text); border: 1px solid var(--b1-border); }
+        .b2 .wp-badge { background: var(--b2-bg); color: var(--b2-text); border: 1px solid var(--b2-border); }
+        .b3 .wp-badge { background: var(--b3-bg); color: var(--b3-text); border: 1px solid var(--b3-border); }
+        .b4 .wp-badge { background: var(--b4-bg); color: var(--b4-text); border: 1px solid var(--b4-border); }
+
+        /* 4-STAGE GRID CARDS */
+        .loop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .loop-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .loop-card-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.725rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+
+        .loop-card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .loop-card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* WORK PACKAGES GRID */
+        .wp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .wp-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .wp-card:hover {
+            border-color: var(--b1-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .wp-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .wp-id {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 0.2rem 0.6rem;
+            background: var(--b1-bg);
+            border: 1px solid var(--b1-border);
+            color: var(--b1-text);
+            border-radius: 6px;
+        }
+
+        .wp-leader {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--b1-primary);
+        }
+
+        .wp-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.45rem;
+        }
+
+        .wp-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* EXECUTION ROADMAP TIMELINE */
+        .roadmap-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+
+        .roadmap-phase-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            position: relative;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .roadmap-phase-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .roadmap-phase-card.phase-1 { border-left: 5px solid var(--b1-primary); }
+        .roadmap-phase-card.phase-2 { border-left: 5px solid var(--b2-primary); }
+        .roadmap-phase-card.phase-3 { border-left: 5px solid var(--accent-widening); }
+        .roadmap-phase-card.phase-4 { border-left: 5px solid var(--b3-primary); }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .phase-title-group {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .phase-badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-p1 { background: var(--b1-bg); color: var(--b1-text); border: 1px solid var(--b1-border); }
+        .badge-p2 { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .badge-p3 { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .badge-p4 { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        .phase-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .phase-timeframe {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            background: var(--bg-body);
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .phase-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+
+        .partner-role-box {
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.9rem 1.1rem;
+            transition: var(--transition);
+        }
+
+        .partner-role-box:hover {
+            border-color: var(--border-medium);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .pr-entity {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.925rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+
+        .pr-wp {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.1rem 0.4rem;
+            background: rgba(148, 163, 184, 0.12);
+            color: var(--accent-gold-bright);
+            border-radius: 3px;
+        }
+
+        .pr-task {
+            font-size: 0.825rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        /* COUNTRY SUMMARY CHIPS */
+        .country-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .country-chip {
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .country-chip:hover, .country-chip.active {
+            border-color: var(--accent-gold);
+            background: rgba(148, 163, 184, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .country-chip .flag {
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+
+        .country-chip .c-name {
+            font-size: 0.825rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .country-chip .c-count {
+            font-size: 0.725rem;
+            color: var(--accent-gold-bright);
+            font-weight: 600;
+        }
+
+        /* TOOLBAR & FILTERS */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+            background: var(--bg-surface);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 0.55rem 1rem 0.55rem 2.25rem;
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.85rem;
+            width: 320px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            color: var(--text-tertiary);
+        }
+
+        .filter-select {
+            padding: 0.55rem 1rem;
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        /* MATRIX TABLE */
+        .table-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        thead tr {
+            background: var(--bg-surface-elevated);
+            border-bottom: 1.5px solid var(--border-medium);
+        }
+
+        th {
+            padding: 1rem 1.25rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text-secondary);
+            font-weight: 700;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background 0.15s ease;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-surface-elevated);
+        }
+
+        td {
+            padding: 1.2rem 1.25rem;
+            vertical-align: top;
+            font-size: 0.875rem;
+        }
+
+        .area-header-row td {
+            background: rgba(148, 163, 184, 0.08);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.75rem 1.25rem;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .partner-link {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition);
+        }
+
+        .partner-link:hover {
+            color: var(--b1-primary);
+        }
+
+        .partner-role-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: rgba(148, 163, 184, 0.12);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .external-icon {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        .country-text {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            margin-top: 0.15rem;
+        }
+
+        .role-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .resp-desc {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+
+        .wp-badge {
+            display: inline-block;
+            padding: 0.15rem 0.45rem;
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            font-size: 0.685rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .badge-status {
+            display: inline-block;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .badge-confirmado {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+        }
+
+        .badge-pendiente {
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-medium);
+            color: var(--text-secondary);
+        }
+
+        .badge-widening {
+            display: inline-block;
+            padding: 0.12rem 0.4rem;
+            background: rgba(225, 29, 72, 0.12);
+            border: 1px solid rgba(225, 29, 72, 0.35);
+            color: var(--accent-widening);
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 0.775rem;
+            color: var(--text-tertiary);
+            margin-top: 0.35rem;
+            white-space: pre-line;
+        }
+
+        .commercial-footer {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .commercial-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--b1-primary), var(--b2-primary));
+        }
+
+        .commercial-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.65rem;
+        }
+
+        @media print {
+            .top-navbar, .btn-group, .toolbar, .view-toggle-bar {
+                display: none !important;
+            }
+            body {
+                background: #fff;
+                color: #000;
+                padding: 0;
+            }
+            header.proposal-hero, .section-card, .table-container, .commercial-footer {
+                background: #fff;
+                border: 1px solid #ccc;
+                box-shadow: none;
+                color: #000;
+            }
+            .hero-title, .section-title, .partner-link, .role-title, .wp-title {
+                color: #000 !important;
+            }
+            .hero-subtitle, .section-desc, .resp-desc, .wp-desc {
+                color: #333 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP NAVIGATION BAR -->
+<nav class="top-navbar">
+    <div class="navbar-content">
+        <a href="#" class="brand-logo">
+            <div class="brand-mark">A</div>
+            <div class="brand-text">AURA <span>Sovereign AI Ecosystem</span></div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#operational-blocks">Operational Blocks</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#edge-engine">Edge Engine</a></li>
+            <li><a href="#roadmap">Project Roadmap</a></li>
+            <li><a href="#work-packages">Work Packages</a></li>
+            <li><a href="#geographic">Geographic Reach</a></li>
+            <li><a href="#matrix">Partner Matrix</a></li>
+            <li><a href="#impact">Strategic Impact</a></li>
+        </ul>
+
+        <div class="header-actions">
+            <button class="btn-secondary" onclick="window.print()">Print Dossier (PDF)</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- HERO PROPOSAL HEADER -->
+    <header class="proposal-hero">
+        <div class="hero-meta">Horizon Europe Research & Innovation Proposal</div>
+        <h1 class="hero-title">AURA — Master Technical Architecture & Partner Consortium</h1>
+        <p class="hero-subtitle">
+            A B2B Sovereign Industrial AI Ecosystem based on Dual Architecture (Federated Cloud vs. On-Premise Factory Edge) uniting 11 key entities across 9 European nations (including 4 Widening countries).
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-value">9 Nations</span>
+                <span class="stat-label">4 Widening Countries</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">11 Entities</span>
+                <span class="stat-label">RTOs, Universities & Industry</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">9 Work Packages</span>
+                <span class="stat-label">Structured Program Governance</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">TRL 5 Validation</span>
+                <span class="stat-label">Vicky Foods & AKCOAT Pilots</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 01. CONSORTIUM OPERATIONAL BLOCKS (MODULES) -->
+    <section id="operational-blocks" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">01 / Consortium Program Architecture</span>
+                <h2 class="section-title">The 4 Operational Blocks & Module Structure</h2>
+                <p class="section-desc">
+                    AURA's consortium ecosystem is structured into 4 specialized operational blocks. Each block groups key partners, clear roles, work package leadership, and strategic deliverables to ensure seamless execution.
+                </p>
+            </div>
+        </div>
+
+        <div class="blocks-showcase-grid">
+            <!-- BLOCK 1 -->
+            <div class="block-module-card b1">
+                <div>
+                    <span class="block-tag">BLOCK 01 · OPERATIONAL</span>
+                    <h3 class="block-module-title">🌐 Operational Governance & B2B Commercialization</h3>
+                    <p class="block-module-desc">
+                        Global Horizon Europe consortium management, legal direction, FSTP Open Call administration, independent evaluation, and post-project B2B monetization.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>SINTEF <span class="block-partner-role">(Norway)</span> <span class="partner-keyword">— Coordinator</span></span>
+                        <span class="wp-badge">WP1 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>GRANT GARANT <span class="block-partner-role">(Czechia)</span> <span class="partner-keyword">— SME Open Calls</span></span>
+                        <span class="wp-badge">WP4/WP5/WP6 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>SYXIS VSI <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— SME Auditor</span></span>
+                        <span class="wp-badge">WP4 Audit</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BLOCK 2 -->
+            <div class="block-module-card b2">
+                <div>
+                    <span class="block-tag">BLOCK 02 · SCIENTIFIC-TECH</span>
+                    <h3 class="block-module-title">🔬 Scientific Engine & Cognitive AI Systems</h3>
+                    <p class="block-module-desc">
+                        Domain Knowledge Graphs, ISA-95 core ontologies, Graph-RAG interactive systems, EU AI Act explainability, predictive anomaly models, and agentic workflows.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>Univ. Alicante <span class="block-partner-role">(Spain)</span> <span class="partner-keyword">— NLP & Tech Mentor</span></span>
+                        <span class="wp-badge">WP2 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>INDElab / UvA <span class="block-partner-role">(Netherlands)</span> <span class="partner-keyword">— Ontologies & Tech Mentor</span></span>
+                        <span class="wp-badge">WP2 Task Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>KIT Karlsruhe <span class="block-partner-role">(Germany)</span> <span class="partner-keyword">— AI Compliance & Tech Mentor</span></span>
+                        <span class="wp-badge">WP2 Task Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>CleverStaff <span class="block-partner-role">(Ukraine)</span> <span class="partner-keyword">— Agentic AI & Integration Mentor</span></span>
+                        <span class="wp-badge">WP4/WP6 Mentor</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BLOCK 3 -->
+            <div class="block-module-card b3">
+                <div>
+                    <span class="block-tag">BLOCK 03 · INFRASTRUCTURE</span>
+                    <h3 class="block-module-title">☁️ Sovereign Cloud & HPC Supercomputing</h3>
+                    <p class="block-module-desc">
+                        24/7 Gaia-X sovereign cloud operation, continuous MLOps/AIOps pipelines, federated APIs, and EuroHPC MareNostrum V heavy AI model pre-training.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>ESTEN s.r.o. <span class="block-partner-role">(Slovakia)</span> <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span></span>
+                        <span class="wp-badge">WP3 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>BSC / MareNostrum <span class="block-partner-role">(Spain)</span> <span class="partner-keyword">— EuroHPC Center & Infra Mentor</span></span>
+                        <span class="wp-badge">WP3 Task Leader</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BLOCK 4 -->
+            <div class="block-module-card b4">
+                <div>
+                    <span class="block-tag">BLOCK 04 · TESTERS & PILOTS</span>
+                    <h3 class="block-module-title">🏭 Industrial Testers & TRL 5 Edge Pilots</h3>
+                    <p class="block-module-desc">
+                        Real-world plant telemetry validation on Layer C on-premise GPU Edge servers across continuous bakery lines and chemical coating manufacturing.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>Vicky Foods <span class="block-partner-role">(Spain)</span> <span class="partner-keyword">— Bakery Pilot</span></span>
+                        <span class="wp-badge">WP5 Pilot</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>AKCOAT <span class="block-partner-role">(Türkiye)</span> <span class="partner-keyword">— Coatings Pilot</span></span>
+                        <span class="wp-badge">WP5 Pilot</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 01. TECHNICAL ARCHITECTURE SHOWCASE -->
+    <section id="architecture" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">02 / Technical Topology</span>
+                <h2 class="section-title">Three-Layer Technical Architecture (Sovereignty & Scalability)</h2>
+                <p class="section-desc">
+                    Unified topology linking the Federated <strong>Top Level</strong> (comprising Layer A EuroHPC supercomputing & Layer B 24/7 Gaia-X sovereign cloud), the <strong>Middle Barrier</strong> for absolute data sovereignty, and the Local <strong>Bottom Level</strong> for on-premise industrial edge nodes (Layer C).
+                </p>
+            </div>
+
+            <div class="view-toggle-bar">
+                <button class="toggle-btn active" id="btn-arch-dual" onclick="switchArchitectureView('dual')">Combined Dual Projection</button>
+                <button class="toggle-btn" id="btn-arch-tech" onclick="switchArchitectureView('tech')">Technical Blueprint</button>
+                <button class="toggle-btn" id="btn-arch-exec" onclick="switchArchitectureView('exec')">Executive Infographic</button>
+            </div>
+        </div>
+
+        <div class="diagram-container">
+            <img id="img-architecture-main" src="aura_three_layer_dual_projection.png" alt="AURA Three-Layer Sovereign Architecture — Combined Dual Projection">
+        </div>
+
+        <div class="architecture-summary-grid">
+            <div class="arch-summary-card federated">
+                <div class="arch-summary-title">01. Top Level: Federated Cloud & EuroHPC (Layers A & B)</div>
+                <div class="arch-summary-text">
+                    ISA-95 Core Ontology (Layer 1), Track B Sectoral Semantic Oracles (Layer 2: HACCP, REACH, CLP), BSC MareNostrum V supercomputing for massive industrial model training, and continuous MLOps pipelines in Gaia-X sovereign cloud (ESTEN).
+                </div>
+            </div>
+
+            <div class="arch-summary-card boundary">
+                <div class="arch-summary-title">02. Middle Barrier: Absolute Data Sovereignty</div>
+                <div class="arch-summary-text">
+                    Unbreachable security perimeter: Downstream unidirectional model/API distribution from platform to edge. <strong>Raw plant telemetry and local sensor logs NEVER leave the factory walls.</strong>
+                </div>
+            </div>
+
+            <div class="arch-summary-card local">
+                <div class="arch-summary-title">03. Bottom Level: On-Premise Industrial Edge (Layer C)</div>
+                <div class="arch-summary-text">
+                    Sovereign GPU edge servers inside <strong>Vicky Foods</strong> (Bakery Pilot) and <strong>AKCOAT</strong> (Chemical Coatings Pilot) plants. Private Knowledge Graph (Layer 3), 4-Agent Cognitive Engine with closed-loop Human-in-the-Loop operation.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. EDGE ENGINE CLOSED LOOP -->
+    <section id="edge-engine" class="section-card" style="border-top: 3px solid var(--b4-primary);">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">03 / Operational Assistance</span>
+                <h2 class="section-title">The AURA Edge Engine: 4-Step Closed Loop in Factory Plant</h2>
+                <p class="section-desc">
+                    Continuous operational conversion of operator tacit experience into explicit Private Knowledge Graph intelligence across plant diagnostic workflows.
+                </p>
+            </div>
+
+            <div class="view-toggle-bar">
+                <button class="toggle-btn active" id="btn-loop-dual" onclick="switchLoopView('dual')">Combined Dual Projection</button>
+                <button class="toggle-btn" id="btn-loop-tech" onclick="switchLoopView('tech')">Technical 4-Step Loop</button>
+                <button class="toggle-btn" id="btn-loop-exec" onclick="switchLoopView('exec')">Executive Flow</button>
+            </div>
+        </div>
+
+        <div class="diagram-container" style="margin-bottom: 1.5rem;">
+            <img id="img-loop-main" src="aura_edge_engine_dual_projection.png" alt="The AURA Edge Engine: Empowering the Human Operator — Combined Dual Projection">
+        </div>
+
+        <div class="loop-grid">
+            <div class="loop-card" style="border-top: 3px solid var(--b1-primary);">
+                <div class="loop-card-num" style="color: var(--b1-primary);">01 · PREDICT</div>
+                <div class="loop-card-title">1. Predict</div>
+                <div class="loop-card-desc">
+                    AI anticipates quality anomalies and machinery failure probabilities based on localized sensor telemetry (>2h in advance).
+                </div>
+            </div>
+
+            <div class="loop-card" style="border-top: 3px solid var(--b2-primary);">
+                <div class="loop-card-num" style="color: var(--b2-primary);">02 · GUIDE</div>
+                <div class="loop-card-title">2. Guide</div>
+                <div class="loop-card-desc">
+                    Cognitive Engine (Dual Graph-RAG agents) provides explainable, step-by-step resolution recommendations citing official SOPs.
+                </div>
+            </div>
+
+            <div class="loop-card" style="border-top: 3px solid var(--b3-primary);">
+                <div class="loop-card-num" style="color: var(--b3-primary);">03 · ACT</div>
+                <div class="loop-card-title">3. Act</div>
+                <div class="loop-card-desc">
+                    Human-at-the-Edge decision. Expert operator executes, modifies, or overrides recommendation, registering diagnostics.
+                </div>
+            </div>
+
+            <div class="loop-card" style="border-top: 3px solid var(--b4-primary);">
+                <div class="loop-card-num" style="color: var(--b4-primary);">04 · LEARN</div>
+                <div class="loop-card-title">4. Learn</div>
+                <div class="loop-card-desc">
+                    Operator tacit diagnostics captured, validated by Judge Agent, and fed back dynamically into the Private Knowledge Graph.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. PROJECT EXECUTION ROADMAP & PARTNER MAPPING -->
+    <section id="roadmap" class="section-card" style="border-top: 3px solid #38bdf8;">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">04 / Execution Strategy & Roadmap</span>
+                <h2 class="section-title">Consortium Implementation Roadmap (Sequential Execution Blocks)</h2>
+                <p class="section-desc">
+                    Four-stage execution timeline detailing exact partner involvement, work package alignment, and key milestones from foundational core design to commercial exploitation.
+                </p>
+            </div>
+        </div>
+
+        <div class="roadmap-container">
+            <!-- PHASE 1 -->
+            <div class="roadmap-phase-card phase-1">
+                <div class="phase-header">
+                    <div class="phase-title-group">
+                        <span class="phase-badge badge-p1">Phase 1</span>
+                        <h3 class="phase-name">Establishment: Project Guidelines & Mentorship Framework</h3>
+                    </div>
+                    <span class="phase-timeframe">Months 01 – 12</span>
+                </div>
+                <p class="section-desc">
+                    <strong>Focus:</strong> Preparation of the €12M FSTP mechanics, establishment of core scientific/technical guidelines, and setup of the Mentorship Network before launching Open Calls.
+                </p>
+                <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b1-primary);">
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">MS1 (M06):</strong> Core Scientific Guidelines & ISA-95 Ontology Standardised &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS2 (M09):</strong> Sovereign Cloud Sandbox & EuroHPC Access Ready &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS3 (M12):</strong> FSTP Open Call #1 Officially Launched
+                    </p>
+                </div>
+                <div class="phase-partners-grid">
+                    <div class="partner-role-box">
+                        <div class="pr-entity">SINTEF <span class="partner-keyword">— Coordinator</span> <span class="pr-wp">B1 · WP1</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">GRANT GARANT <span class="partner-keyword">— SME Open Calls</span> <span class="pr-wp">B1 · WP4/WP5/WP6</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— SME Auditor</span> <span class="pr-wp">B1 · WP4</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">CleverStaff <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP4/WP6</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">Vicky Foods <span class="partner-keyword">— Bakery Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">AKCOAT <span class="partner-keyword">— Coatings Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 2 -->
+            <div class="roadmap-phase-card phase-2">
+                <div class="phase-header">
+                    <div class="phase-title-group">
+                        <span class="phase-badge badge-p2">Phase 2</span>
+                        <h3 class="phase-name">Iterative Execution: FSTP Open Calls, Auditing & SME Deployment</h3>
+                    </div>
+                    <span class="phase-timeframe">Months 13 – 30</span>
+                </div>
+                <p class="section-desc">
+                    <strong>Focus:</strong> Cyclical process repeating across multiple €12M FSTP calls (Adoption Pilots, Tech Adaptation). SMEs apply, are selected, mentored, deployed, and strictly audited.
+                </p>
+                <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b2-primary);">
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">MS4 (M18):</strong> Batch 1 SMEs (Adoption & Tech) Deployed & Mentored &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS5 (M24):</strong> FSTP Open Call #2 Launched &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS6 (M30):</strong> On-Premise Industrial Pilots Validated at TRL 5
+                    </p>
+                </div>
+                <div class="phase-partners-grid">
+                    <div class="partner-role-box">
+                        <div class="pr-entity">SINTEF <span class="partner-keyword">— Coordinator</span> <span class="pr-wp">B1 · WP1</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">GRANT GARANT <span class="partner-keyword">— SME Open Calls</span> <span class="pr-wp">B1 · WP4/WP5/WP6</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— SME Auditor</span> <span class="pr-wp">B1 · WP4</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">CleverStaff <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP4/WP6</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">Vicky Foods <span class="partner-keyword">— Bakery Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">AKCOAT <span class="partner-keyword">— Coatings Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 3 -->
+            <div class="roadmap-phase-card phase-3">
+                <div class="phase-header">
+                    <div class="phase-title-group">
+                        <span class="phase-badge badge-p3">Phase 3</span>
+                        <h3 class="phase-name">B2B Commercial Exploitation & Ecosystem Scaling</h3>
+                    </div>
+                    <span class="phase-timeframe">Months 31 – 36</span>
+                </div>
+                <p class="section-desc">
+                    <strong>Focus:</strong> Post-project sustainability, leveraging the validated SME projects to scale the AURA ecosystem commercially across Europe.
+                </p>
+                <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b3-primary);">
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">MS7 (M32):</strong> SME Technical Audits & FSTP Financial Closure &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS8 (M34):</strong> AURA Marketplace & B2B Exploitation Packages Live &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS9 (M36):</strong> Final Ecosystem Scaling Strategy Delivered
+                    </p>
+                </div>
+                <div class="phase-partners-grid">
+                    <div class="partner-role-box">
+                        <div class="pr-entity">SINTEF <span class="partner-keyword">— Coordinator</span> <span class="pr-wp">B1 · WP1</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">GRANT GARANT <span class="partner-keyword">— SME Open Calls</span> <span class="pr-wp">B1 · WP4/WP5/WP6</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— SME Auditor</span> <span class="pr-wp">B1 · WP4</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">CleverStaff <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP4/WP6</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                    </div>
+                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
+                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">Vicky Foods <span class="partner-keyword">— Bakery Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
+                    </div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">AKCOAT <span class="partner-keyword">— Coatings Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. FSTP MECHANICS -->
+    <section id="fstp-mechanics" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">05 / FSTP Cascade Funding Mechanics</span>
+                <h2 class="section-title">Driving Market Uptake: €12M FSTP Allocation</h2>
+                <p class="section-desc">
+                    Distribution of the €12,000,000 cascade funding across four key pillars to guarantee SME adoption, technical customization, workforce upskilling, and expert mentorship.
+                </p>
+            </div>
+        </div>
+
+        <div style="background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; margin-top: 2rem; text-align: center;">
+            
+            <!-- Center Total Budget -->
+            <div style="display: inline-block; padding: 1.5rem 3rem; border: 2px solid #eab308; border-radius: 12px; margin-bottom: 3rem; background-color: rgba(234, 179, 8, 0.05); box-shadow: 0 4px 20px rgba(234, 179, 8, 0.1); position: relative;">
+                <h3 style="color: #eab308; font-size: 2.5rem; font-weight: 700; margin: 0; font-family: var(--font-heading);">€12,000,000</h3>
+                <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">Total Cascade Funding</p>
+            </div>
+
+            <!-- 4 Pillars Grid -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: left;">
+                
+                <!-- Adoption Pilots -->
+                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b1-primary);">
+                    <h4 style="color: var(--b1-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Adoption Pilots (50%)</h4>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€6.0M</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        Direct funding for implementing AURA solutions in real industrial environments (~30-40 projects).
+                    </p>
+                </div>
+
+                <!-- Tech Adaptation -->
+                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b2-primary);">
+                    <h4 style="color: var(--b2-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Tech Adaptation (25%)</h4>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€3.0M</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        Support for SMEs to customize and integrate AURA components into existing systems (~20-25 projects).
+                    </p>
+                </div>
+
+                <!-- Training -->
+                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b3-primary);">
+                    <h4 style="color: var(--b3-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Training (15%)</h4>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€1.8M</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        Upskilling programs and workshops for industrial workers using AURA technology.
+                    </p>
+                </div>
+
+                <!-- Mentoring -->
+                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b4-primary);">
+                    <h4 style="color: var(--b4-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Mentoring (10%)</h4>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€1.2M</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
+                        Expert continuous technical support and mentor network for successful deployment.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. WORK PACKAGES STRUCTURE -->
+    <section id="work-packages" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">06 / Program Governance</span>
+                <h2 class="section-title">Work Package Structure & Methodological Breakdown (WPs 1–6)</h2>
+                <p class="section-desc">
+                    Operational breakdown of the 6 Work Packages defining consortium leadership, execution responsibilities, and key deliverables.
+                </p>
+            </div>
+        </div>
+
+        <div class="wp-grid">
+            <div class="wp-card">
+                <div>
+                    <div class="wp-card-header">
+                        <span class="wp-id">WP1</span>
+                        <span class="wp-leader"><strong>Leader:</strong> SINTEF <span class="partner-keyword">— Coordinator</span></span>
+                    </div>
+                    <div class="wp-title">Global Project Coordination & Management</div>
+                    <div class="wp-desc">
+                        Strategic, legal, and financial management of the Horizon Europe consortium; direction of the FSTP funding program and official liaison with the European Commission.
+                    </div>
+                </div>
+            </div>
+
+            <div class="wp-card">
+                <div>
+                    <div class="wp-card-header">
+                        <span class="wp-id">WP2</span>
+                        <span class="wp-leader"><strong>Leader:</strong> Univ. Alicante <span class="partner-keyword">— Task Leaders: KIT / INDElab</span></span>
+                    </div>
+                    <div class="wp-title">Core Cognitive Engine & AI Science</div>
+                    <div class="wp-desc">
+                        Unified scientific methodology merging industrial prompt engineering (NLP), ISA-95 Core Ontology standardisation, and global EU AI Act explainability guidelines.
+                    </div>
+                </div>
+            </div>
+
+            <div class="wp-card">
+                <div>
+                    <div class="wp-card-header">
+                        <span class="wp-id">WP3</span>
+                        <span class="wp-leader"><strong>Leader:</strong> ESTEN s.r.o. <span class="partner-keyword">— Task Leader: BSC</span></span>
+                    </div>
+                    <div class="wp-title">Sovereign Infrastructure & HPC Backbone</div>
+                    <div class="wp-desc">
+                        Operation of the Gaia-X sovereign cloud infrastructure, MLOps sandbox, and EuroHPC supercomputing access for industrial LLM/SLM training.
+                    </div>
+                </div>
+            </div>
+
+            <div class="wp-card">
+                <div>
+                    <div class="wp-card-header">
+                        <span class="wp-id">WP4</span>
+                        <span class="wp-leader"><strong>Leader:</strong> GRANT GARANT <span class="partner-keyword">— Task Leaders: SYXIS / CleverStaff</span></span>
+                    </div>
+                    <div class="wp-title">FSTP Open Calls, Auditing & Mentorship</div>
+                    <div class="wp-desc">
+                        Orchestration of the €12M cascade funding: SME attraction, independent evaluation panel, and hands-on technical acceleration mentorship.
+                    </div>
+                </div>
+            </div>
+
+            <div class="wp-card">
+                <div>
+                    <div class="wp-card-header">
+                        <span class="wp-id">WP5</span>
+                        <span class="wp-leader"><strong>Leader:</strong> GRANT GARANT <span class="partner-keyword">— Pilots: Vicky Foods / AKCOAT</span></span>
+                    </div>
+                    <div class="wp-title">TRL 5 Industrial Validation Pilots</div>
+                    <div class="wp-desc">
+                        Operational deployment and TRL 5 validation in real environments: continuous bakery line (Vicky Foods) and thermal/chemical coatings (AKCOAT).
+                    </div>
+                </div>
+            </div>
+
+            <div class="wp-card">
+                <div>
+                    <div class="wp-card-header">
+                        <span class="wp-id">WP6</span>
+                        <span class="wp-leader"><strong>Leader:</strong> GRANT GARANT <span class="partner-keyword">— Task Leader: CleverStaff</span></span>
+                    </div>
+                    <div class="wp-title">Communication, B2B Exploitation & Scaling</div>
+                    <div class="wp-desc">
+                        European ecosystem dissemination, B2B commercialization strategy, and post-project sustainability through packaged enterprise solutions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. GEOGRAPHIC FOOTPRINT -->
+    <section id="geographic" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">07 / Geographic Presence</span>
+                <h2 class="section-title">Consortium Footprint & Participating Nations</h2>
+                <p class="section-desc">
+                    Representation across 9 European nations (including 4 Widening countries). Select any country filter chip below to refine the partner responsibility matrix.
+                </p>
+            </div>
+        </div>
+
+        <div class="diagram-container" id="mapContainer" style="max-width: 880px; margin: 0 auto; aspect-ratio: 1 / 1;">
+            <img id="img-map-rendered" src="aura_clean_countries_map.png" alt="Participating Countries Map — AURA Consortium">
+        </div>
+
+        <div class="country-cards-grid">
+            <div class="country-chip active" id="chip-ALL" onclick="filterByCountry('ALL')">
+                <span class="flag">🌐</span>
+                <div class="c-name">All Partners</div>
+                <div class="c-count">11 Entities</div>
+            </div>
+            <div class="country-chip" id="chip-Norway" onclick="filterByCountry('Norway')">
+                <span class="flag">🇳🇴</span>
+                <div class="c-name">Norway</div>
+                <div class="c-count">SINTEF</div>
+            </div>
+            <div class="country-chip" id="chip-Spain" onclick="filterByCountry('Spain')">
+                <span class="flag">🇪🇸</span>
+                <div class="c-name">Spain</div>
+                <div class="c-count">3 Partners</div>
+            </div>
+            <div class="country-chip" id="chip-Germany" onclick="filterByCountry('Germany')">
+                <span class="flag">🇩🇪</span>
+                <div class="c-name">Germany</div>
+                <div class="c-count">KIT</div>
+            </div>
+            <div class="country-chip" id="chip-Netherlands" onclick="filterByCountry('Netherlands')">
+                <span class="flag">🇳🇱</span>
+                <div class="c-name">Netherlands</div>
+                <div class="c-count">INDElab</div>
+            </div>
+            <div class="country-chip" id="chip-Czechia" onclick="filterByCountry('Czechia')">
+                <span class="flag">🇨🇿</span>
+                <div class="c-name">Czechia</div>
+                <div class="c-count">Widening</div>
+            </div>
+            <div class="country-chip" id="chip-Slovakia" onclick="filterByCountry('Slovakia')">
+                <span class="flag">🇸🇰</span>
+                <div class="c-name">Slovakia</div>
+                <div class="c-count">Widening</div>
+            </div>
+            <div class="country-chip" id="chip-Lithuania" onclick="filterByCountry('Lithuania')">
+                <span class="flag">🇱🇹</span>
+                <div class="c-name">Lithuania</div>
+                <div class="c-count">Widening</div>
+            </div>
+            <div class="country-chip" id="chip-Ukraine" onclick="filterByCountry('Ukraine')">
+                <span class="flag">🇺🇦</span>
+                <div class="c-name">Ukraine</div>
+                <div class="c-count">CleverStaff</div>
+            </div>
+            <div class="country-chip" id="chip-Türkiye" onclick="filterByCountry('Türkiye')">
+                <span class="flag">🇹🇷</span>
+                <div class="c-name">Türkiye</div>
+                <div class="c-count">Widening</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. CONSORTIUM MATRIX -->
+    <section id="matrix" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">08 / Consortium Responsibility Matrix</span>
+                <h2 class="section-title">Partner Responsibilities & Operational Block Breakdown</h2>
+                <p class="section-desc">
+                    Comprehensive mapping of all 11 consortium partners across the 4 Operational Blocks, detailing organization profile, strategic role, WP leadership, and confirmation status.
+                </p>
+            </div>
+        </div>
+        <div class="toolbar">
+            <div class="search-box">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <input type="text" id="searchInput" placeholder="Search partner, role, or WP leadership..." oninput="filterRows()">
+            </div>
+            <select class="filter-select" id="statusFilter" onchange="filterRows()">
+                <option value="ALL">All Statuses</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Pending">In Progress / Pending</option>
+            </select>
+            <select class="filter-select" id="typeFilter" onchange="filterRows()">
+                <option value="ALL">All Profile Types</option>
+                <option value="WIDENING">Widening Countries</option>
+                <option value="RTO">RTOs & Universities</option>
+                <option value="INDUSTRY">Industrial Edge Pilots</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 22%;">Partner / Organization</th>
+                        <th style="width: 15%;">Country & Profile</th>
+                        <th style="width: 22%;">Strategic Role</th>
+                        <th style="width: 27%;">Key Responsibilities & Contribution</th>
+                        <th style="width: 14%;">WP Leadership & Status</th>
+                    </tr>
+                </thead>
+                <tbody id="matrixBody">
+                    
+                    <!-- BLOCK 1: OPERATIONAL & FSTP GOVERNANCE -->
+                    <tr class="area-header-row area-b1">
+                        <td colspan="5">Block 01 · Operational Governance, Global Coordination, FSTP & B2B Exploitation</td>
+                    </tr>
+                    <tr class="partner-row" data-country="Norway" data-status="Confirmed" data-type="RTO">
+                        <td>
+                            <a href="https://www.sintef.no/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Global Coordination & Legal Management">🌐</span> SINTEF <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Norway</div>
+                            <div class="country-text">Global RTO</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Global Project Coordinator & FSTP Program Director</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Strategic, administrative, and legal project management; contractual design and global direction of the Financial Support to Third Parties (FSTP) program; European Commission liaison.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP1 Leader</span><br>
+                            <span class="wp-badge">WP6 Task Leader</span><br>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Czechia" data-status="Pending" data-type="WIDENING">
+                        <td>
+                            <a href="https://www.grant-garant.cz/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Open Calls Outreach & B2B Commercialization">📈</span> GRANT GARANT <span class="external-icon">↗</span>
+                            </a>
+                            <span class="badge-widening">WIDENING</span>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Czechia</div>
+                            <div class="country-text">B2B Innovation SME</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Open Call Outreach, Widening Engagement & B2B Commercialization</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Open Call applicant attraction focusing on Central Europe and Widening countries; business model definition; commercial exploitation roadmap and B2B marketplace strategy.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP4 Leader</span><br>
+                            <span class="wp-badge">WP5 Leader</span><br>
+                            <span class="wp-badge">WP6 Leader</span><br>
+                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Lithuania" data-status="Pending" data-type="WIDENING">
+                        <td>
+                            <a href="https://syxis.eu/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Independent Technical Audit & Neutral Evaluation">⚖️</span> SYXIS VSI <span class="external-icon">↗</span>
+                            </a>
+                            <span class="badge-widening">WIDENING</span>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Lithuania</div>
+                            <div class="country-text">Audit & Evaluation RTO</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Independent Technical Audit & FSTP Evaluation Panel Chair</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Constitution and management of the independent expert evaluation panel for Open Calls; technical audits of SME prototypes; objective quality assurance of FSTP deliverables.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP4 Audit Panel Chair</span><br>
+                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                        </td>
+                    </tr>
+
+                    <!-- BLOCK 2: SCIENTIFIC & TECHNICAL -->
+                    <tr class="area-header-row area-b2">
+                        <td colspan="5">Block 02 · Scientific-Technical Leadership, Guidelines, Agentic Systems & Mentorship</td>
+                    </tr>
+                    <tr class="partner-row" data-country="Spain" data-status="Confirmed" data-type="RTO">
+                        <td>
+                            <a href="https://www.ua.es/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Scientific Leadership, Industrial Prompts & NLP">🔬</span> Universidad de Alicante <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Spain</div>
+                            <div class="country-text">Research University</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Scientific Leader & Industrial Prompting</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                General scientific methodology oversight; industrial prompt engineering (NLP); LLM interaction design; plant dataset curation, annotation, and anti-hallucination RAG validation.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP2 Leader</span><br>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Netherlands" data-status="Pending" data-type="RTO">
+                        <td>
+                            <a href="https://indelab.org/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="ISA-95 Ontologies, Knowledge Graphs & Graph-RAG">🕸️</span> INDElab / Univ. Amsterdam <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Netherlands</div>
+                            <div class="country-text">Excellence University</div>
+                        </td>
+                        <td>
+                            <div class="role-title">ISA-95 Core Ontologies & Dual Graph-RAG</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Strategic supervision and design guidelines for domain and general Knowledge Graphs; architecture of Graph-RAG consumption systems through which human operators interact with plant telemetry and SOPs; ISA-95 core ontology standardization.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP2 Task Leader</span><br>
+                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Germany" data-status="Pending" data-type="RTO">
+                        <td>
+                            <a href="https://www.kit.edu/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="EU AI Act Explainability Guidelines & Digital Twins">🧩</span> KIT Karlsruhe <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Germany</div>
+                            <div class="country-text">Institutional RTO</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Predictive AI, Digital Twins & EU AI Act Explainability</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Definition and supervision of EU AI Act explainability guidelines across all platform modules, ensuring every query, prediction, and output in the resulting system is strictly explainable; development of real-time predictive anomaly models and trustworthy digital twins.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP2 Task Leader</span><br>
+                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Ukraine" data-status="Confirmed" data-type="RTO">
+                        <td>
+                            <a href="https://cleverstaff.net/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Agentic Workflow Systems & B2B SaaS FSTP Mentorship">🤖</span> CleverStaff (Oh My Grant) <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Ukraine</div>
+                            <div class="country-text">B2B SaaS Enterprise SME</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Agentic Systems Architecture & FSTP Technical Mentorship</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Architecture of agentic task orchestration systems; hands-on technical mentorship & acceleration for FSTP SMEs leveraging 12+ years of experience in enterprise B2B SaaS workflow automation and AI data analysis pipelines across 35+ countries.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP4/WP6 Tech Mentor</span><br>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
+                        </td>
+                    </tr>
+
+                    <!-- BLOCK 3: SOVEREIGN INFRASTRUCTURE & MLOPS -->
+                    <tr class="area-header-row area-b3">
+                        <td colspan="5">Block 03 · 24/7 Sovereign Cloud Infrastructure, MLOps & EuroHPC Supercomputing</td>
+                    </tr>
+                    <tr class="partner-row" data-country="Slovakia" data-status="Pending" data-type="WIDENING">
+                        <td>
+                            <a href="https://www.esten.sk/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="24/7 Gaia-X Sovereign Cloud & MLOps Pipelines">☁️</span> ESTEN s.r.o. <span class="external-icon">↗</span>
+                            </a>
+                            <span class="badge-widening">WIDENING</span>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Slovakia</div>
+                            <div class="country-text">Cloud Tech SME</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Gaia-X Sovereign Cloud Operator, APIs & Knowledge Graphs</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                24/7 sovereign cloud infrastructure operation (Gaia-X standard); continuous AIOps/MLOps pipeline management; federated API services, sovereign Knowledge Graph storage, and deployment of testing Sandboxes for FSTP integrators.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP3 Leader</span><br>
+                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Spain" data-status="Pending" data-type="RTO">
+                        <td>
+                            <a href="https://www.bsc.es/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="EuroHPC Supercomputing & Federated Learning">🖥️</span> BSC / MareNostrum <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Spain</div>
+                            <div class="country-text">HPC Infrastructure</div>
+                        </td>
+                        <td>
+                            <div class="role-title">EuroHPC Supercomputing Support & Heavy Model Training</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                MareNostrum V supercomputing node provision for heavy industrial LLM/SLM pre-training and fine-tuning; federated learning aggregation; large-scale datahub repository curation.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP3 Task Leader</span><br>
+                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                        </td>
+                    </tr>
+
+                    <!-- BLOCK 4: INDUSTRIAL TESTERS -->
+                    <tr class="area-header-row area-b4">
+                        <td colspan="5">Block 04 · Industrial Testers & Plant Operational Validation (TRL 5 Pilots)</td>
+                    </tr>
+                    <tr class="partner-row" data-country="Spain" data-status="Confirmed" data-type="INDUSTRY">
+                        <td>
+                            <a href="https://www.vickyfoods.es/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Agro-Food Industrial Pilot & TRL 5 Validator">🥖</span> Vicky Foods <span class="external-icon">↗</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Spain</div>
+                            <div class="country-text">Agro-Food Industry</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Agro-Food Industrial Edge Pilot Plant & TRL 5 Validator</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Real industrial challenge provision in continuous bakery line (Track A.1); Layer C on-premise GPU edge server deployment; plant telemetry data provision and final TRL 5 validation in plant.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP5 Bakery Pilot</span><br>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
+                        </td>
+                    </tr>
+                    <tr class="partner-row" data-country="Türkiye" data-status="Confirmed" data-type="WIDENING">
+                        <td>
+                            <a href="https://www.akcoat.com/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                                <span class="partner-role-icon" title="Chemical & Materials Pilot & TRL 5 Validator">🧪</span> AKCOAT <span class="external-icon">↗</span>
+                            </a>
+                            <span class="badge-widening">WIDENING</span>
+                        </td>
+                        <td>
+                            <div class="resp-desc">Türkiye</div>
+                            <div class="country-text">Chemical & Materials Industry</div>
+                        </td>
+                        <td>
+                            <div class="role-title">Chemical & Materials Industrial Edge Pilot Plant & TRL 5 Validator</div>
+                        </td>
+                        <td>
+                            <div class="resp-desc">
+                                Physico-chemical manufacturing challenge provision (Track A.2); rheology & thermal curing dataset provision; Layer C on-premise GPU edge server deployment and TRL 5 validation in plant.
+                            </div>
+                        </td>
+                        <td>
+                            <span class="wp-badge">WP5 Coatings Pilot</span><br>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- HORIZON EUROPE STRATEGIC IMPACT & COMPLIANCE -->
+    <section id="impact" class="section-card" style="border-top: 3px solid var(--accent-emerald);">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">09 / Horizon Europe Strategic Alignment</span>
+                <h2 class="section-title">Horizon Europe High-Level Impact & Policy Compliance</h2>
+                <p class="section-desc">
+                    Strategic alignment with the EU AI Act, Gaia-X Sovereign Data Space, Widening Action Criteria, and FSTP SME Acceleration Goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="architecture-summary-grid">
+            <div class="arch-summary-card federated" style="border-top-color: var(--accent-emerald);">
+                <div class="arch-summary-title">🛡️ Data Sovereignty & EU AI Act Compliance</div>
+                <div class="arch-summary-text">
+                    Strict isolation of local factory telemetry (Layer C). All predictions, anomaly root causes, and Graph-RAG outputs are 100% explainable and verifiable under the EU AI Act safety framework (KIT & UA supervision).
+                </div>
+            </div>
+
+            <div class="arch-summary-card boundary" style="border-top-color: #38bdf8;">
+                <div class="arch-summary-title">🇪🇺 Widening Integration & Regional Balance</div>
+                <div class="arch-summary-text">
+                    4 out of 9 participating nations are <strong>Widening countries</strong> (Czechia, Slovakia, Lithuania, Türkiye) plus strategic association with Ukraine (CleverStaff). Strong capacity building in Central & Eastern Europe.
+                </div>
+            </div>
+
+            <div class="arch-summary-card local" style="border-top-color: #a855f7;">
+                <div class="arch-summary-title">🚀 FSTP Acceleration & Cascade Funding</div>
+                <div class="arch-summary-text">
+                    Managed by SINTEF, GRANT GARANT, CleverStaff, and SYXIS VSI. Over 1.5M€ allocated in cascade funding to third-party SMEs, creating a self-sustaining B2B industrial AI marketplace.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMERCIAL VALUE FOOTER -->
+    <footer class="commercial-footer">
+        <h3 class="commercial-title">Commercial Alliance & Consortium Sustainability Model</h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+            The AURA consortium acts as the <strong>organizer, facilitator, and technical guarantor</strong> of the ecosystem. Through this framework, technology-buying enterprises deploy sovereign AI agents connected to their Standard Operating Procedures (SOPs) without data leakage risks (Layer C at Vicky Foods and AKCOAT), while provider SMEs integrate their API-consumable semantic "Oracles" into a self-sustaining industrial B2B marketplace commercially led by GRANT GARANT and CleverStaff.
+        </p>
+    </footer>
+</div>
+
+<script>
+    let activeCountryFilter = 'ALL';
+
+    function switchArchitectureView(mode) {
+        const img = document.getElementById('img-architecture-main');
+        const btnDual = document.getElementById('btn-arch-dual');
+        const btnTech = document.getElementById('btn-arch-tech');
+        const btnExec = document.getElementById('btn-arch-exec');
+
+        btnDual.classList.remove('active');
+        btnTech.classList.remove('active');
+        btnExec.classList.remove('active');
+
+        img.style.opacity = 0;
+        setTimeout(() => {
+            if (mode === 'dual') {
+                img.src = 'aura_three_layer_dual_projection.png';
+                btnDual.classList.add('active');
+            } else if (mode === 'tech') {
+                img.src = 'aura_three_layer_architecture_dark.png';
+                btnTech.classList.add('active');
+            } else {
+                img.src = 'aura_master_architecture.png';
+                btnExec.classList.add('active');
+            }
+            img.style.opacity = 1;
+        }, 150);
+    }
+
+    function switchLoopView(mode) {
+        const img = document.getElementById('img-loop-main');
+        const btnDual = document.getElementById('btn-loop-dual');
+        const btnTech = document.getElementById('btn-loop-tech');
+        const btnExec = document.getElementById('btn-loop-exec');
+
+        btnDual.classList.remove('active');
+        btnTech.classList.remove('active');
+        btnExec.classList.remove('active');
+
+        img.style.opacity = 0;
+        setTimeout(() => {
+            if (mode === 'dual') {
+                img.src = 'aura_edge_engine_dual_projection.png';
+                btnDual.classList.add('active');
+            } else if (mode === 'tech') {
+                img.src = 'aura_edge_engine_4steps_dark.png';
+                btnTech.classList.add('active');
+            } else {
+                img.src = 'aura_bucle_4_etapas.png';
+                btnExec.classList.add('active');
+            }
+            img.style.opacity = 1;
+        }, 150);
+    }
+
+    function filterByCountry(countryName) {
+        activeCountryFilter = countryName;
+        
+        document.querySelectorAll('.country-chip').forEach(chip => {
+            chip.classList.remove('active');
+        });
+
+        const activeChip = document.getElementById(`chip-${countryName}`);
+        if (activeChip) activeChip.classList.add('active');
+
+        filterRows();
+    }
+
+    function filterRows() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const status = document.getElementById('statusFilter').value;
+        const type = document.getElementById('typeFilter').value;
+
+        const rows = document.querySelectorAll('.partner-row');
+        const areaHeaders = document.querySelectorAll('.area-header-row');
+
+        rows.forEach(row => {
+            const text = row.innerText.toLowerCase();
+            const rowCountry = row.getAttribute('data-country');
+            const rowStatus = row.getAttribute('data-status');
+            const rowType = row.getAttribute('data-type');
+
+            const matchesQuery = text.includes(query);
+            const matchesStatus = status === 'ALL' || rowStatus === status;
+            const matchesCountry = activeCountryFilter === 'ALL' || rowCountry === activeCountryFilter;
+
+            let matchesType = true;
+            if (type === 'WIDENING') matchesType = rowType === 'WIDENING';
+            if (type === 'RTO') matchesType = rowType === 'RTO';
+            if (type === 'INDUSTRY') matchesType = rowType === 'INDUSTRY';
+
+            if (matchesQuery && matchesStatus && matchesCountry && matchesType) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        areaHeaders.forEach(header => {
+            let next = header.nextElementSibling;
+            let hasVisible = false;
+            while (next && !next.classList.contains('area-header-row')) {
+                if (next.style.display !== 'none') {
+                    hasVisible = true;
+                    break;
+                }
+                next = next.nextElementSibling;
+            }
+            header.style.display = hasVisible ? '' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>

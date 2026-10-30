@@ -35,11 +35,11 @@ def draw_tech_blueprint():
     draw.rounded_rectangle((50, 140, 974, 320), radius=12, fill=(28, 22, 16, 255), outline=(215, 145, 60), width=2)
     draw.rounded_rectangle((70, 155, 160, 185), radius=6, fill=(195, 133, 40, 255))
     draw.text((115, 170), "LAYER A", fill=(15, 12, 10), font=font_card_body, anchor="mm")
-    draw.text((180, 170), "EUROHPC SUPERCOMPUTING & DATAHUB (BSC MARENOSTRUM V)", fill=(248, 250, 252), font=font_section, anchor="ls")
+    draw.text((180, 170), "EUROHPC SUPERCOMPUTING & DATAHUB (BSC MARENOSTRUM 5)", fill=(248, 250, 252), font=font_section, anchor="ls")
 
-    draw.text((80, 220), "• MareNostrum V Supercomputing Access: Heavy industrial LLM / SLM fine-tuning & foundation training", fill=(220, 210, 200), font=font_card_body)
+    draw.text((80, 220), "• MareNostrum 5 Supercomputing Access: Heavy industrial LLM / SLM fine-tuning & foundation training", fill=(220, 210, 200), font=font_card_body)
     draw.text((80, 250), "• Pan-European Industrial Datahub: Multimodal dataset curation, benchmarking, & open-source weights distribution", fill=(220, 210, 200), font=font_card_body)
-    draw.text((80, 280), "• Key Partner Leadership: BSC MareNostrum (WP8 Leader) & Scientific Guidance (UA - WP2)", fill=(245, 197, 115), font=font_card_body)
+    draw.text((80, 280), "• Key Partner Leadership: BSC MareNostrum (WP3) & Scientific Guidance (UA - WP2)", fill=(245, 197, 115), font=font_card_body)
 
     # Arrow Down
     draw.line([(512, 320), (512, 360)], fill=(215, 145, 60), width=3)
@@ -51,19 +51,19 @@ def draw_tech_blueprint():
     draw.text((115, 400), "LAYER B", fill=(255, 255, 255), font=font_card_body, anchor="mm")
     draw.text((180, 400), "24/7 LIVE GAIA-X SOVEREIGN CLOUD & SECTORAL ORACLES", fill=(248, 250, 252), font=font_section, anchor="ls")
 
-    draw.text((80, 450), "• Core ISA-95 Ontology (Layer 1): Standardized industrial hierarchy & data models (INDElab / UvA - WP4)", fill=(220, 210, 200), font=font_card_body)
-    draw.text((80, 480), "• Sectoral Oracles Track B (Layer 2): Regulatory & compliance knowledge (HACCP, REACH, CLP, OSHA)", fill=(220, 210, 200), font=font_card_body)
-    draw.text((80, 510), "• Gaia-X Sovereign Cloud Infrastructure: 24/7 high-availability MLOps / AIOps pipelines (ESTEN - WP5)", fill=(245, 197, 115), font=font_card_body)
+    draw.text((80, 450), "• Core ISA-95 Ontology (Layer 1): Standardized industrial hierarchy & data models (INDElab / UvA - WP2)", fill=(220, 210, 200), font=font_card_body)
+    draw.text((80, 480), "• Sector Oracles (Layer 2): Regulatory knowledge built by the teams (HACCP, REACH, CLP)", fill=(220, 210, 200), font=font_card_body)
+    draw.text((80, 510), "• Gaia-X Sovereign Cloud Infrastructure: 24/7 high-availability MLOps / AIOps pipelines (ESTEN - WP3)", fill=(245, 197, 115), font=font_card_body)
 
     # Sovereignty Boundary
     draw.line([(30, 590), (994, 590)], fill=(225, 29, 72, 255), width=3)
     draw.rounded_rectangle((180, 572, 844, 608), radius=6, fill=(20, 16, 12, 255), outline=(225, 29, 72, 255), width=1)
-    draw.text((512, 590), "ABSOLUTE DATA SOVEREIGNTY BOUNDARY — PLANT TELEMETRY & RAW LOGS NEVER LEAVE FACTORY", fill=(255, 255, 255), font=font_card_body, anchor="mm")
+    draw.text((512, 590), "DATA SOVEREIGNTY BOUNDARY — RAW DATA STAYS IN THE PLANT DURING PILOT VALIDATION", fill=(255, 255, 255), font=font_card_body, anchor="mm")
 
     # Arrow Down
     draw.line([(250, 608), (250, 640)], fill=(225, 29, 72, 255), width=2)
     draw.polygon([(245, 635), (255, 635), (250, 645)], fill=(225, 29, 72, 255))
-    draw.text((260, 625), "Unidirectional Downstream Model / API Push", fill=(230, 180, 180), font=get_font(11))
+    draw.text((260, 625), "Plant-initiated fetch of signed packages", fill=(230, 180, 180), font=get_font(11))
 
     # Layer C
     draw.rounded_rectangle((50, 650, 974, 980), radius=12, fill=(28, 22, 16, 255), outline=(215, 145, 60), width=2)
@@ -86,7 +86,7 @@ def draw_tech_blueprint():
     draw.text((85, 905), "• Local SOPs, machinery manuals, operator logs & sensor data stored strictly inside factory walls", fill=(220, 210, 200), font=font_card_body)
     draw.text((85, 930), "• 4-Agent Architecture: Router Agent | Dual Graph-RAG | EU AI Act Explainability | Judge Evaluator", fill=(245, 197, 115), font=font_card_body)
 
-    img.save("aura_three_layer_architecture_dark.png")
+    img.save("aura_three_layer_architecture_dark_v2.png")
     print("Rendered aura_three_layer_architecture_dark.png")
 
 def create_dual_projections():
@@ -94,8 +94,8 @@ def create_dual_projections():
     draw_tech_blueprint()
     
     # Open Tech Dark Blueprint & Master Arch
-    img_tech = Image.open("aura_three_layer_architecture_dark.png")
-    img_exec = Image.open("aura_master_architecture.png")
+    img_tech = Image.open("aura_three_layer_architecture_dark_v2.png")
+    img_exec = Image.open("aura_master_architecture_v2.png")
 
     # Combine into Dual Projection (2048 x 1080)
     w, h = 2048, 1080
@@ -120,7 +120,7 @@ def create_dual_projections():
     draw_dual.rounded_rectangle((20, 90, 1010, 1055), radius=10, fill=None, outline=(215, 145, 60), width=1)
     draw_dual.rounded_rectangle((1038, 90, 2028, 1055), radius=10, fill=None, outline=(215, 145, 60), width=1)
 
-    dual_arch.save("aura_three_layer_dual_projection.png")
+    dual_arch.save("aura_three_layer_dual_projection_v2.png")
     print("Rendered aura_three_layer_dual_projection.png")
 
 def patch_edge_engine_projections():
@@ -238,4 +238,3 @@ def patch_edge_engine_projections():
     print("Rendered aura_edge_engine_dual_projection.png")
 
 create_dual_projections()
-patch_edge_engine_projections()

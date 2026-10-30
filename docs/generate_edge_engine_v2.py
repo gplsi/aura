@@ -1,8 +1,8 @@
 from PIL import Image, ImageDraw, ImageFont
 import sys, os
 OUT = sys.argv[1]
-R = "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf"
-B = "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf"
+R = "/System/Library/Fonts/Supplemental/Arial.ttf"
+B = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 def F(s, b=False): return ImageFont.truetype(B if b else R, s)
 
 BG=(18,15,12); CARD=(28,22,16); GOLD=(245,197,115); TXT=(220,210,200); WHITE=(248,250,252)
@@ -19,7 +19,7 @@ def cloud_band(d, x1, y1, x2, y2, scale=1.0):
     d.text((x1+16+int(75*scale), y1+29), "LAYERS A + B", fill=(8,20,30), font=F(int(13*scale),True), anchor="mm")
     d.text((x1+30+int(150*scale), y1+29), "FEDERATED SOVEREIGN CLOUD  ·  Gaia-X 24/7 + EuroHPC  (outside the plant)", fill=WHITE, font=F(int(16*scale),True), anchor="lm")
     items = [("Core Ontology ISA-95", "Layer 1 · shared data model", "INDElab / UvA"),
-             ("Sector Oracles", "Layer 2 · HACCP/EFSA · REACH/CLP", "maintained by D2 SMEs"),
+             ("Sector Oracles", "Layer 2 · HACCP/EFSA · REACH/CLP", "built by the competing teams"),
              ("Generic AI models", "LLM/SLM trained on MareNostrum 5", "BSC · EuroHPC"),
              ("MLOps pipeline", "signed, versioned knowledge packages", "ESTEN")]
     n=len(items); gap=14; iw=(x2-x1-32-gap*(n-1))/n
@@ -45,7 +45,7 @@ def boundary(d, x1, x2, y, xs_down, label_x, top=None):
 
 def steps(d, x0, y0, total_w, h, fed=True):
     data=[("STEP 1","1. PREDICT","Generic predictive models",["Real-time sensor log analysis","Anomaly detection on local GPU","Failure anticipation (>2 h)","Dough / enamel quality alerts"]),
-          ("STEP 2","2. GUIDE","Ontology + sector oracles",["Dual Graph-RAG: oracles + private graph","Explainable step-by-step SOPs","Root-cause evidence","EU AI Act compliant rationale"]),
+          ("STEP 2","2. GUIDE","Ontology + sector oracles",["Dual Graph-RAG: oracles + private graph","Explainable step-by-step SOPs","Root-cause evidence","AI Act-aligned rationale"]),
           ("STEP 3","3. ACT","Updated SOPs & compliance rules",["Human-at-the-Edge decision","Operator executes or overrides","Plant line adjustment","Outcome logged locally"]),
           ("STEP 4","4. LEARN","New model versions (pull)",["Tacit experience capture","Judge Agent validation","Private Graph update","Knowledge stays in the plant"])]
     gap=22; cw=(total_w-3*gap)/4

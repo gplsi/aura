@@ -48,29 +48,29 @@ def render_master_architecture():
 
     # Card 2: Layer 2
     draw.rounded_rectangle((310, 218, 520, 390), radius=10, fill=(184, 92, 55, 255), outline=(225, 125, 85), width=1)
-    draw.text((415, 295), "Layer 2:\nTrack B Domain\nOracles\n(HACCP/EFSA, REACH/CLP)", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
+    draw.text((415, 295), "Layer 2:\nSector\nOracles\n(HACCP/EFSA, REACH/CLP)", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
 
     # Card 3: EuroHPC BSC
     draw.rounded_rectangle((540, 218, 735, 390), radius=10, fill=(45, 32, 22, 255), outline=(180, 130, 80), width=1)
-    draw.text((637, 295), "EuroHPC BSC\nMareNostrum V\nLLM Training", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
+    draw.text((637, 295), "EuroHPC BSC\nMareNostrum 5\nLLM Training", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
 
     # Card 4: MLOps Pipeline
     draw.rounded_rectangle((780, 218, 955, 390), radius=10, fill=(175, 95, 65, 255), outline=(215, 135, 105), width=1)
     draw.text((867, 295), "MLOps\nPipeline", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
 
     # 2. MIDDLE BARRIER (SOVEREIGNTY BOUNDARY)
-    # Track A Oracles card left
+    # Pilot plants card left
     draw.rounded_rectangle((98, 440, 250, 505), radius=8, fill=(160, 85, 50, 255))
-    draw.text((174, 472), "Track A Oracles\nPlant Integrators\n(Vicky Foods & AKCOAT)", fill=(248, 250, 252), font=font_card_body, anchor="mm", align="center")
+    draw.text((174, 472), "Pilot Plants\n(Vicky Foods\n& AKCOAT)", fill=(248, 250, 252), font=font_card_body, anchor="mm", align="center")
 
     # Center Sovereignty Line
     draw.line([(75, 510), (975, 510)], fill=(225, 29, 72, 255), width=3)
     draw.rounded_rectangle((285, 492, 715, 528), radius=6, fill=(20, 16, 12, 255), outline=(225, 29, 72, 255), width=1)
-    draw.text((500, 510), "ABSOLUTE DATA SOVEREIGNTY BOUNDARY", fill=(255, 255, 255), font=font_section, anchor="mm")
+    draw.text((500, 510), "DATA SOVEREIGNTY BOUNDARY", fill=(255, 255, 255), font=font_section, anchor="mm")
 
     # Right warning
-    draw.text((865, 450), "Track B Oracles", fill=(230, 210, 190), font=font_card_body, anchor="mm")
-    draw.text((865, 545), "Raw plant data\nNEVER leaves factory", fill=(255, 120, 120), font=font_card_body, anchor="mm", align="center")
+    draw.text((865, 450), "Sector Oracles", fill=(230, 210, 190), font=font_card_body, anchor="mm")
+    draw.text((865, 545), "Raw plant data stays\nin the factory (pilots)", fill=(255, 120, 120), font=font_card_body, anchor="mm", align="center")
 
     # 3. BOTTOM LEVEL BOX (LOCAL LEVEL)
     draw.rounded_rectangle((75, 610, 975, 975), radius=12, fill=(28, 22, 16, 255), outline=(215, 145, 60), width=2)
@@ -119,7 +119,7 @@ def render_master_architecture():
     draw.rounded_rectangle((740, 880, 895, 925), radius=6, fill=(245, 197, 115, 255))
     draw.text((817, 902), "4. Knowledge\nGraph Learning", fill=(15, 12, 10), font=font_card_body, anchor="mm", align="center")
 
-    img.save("aura_master_architecture.png")
+    img.save("aura_master_architecture_v2.png")
     print("Rendered clean English aura_master_architecture.png")
 
 render_master_architecture()

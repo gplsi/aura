@@ -872,6 +872,15 @@
         .fs-stage p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
         .fs-arrow { align-self: center; font-size: 1.6rem; color: var(--text-tertiary); }
         .fs-note { margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); text-align: left; }
+        .sm-wrap { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); text-align: left; }
+        .sm-title { margin: 0 0 0.4rem; font-size: 1.15rem; color: var(--text-primary); }
+        .sm-lead { margin: 0 0 1.1rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+        .sm-sub { margin: 1.4rem 0 0.6rem; font-size: 0.95rem; color: var(--text-primary); }
+        .sm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem; }
+        .sm-card { padding: 0.85rem 0.95rem; border: 1px solid var(--border-subtle); border-radius: 10px; }
+        .sm-card h5 { margin: 0 0 0.3rem; font-size: 0.88rem; color: var(--text-primary); }
+        .sm-card p { margin: 0; font-size: 0.83rem; line-height: 1.5; color: var(--text-secondary); }
+        .sm-tag { display: block; margin-bottom: 0.3rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-tertiary); }
         @media (max-width: 820px) { .fs-stages { grid-template-columns: 1fr; } .fs-arrow { transform: rotate(90deg); justify-self: center; } }
 
         /* EXECUTION ROADMAP TIMELINE */
@@ -1348,16 +1357,16 @@
 <div class="container">
     <!-- HERO PROPOSAL HEADER -->
     <header class="proposal-hero">
-        <div class="hero-meta">Horizon Europe Research & Innovation Proposal</div>
+        <div class="hero-meta">Horizon Europe RIA · Apply AI: Challenge-Driven AI Innovation Booster · Sector: Advanced Manufacturing</div>
         <h1 class="hero-title">AURA — Master Technical Architecture & Partner Consortium</h1>
         <p class="hero-subtitle">
-            A B2B Sovereign Industrial AI Ecosystem based on Dual Architecture (Federated Cloud vs. On-Premise Factory Edge) uniting 11 key entities across 9 nations, including the Widening Member States Czechia, Slovakia and Lithuania. Participation of Türkiye and Ukraine is subject to eligibility verification (see panel below).
+            A B2B Sovereign Industrial AI Ecosystem based on Dual Architecture (Federated Cloud vs. On-Premise Factory Edge) uniting 11 key entities across 9 nations, including the Widening Member States Czechia, Slovakia and Lithuania. Türkiye and Ukraine are not in the topic's participation list (see panel below).
         </p>
 
         <div class="hero-stats">
             <div class="stat-item">
                 <span class="stat-value">9 Nations</span>
-                <span class="stat-label">3 Widening + 2 to verify</span>
+                <span class="stat-label">3 Widening + 2 not eligible as listed</span>
             </div>
             <div class="stat-item">
                 <span class="stat-value">11 Entities</span>
@@ -1378,19 +1387,19 @@
     <section id="eligibility" class="section-card el-panel">
         <div class="el-head">
             <span class="el-badge el-chk">⚠ Action required before submission</span>
-            <h2 class="section-title" style="margin-top:0.5rem;">Horizon Europe eligibility verification</h2>
-            <p class="section-desc">Topic <strong>HORIZON-CL4-2027-04-DIGITAL-EMERGING-04</strong> restricts participation to entities established in EU Member States, Iceland, Norway and the listed associated countries (Canada, Israel, Republic of Korea, New Zealand, Switzerland, United Kingdom), and excludes entities majority-owned from non-eligible countries. The same rules apply to the SMEs funded through the competition. Status checked against public summaries (IDEAL-IST, PCN France, Horizon Europe Moldova) on 29 Oct 2026, not yet against the official topic text; still open, to be confirmed with the National Contact Point / EC.</p>
+            <h2 class="section-title" style="margin-top:0.5rem;">Horizon Europe eligibility check</h2>
+            <p class="section-desc">Checked against the official topic text on the Funding &amp; Tenders Portal (30 Oct 2026). Topic <strong>HORIZON-CL4-2027-04-DIGITAL-EMERGING-04</strong> limits participation to legal entities established in EU Member States, Iceland, Norway, Canada, Israel, Republic of Korea, New Zealand, Switzerland, the United Kingdom and Japan (added 19 Oct 2026). Entities in those countries that are directly or indirectly controlled from a non-eligible country need guarantees positively assessed by their country of establishment; entities controlled from China cannot submit them. Each partner files an Ownership Control Declaration. FSTP recipients must be established in eligible countries and not controlled from non-eligible ones; SMEs and private research organisations must not be directly majority-owned (&gt;50%) by entities in non-eligible countries.</p>
         </div>
         <div class="tk-table-wrap" style="padding:0;">
             <table class="tk-table el-table">
                 <thead><tr><th>Partner</th><th>Country</th><th>Basis</th><th>Status</th></tr></thead>
-                <tbody><tr><td><strong>SINTEF</strong></td><td>Norway</td><td>Associated country listed in the topic</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>GRANT GARANT</strong></td><td>Czechia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>SYXIS VSI</strong></td><td>Lithuania</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>ESTEN s.r.o.</strong></td><td>Slovakia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Univ. Alicante</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>INDElab / UvA</strong></td><td>Netherlands</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>KIT Karlsruhe</strong></td><td>Germany</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>BSC / MareNostrum</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Vicky Foods</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>CleverStaff</strong></td><td>Ukraine</td><td>Associated to Horizon Europe but not in the topic's participation list</td><td><span class="el-badge el-chk">⚠ To verify</span></td></tr><tr><td><strong>AKCOAT</strong></td><td>Türkiye</td><td>Associated to Horizon Europe but not in the topic's participation list</td><td><span class="el-badge el-chk">⚠ To verify</span></td></tr></tbody>
+                <tbody><tr><td><strong>SINTEF</strong></td><td>Norway</td><td>Associated country listed in the topic</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>GRANT GARANT</strong></td><td>Czechia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>SYXIS VSI</strong></td><td>Lithuania</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>ESTEN s.r.o.</strong></td><td>Slovakia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Univ. Alicante</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>INDElab / UvA</strong></td><td>Netherlands</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>KIT Karlsruhe</strong></td><td>Germany</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>BSC / MareNostrum</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Vicky Foods</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>CleverStaff</strong></td><td>Ukraine</td><td>Associated to Horizon Europe, but not in the topic's eligible list</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr><tr><td><strong>AKCOAT</strong></td><td>Türkiye</td><td>Associated to Horizon Europe, but not in the topic's eligible list</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr></tbody>
             </table>
         </div>
         <div class="el-actions">
-            <div><strong>1 · Verify</strong> Send a formal query to the NCP / EC on Türkiye and Ukraine for this topic, and confirm the ownership condition for every SME partner.</div>
-            <div><strong>2 · If AKCOAT is not eligible</strong> Replace the coatings pilot with an eligible chemical / coatings manufacturer (preferably in a Widening Member State). The topic requires user-industry companies from the sector as core partners.</div>
-            <div><strong>3 · If CleverStaff is not eligible</strong> Reassign T2.7 (agentic AI) and T4.6 (team support) to an eligible partner and keep its budget in the consortium.</div>
+            <div><strong>1 · AKCOAT</strong> Confirmed as a partner, but Türkiye is not in the topic&#x27;s eligible list; to be confirmed with the European Commission. Use an AKCOAT entity established in an eligible country, if one exists, or replace the coatings pilot with an eligible manufacturer. User-industry companies must be core partners.</div>
+            <div><strong>2 · CleverStaff</strong> Confirmed as a partner, but Ukraine is not in the topic&#x27;s eligible list; to be confirmed with the European Commission. Use an entity established in an eligible country, if one exists, or reassign T2.7 and T4.6 to an eligible partner and keep the budget in the consortium.</div>
+            <div><strong>3 · All partners</strong> Complete the Ownership Control Declaration, and confirm any open point with the National Contact Point before submission.</div>
         </div>
     </section>
 
@@ -1413,7 +1422,7 @@
                     <span class="block-tag">BLOCK 01 · OPERATIONAL</span>
                     <h3 class="block-module-title">🌐 Operational Governance & B2B Commercialization</h3>
                     <p class="block-module-desc">
-                        Global Horizon Europe consortium management, legal direction, FSTP Open Call administration, independent evaluation, and post-project B2B monetization.
+                        Global Horizon Europe consortium management, legal direction, competition and open call administration, independent evaluation, and uptake of the winning solutions.
                     </p>
                 </div>
                 <ul class="block-partners-list">
@@ -1427,7 +1436,7 @@
                     </li>
                     <li class="block-partner-item">
                         <span>SYXIS VSI <span class="badge-status badge-pendiente" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Pending</span> <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— Evaluation &amp; Monitoring</span></span>
-                        <span class="wp-badge">WP4 Audit</span>
+                        <span class="wp-badge">WP4 Evaluation</span>
                     </li>
                 </ul>
             </div>
@@ -1455,7 +1464,7 @@
                         <span class="wp-badge">WP2 Tech Mentor</span>
                     </li>
                     <li class="block-partner-item">
-                        <span>CleverStaff <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Ukraine)</span> <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. To be confirmed with the NCP / EC before submission.">⚠ HE eligibility to verify</span> <span class="partner-keyword">— Agentic AI & Integration Mentor</span></span>
+                        <span>CleverStaff <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Ukraine)</span> <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span> <span class="partner-keyword">— Agentic AI & Integration Mentor</span></span>
                         <span class="wp-badge">WP2/WP3 Tech Mentor</span>
                     </li>
                 </ul>
@@ -1467,7 +1476,7 @@
                     <span class="block-tag">BLOCK 03 · INFRASTRUCTURE</span>
                     <h3 class="block-module-title">☁️ Sovereign Cloud & HPC Supercomputing</h3>
                     <p class="block-module-desc">
-                        24/7 Gaia-X sovereign cloud operation, continuous MLOps/AIOps pipelines, federated APIs, and EuroHPC MareNostrum V heavy AI model pre-training.
+                        Gaia-X-aligned federated testing cloud, continuous MLOps/AIOps pipelines, federated APIs, and EuroHPC / AI Factory access for large-model training, subject to approval.
                     </p>
                 </div>
                 <ul class="block-partners-list">
@@ -1497,7 +1506,7 @@
                         <span class="wp-badge">WP5 Leader</span>
                     </li>
                     <li class="block-partner-item">
-                        <span>AKCOAT <span class="badge-status badge-pendiente" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Pending</span> <span class="block-partner-role">(Türkiye)</span> <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. To be confirmed with the NCP / EC before submission.">⚠ HE eligibility to verify</span> <span class="partner-keyword">— Coatings Pilot</span></span>
+                        <span>AKCOAT <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Türkiye)</span> <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span> <span class="partner-keyword">— Coatings Pilot</span></span>
                         <span class="wp-badge">WP5 Pilot</span>
                     </li>
                 </ul>
@@ -1512,7 +1521,7 @@
                 <span class="section-num-tag">02 / Technical Topology</span>
                 <h2 class="section-title">Three-Layer Technical Architecture (Sovereignty & Scalability)</h2>
                 <p class="section-desc">
-                    Unified topology linking the Federated <strong>Top Level</strong> (comprising Layer A EuroHPC supercomputing & Layer B 24/7 Gaia-X sovereign cloud), the <strong>Middle Barrier</strong> for absolute data sovereignty, and the Local <strong>Bottom Level</strong> for on-premise industrial edge nodes (Layer C).
+                    Unified topology linking the Federated <strong>Top Level</strong> (comprising Layer A EuroHPC supercomputing & Layer B Gaia-X-aligned federated cloud), the <strong>Middle Barrier</strong> for absolute data sovereignty, and the Local <strong>Bottom Level</strong> for on-premise industrial edge nodes (Layer C).
                 </p>
             </div>
 
@@ -1524,21 +1533,21 @@
         </div>
 
         <div class="diagram-container">
-            <img id="img-architecture-main" src="aura_three_layer_dual_projection.png" alt="AURA Three-Layer Sovereign Architecture — Combined Dual Projection">
+            <img id="img-architecture-main" src="aura_three_layer_dual_projection_v2.png" alt="AURA Three-Layer Sovereign Architecture — Combined Dual Projection">
         </div>
 
         <div class="architecture-summary-grid">
             <div class="arch-summary-card federated">
                 <div class="arch-summary-title">01. Top Level: Federated Cloud & EuroHPC (Layers A & B)</div>
                 <div class="arch-summary-text">
-                    ISA-95 Core Ontology (Layer 1), Track B Sectoral Semantic Oracles (Layer 2: HACCP, REACH, CLP), BSC MareNostrum V supercomputing for massive industrial model training, and continuous MLOps pipelines in Gaia-X sovereign cloud (ESTEN).
+                    ISA-95 Core Ontology (Layer 1), Sector oracles (Layer 2: HACCP, REACH, CLP) specified by the consortium and built by the teams, EuroHPC / AI Factory compute for large-model training (MareNostrum 5 access to be requested through BSC, subject to approval), and continuous MLOps pipelines in the Gaia-X-aligned federated cloud (ESTEN).
                 </div>
             </div>
 
             <div class="arch-summary-card boundary">
                 <div class="arch-summary-title">02. Middle Barrier: Absolute Data Sovereignty</div>
                 <div class="arch-summary-text">
-                    Unbreachable security perimeter: Downstream unidirectional model/API distribution from platform to edge. <strong>Raw plant telemetry and local sensor logs NEVER leave the factory walls.</strong>
+                    Security perimeter: signed models and knowledge packages reach the edge through plant-initiated requests or a mirror repository. <strong>During pilot validation raw plant data stays inside the factory.</strong> During development, only cleaned and anonymised datasets are shared.
                 </div>
             </div>
 
@@ -1628,7 +1637,7 @@
                         <span class="phase-badge badge-p1">Phase 1</span>
                         <h3 class="phase-name">Preparation: Reference Framework, Competition Handbook & Stage 1 Open Call</h3>
                     </div>
-                    <span class="phase-timeframe">Months 01 – 11</span>
+                    <span class="phase-timeframe">Months 01 – 12</span>
                 </div>
                 <p class="section-desc">
                     <strong>Focus:</strong> Reference ontology, interface contract and benchmarks; competition handbook with challenges, KPIs and evaluation criteria; cleaned and anonymised pilot datasets in the sandbox; Stage 1 open call (M07) and selection of the top 10 teams.
@@ -1638,7 +1647,7 @@
                         <strong style="color: var(--text-primary);">MS1 (M05):</strong> Reference framework v1 &nbsp;&bull;&nbsp; 
                         <strong style="color: var(--text-primary);">MS2 (M06):</strong> Handbook, sandbox &amp; anonymised datasets ready &nbsp;&bull;&nbsp; 
                         <strong style="color: var(--text-primary);">MS3 (M07):</strong> Stage 1 open call launched &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS4 (M11):</strong> Top 10 teams contracted
+                        <strong style="color: var(--text-primary);">MS4 (M12):</strong> Top 10 teams contracted
                     </p>
                 </div>
                 <div class="phase-partners-grid">
@@ -1685,15 +1694,15 @@
                         <span class="phase-badge badge-p2">Phase 2</span>
                         <h3 class="phase-name">Stage 2: Prototyping by 10 SME-led Teams (€300k each)</h3>
                     </div>
-                    <span class="phase-timeframe">Months 12 – 21</span>
+                    <span class="phase-timeframe">Months 13 – 23</span>
                 </div>
                 <p class="section-desc">
-                    <strong>Focus:</strong> The 10 teams build their solutions in the Gaia-X sandbox with the anonymised pilot datasets (TRL 3 → 4), supported technically and commercially by the consortium and monitored by SYXIS. Benchmark and demo day select 4 finalists.
+                    <strong>Focus:</strong> The 10 teams build their solutions in the Gaia-X sandbox with the anonymised pilot datasets (TRL 3 → 4), supported technically and commercially by the consortium and monitored by SYXIS. Benchmark and demo day select 4 finalists, whose Stage 3 agreements are signed in M23.
                 </p>
                 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b2-primary);">
                     <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
-                        <strong style="color: var(--text-primary);">Mid-term review (M16)</strong> &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS5 (M21):</strong> 4 finalists selected
+                        <strong style="color: var(--text-primary);">Mid-term review (M17)</strong> &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS5 (M22):</strong> 4 finalists selected
                     </p>
                 </div>
                 <div class="phase-partners-grid">
@@ -1740,16 +1749,16 @@
                         <span class="phase-badge badge-p3">Phase 3</span>
                         <h3 class="phase-name">Stage 3: TRL 5 Validation in the Pilot Plants (€2.25M per finalist) & Uptake</h3>
                     </div>
-                    <span class="phase-timeframe">Months 22 – 36</span>
+                    <span class="phase-timeframe">Months 24 – 36</span>
                 </div>
                 <p class="section-desc">
-                    <strong>Focus:</strong> The 4 finalists install their edge nodes and validate the full loop on the production lines with zero outbound data. Grand finale at M34, followed by uptake contracts with user industries and the AURA marketplace.
+                    <strong>Focus:</strong> The 4 finalists install their edge nodes and validate the full loop on the production lines with no plant data leaving the site. Grand finale at M34, followed by uptake measures with the user industries.
                 </p>
                 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b3-primary);">
                     <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
                         <strong style="color: var(--text-primary);">MS6 (M33):</strong> TRL 5 validated &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS7 (M34):</strong> Grand finale &amp; FSTP closure &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS8 (M35):</strong> Uptake contracts &amp; marketplace live &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS7 (M34):</strong> Grand finale &amp; best solution identified &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS8 (M35):</strong> Partnership or contract offer to the best team &amp; uptake plans &nbsp;&bull;&nbsp; 
                         <strong style="color: var(--text-primary);">MS9 (M36):</strong> Exploitation &amp; sustainability plan
                     </p>
                 </div>
@@ -1825,16 +1834,75 @@
             <!-- FSTP Breakdown Title -->
             <div style="margin-top: 4rem; margin-bottom: 2rem; text-align: left; padding-left: 1rem; border-left: 4px solid #eab308;">
                 <h3 style="margin: 0; color: #ca8a04; font-size: 1.4rem; font-weight: 600;">The €12.0M FSTP as a 3-stage competition</h3>
-                <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">FSTP only as grants, to single SMEs or SME-led teams (SME + research organisations / public bodies) from eligible countries. Maximum €2.55M per third party.</p>
+                <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">FSTP only as grants, to single SMEs or SME-led teams (SME lead + SMEs, research organisations, public bodies or secondary / higher education establishments) from eligible countries. Maximum €2.55M per third party.</p>
             </div>
             <div class="fs-stages">
-                <div class="fs-stage" style="--sc:#ca8a04"><div class="fs-n">Stage 1 · M07–M11</div><h4>Open call &amp; selection</h4><div class="fs-amt">Selection</div><p>Teams answer one of the two pilot challenges. An external jury run by the consortium selects the <strong>top 10</strong>.</p></div>
+                <div class="fs-stage" style="--sc:#ca8a04"><div class="fs-n">Stage 1 · M07–M12</div><h4>Open call &amp; selection</h4><div class="fs-amt">Selection</div><p>Teams answer one of the two pilot challenges. The evaluation led by SYXIS VSI selects the <strong>top 10</strong>.</p></div>
                 <div class="fs-arrow">→</div>
-                <div class="fs-stage" style="--sc:#0d9488"><div class="fs-n">Stage 2 · M12–M21</div><h4>Prototyping · 10 teams</h4><div class="fs-amt">€3.0M</div><p><strong>10 × €300,000</strong>. Prototypes (TRL 3–4) in the sandbox using cleaned, anonymised pilot data. Benchmark + demo day select the <strong>top 4</strong>.</p></div>
+                <div class="fs-stage" style="--sc:#0d9488"><div class="fs-n">Stage 2 · M13–M22</div><h4>Prototyping · 10 teams</h4><div class="fs-amt">€3.0M</div><p><strong>10 × €300,000</strong>. Prototypes (TRL 3–4) in the sandbox using cleaned, anonymised pilot data. Benchmark + demo day select the <strong>top 4</strong>.</p></div>
                 <div class="fs-arrow">→</div>
-                <div class="fs-stage" style="--sc:#7c3aed"><div class="fs-n">Stage 3 · M22–M34</div><h4>Grand finale · 4 teams</h4><div class="fs-amt">€9.0M</div><p><strong>4 × €2,250,000</strong>. Integration and TRL 5 validation in the Vicky Foods and AKCOAT plants with zero outbound data, then uptake contracts.</p></div>
+                <div class="fs-stage" style="--sc:#7c3aed"><div class="fs-n">Stage 3 · M24–M34</div><h4>Grand finale · 4 teams</h4><div class="fs-amt">€9.0M</div><p><strong>4 × €2,250,000</strong>. Integration and TRL 5 validation in the Vicky Foods and AKCOAT plants with no plant data leaving the site, then uptake measures.</p></div>
             </div>
             <p class="fs-note">Training, mentoring and evaluation are <strong>not</strong> paid as FSTP: they are carried out by the consortium within its €2.0M (WP4), as the topic requires.</p>
+
+            <div class="sm-wrap" id="solution-model">
+                <h3 class="sm-title">Solution model: what each team builds</h3>
+                <p class="sm-lead"><strong>Each team delivers one complete, modular solution for one industrial challenge, built on the common AURA framework.</strong> The topic sets the competition; it does not prescribe the technical solution. This model is AURA&#x27;s proposal, and teams remain free to choose their technologies.</p>
+
+                <h4 class="sm-sub">Three different concepts</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><span class="sm-tag">Competition</span><h5>3 stages</h5><p>Open call → 10 funded teams → 4 finalists and grand finale. Defined by the topic.</p></div>
+                    <div class="sm-card"><span class="sm-tag">Industrial problem</span><h5>2 challenges</h5><p>A.1 Bakery (Vicky Foods) and A.2 Coatings (AKCOAT). Defined by the user industries.</p></div>
+                    <div class="sm-card"><span class="sm-tag">What the solution does</span><h5>4-step loop</h5><p>Predict → Guide → Act → Learn. Every solution must cover all four steps.</p></div>
+                </div>
+
+                <h4 class="sm-sub">Rules for the teams</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><h5>One challenge per team</h5><p>Each team chooses A.1 or A.2 and develops its solution for that challenge.</p></div>
+                    <div class="sm-card"><h5>One complete solution</h5><p>Each team delivers all four steps of the loop as one working solution.</p></div>
+                    <div class="sm-card"><h5>Modular inside the team</h5><p>A single SME can build every module, or an SME-led team can share them.</p></div>
+                    <div class="sm-card"><h5>One responsible lead</h5><p>The lead SME integrates the modules and answers for the complete solution.</p></div>
+                    <div class="sm-card"><h5>Common framework</h5><p>All teams use the same interface contract, reference ontology and benchmarks, so results can be compared.</p></div>
+                    <div class="sm-card"><h5>Built to be reused</h5><p>Plant-specific elements are configured separately, so the solution can move to other plants after the project.</p></div>
+                </div>
+                <p class="fs-note"><strong>Not funded:</strong> separate modules from different teams for the consortium to integrate later. Teams compete with complete solutions, as the topic identifies the best-performing solution.</p>
+
+                <h4 class="sm-sub">What each team delivers per stage</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><span class="sm-tag">Stage 1 · Proposal</span><p>Chosen challenge, architecture covering the four steps, and allocation of modules within the team.</p></div>
+                    <div class="sm-card"><span class="sm-tag">Stage 2 · Prototype</span><p>Complete prototype in the sandbox, using anonymised data, tested against the benchmarks and the interface contract.</p></div>
+                    <div class="sm-card"><span class="sm-tag">Stage 3 · Plant validation</span><p>Integrated solution validated on the production line of its challenge, with operators, up to TRL 5.</p></div>
+                </div>
+
+                <h4 class="sm-sub">Example: how Challenge A.1 follows the 4-step loop</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><span class="sm-tag">1 · Predict</span><p>Anticipates a quality anomaly or a failure on the bakery line.</p></div>
+                    <div class="sm-card"><span class="sm-tag">2 · Guide</span><p>Recommends what to do and cites the official procedures.</p></div>
+                    <div class="sm-card"><span class="sm-tag">3 · Act</span><p>The operator applies, changes or rejects the recommendation.</p></div>
+                    <div class="sm-card"><span class="sm-tag">4 · Learn</span><p>The validated experience is added to the plant&#x27;s private knowledge graph.</p></div>
+                </div>
+            </div>
+            <div class="tk-table-wrap" style="margin-top:1.25rem;">
+            <h3 style="margin:0 0 0.4rem;font-size:1.05rem;">Stage targets &amp; KPIs (proposed; baselines fixed in T5.1)</h3>
+            <table class="tk-table">
+                <thead><tr><th>Challenge</th><th>Quantitative KPIs</th><th>Stage 2 (sandbox)</th><th>Stage 3 (plant)</th></tr></thead>
+                <tbody><tr><th>A.1 Bakery (Vicky Foods)</th><td>Anomaly lead time ≥ 2 h · precision &gt; 85% · 100% of recommendations traceable to source · scrap −15%</td><td>Lead time, precision and traceability on benchmarks</td><td>All KPIs measured on the line</td></tr><tr><th>A.2 Coatings (AKCOAT, not eligible as listed; to be confirmed with the EC)</th><td>Real-time rheology deviation detection · surface-defect rejects −20% · oven energy −12%</td><td>Detection and traceability on benchmarks</td><td>All KPIs measured on the line</td></tr><tr><th>Both (qualitative &amp; HITL)</th><td>Operator acceptance · time-to-resolution · override rate</td><td>Interface-contract conformance and AI Act requirements</td><td>Measured under the T2.6 protocol</td></tr></tbody>
+            </table>
+            <h3 style="margin:1.1rem 0 0.4rem;font-size:1.05rem;">Evaluation criteria per stage (proposed)</h3>
+            <table class="tk-table">
+                <thead><tr><th>Stage</th><th>Criteria and weights</th></tr></thead>
+                <tbody><tr><th>Stage 1 → top 10</th><td>Technical excellence and fit to the challenge 35% · coverage of the 4 steps and interface contract 25% · team capacity 20% · impact and exploitation 20%</td></tr><tr><th>Stage 2 → top 4</th><td>Technical KPIs in the sandbox 40% · interface contract and AI Act 25% · monitoring report 20% · plant deployment plan 15%</td></tr><tr><th>Stage 3 → best solution</th><td>Plant KPIs 40% · operator acceptance (HITL) 20% · explainability and compliance 20% · exploitation plan, reusability and industry agreements 20%</td></tr></tbody>
+            </table>
+            <p class="fs-note">Selection uses a single ranking per stage. In the grand finale each team is scored on its attainment of its own challenge targets, relative to the T5.1 baselines, so solutions from both challenges can be compared; the highest overall score is the best-performing solution.</p>
+            <h4 style="margin:1.2rem 0 0.5rem 0;">FSTP payment schedule (proposed)</h4>
+            <div class="tk-table-wrap" style="padding:0;">
+            <table class="tk-table">
+                <thead><tr><th>Stage</th><th>Instalment</th><th>Trigger</th><th>Month</th><th>Share</th><th>Per team</th><th>Total</th></tr></thead>
+                <tbody><tr><th>Stage 2</th><td>Pre-financing</td><td>FSTP agreement signed</td><td>M12</td><td>40%</td><td>€120,000</td><td>€1.2M</td></tr><tr><th>Stage 2</th><td>Final payment</td><td>Deliverables accepted after the Stage 2 evaluation</td><td>M22</td><td>60%</td><td>€180,000</td><td>€1.8M</td></tr><tr><th>Stage 3</th><td>Pre-financing</td><td>FSTP agreement signed</td><td>M23</td><td>30%</td><td>€675,000</td><td>€2.7M</td></tr><tr><th>Stage 3</th><td>Interim payment</td><td>Mid-term review passed</td><td>M29</td><td>40%</td><td>€900,000</td><td>€3.6M</td></tr><tr><th>Stage 3</th><td>Final payment</td><td>Final deliverables accepted after the grand finale</td><td>M34–M35</td><td>30%</td><td>€675,000</td><td>€2.7M</td></tr><tr><th>Total</th><td colspan="5"></td><td>€12.0M</td></tr></tbody>
+            </table>
+            </div>
+            <p class="fs-note">SINTEF, as coordinator, holds the €12.0M FSTP budget in addition to its share of the €2.0M core budget, signs the FSTP agreements and pays the teams (T1.2, T4.5). Payments depend on accepted deliverables and SYXIS VSI's monitoring reports, not on the final ranking. Instalments may be reduced or withheld if the agreed targets are not met.</p>
+            </div>
         </div>
     </section>
 
@@ -1886,7 +1954,7 @@
                                     <span class="tk-chips"><span class="tk-chip lead" title="SINTEF · 620 h">SINTEF <b>4.3</b></span><span class="tk-chip" title="GRANT GARANT · 150 h">GRANT GARANT <b>1.0</b></span><span class="tk-chip" title="SYXIS VSI · 150 h">SYXIS <b>1.0</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Sub-grant agreements for Stage 2 (€300k per team) and Stage 3 (€2.25M per team; max €2.55M per third party), FSTP only as grants. Eligibility rules for applicants: single SMEs or SME-led teams (SME + research organisations / public bodies), established in eligible countries and not majority-owned from non-eligible countries. Payment schedule linked to stage results and conflict-of-interest policy.</div>
+                            <div class="tk-desc">Sub-grant agreements for Stage 2 (€300k per team) and Stage 3 (€2.25M per team; max €2.55M per third party), FSTP only as grants. Eligibility rules for applicants: single SMEs or SME-led teams (SME lead + SMEs, research organisations, public bodies or secondary / higher education establishments), established in eligible countries and not majority-owned from non-eligible countries. Payment schedule linked to stage results and conflict-of-interest policy.</div>
                         </details>
                         <details class="tk">
                             <summary>
@@ -1923,19 +1991,19 @@
                         <span class="wp-leader"><strong>Leader:</strong> Univ. Alicante</span>
                     </div>
                     <div class="wp-title">Scientific Reference Framework &amp; Benchmarks</div>
-                    <div class="wp-desc">Research core of the RIA (TRL 2 → 5): methodology of the 4-phase loop, reference ontology, Dual Graph-RAG reference architecture, open benchmarks and trustworthy-AI protocol. These are the measurable scientific results of the consortium and the yardstick used to evaluate the competing teams.</div>
+                    <div class="wp-desc">Research core of the RIA (TRL 2 → 5): methodology of the 4-step loop, reference ontology, Dual Graph-RAG reference architecture, open benchmarks and trustworthy-AI protocol. These are the measurable scientific results of the consortium and the yardstick used to evaluate the competing teams.</div>
                     <div class="tk-wp-sum">7 tasks · <strong>50.4 PM</strong></div>
                     <div class="tk-list">
                         <details class="tk">
                             <summary>
                                 <span class="wp-task-id">T2.1</span>
                                 <span class="tk-main">
-                                    <span class="tk-title">4-phase loop methodology &amp; measurable research objectives</span>
+                                    <span class="tk-title">4-step loop methodology &amp; measurable research objectives</span>
                                     <span class="tk-meta">Lead: <strong>Univ. Alicante</strong> · M01–M24 · <strong>7.7 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="Univ. Alicante · 850 h">UA <b>5.9</b></span><span class="tk-chip" title="INDElab / UvA · 80 h">INDElab <b>0.6</b></span><span class="tk-chip" title="CleverStaff · 80 h">CleverStaff <b>0.6</b></span><span class="tk-chip" title="KIT Karlsruhe · 60 h">KIT <b>0.4</b></span><span class="tk-chip" title="Vicky Foods · 20 h">Vicky Foods <b>0.1</b></span><span class="tk-chip" title="AKCOAT · 20 h">AKCOAT <b>0.1</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Scientific methodology of the Predict · Guide · Act · Learn loop with quantified objectives beyond the state of the art and a TRL map per component (TRL 2 at start, TRL 4 at end of Stage 2, TRL 5 at end of Stage 3). Defines the KPIs every team must report.</div>
+                            <div class="tk-desc">Scientific methodology of the Predict · Guide · Act · Learn loop with quantified objectives beyond the state of the art, reusing public results from relevant funded actions where possible, and a TRL map per component (TRL 2 at start, TRL 4 at end of Stage 2, TRL 5 at end of Stage 3). Defines the KPIs every team must report.</div>
                         </details>
                         <details class="tk">
                             <summary>
@@ -2050,7 +2118,7 @@
                                     <span class="tk-chips"><span class="tk-chip lead" title="ESTEN s.r.o. · 820 h">ESTEN <b>5.7</b></span><span class="tk-chip" title="CleverStaff · 200 h">CleverStaff <b>1.4</b></span><span class="tk-chip" title="Univ. Alicante · 80 h">UA <b>0.6</b></span><span class="tk-chip" title="Vicky Foods · 40 h">Vicky Foods <b>0.3</b></span><span class="tk-chip" title="AKCOAT · 40 h">AKCOAT <b>0.3</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Pipeline that versions, signs and publishes the finalists&#x27; models and knowledge packages so that the pilot edge nodes pull them without outbound connections during TRL 5 validation.</div>
+                            <div class="tk-desc">Pipeline that versions, signs and publishes the finalists&#x27; models and knowledge packages so that the pilot edge nodes fetch them through plant-initiated requests or a mirror repository during TRL 5 validation. No inbound connection is opened and no plant data is sent out.</div>
                         </details>
                         <details class="tk">
                             <summary>
@@ -2061,7 +2129,7 @@
                                     <span class="tk-chips"><span class="tk-chip lead" title="BSC / MareNostrum · 642 h">BSC <b>4.5</b></span><span class="tk-chip" title="Univ. Alicante · 120 h">UA <b>0.8</b></span><span class="tk-chip" title="ESTEN s.r.o. · 100 h">ESTEN <b>0.7</b></span><span class="tk-chip" title="KIT Karlsruhe · 40 h">KIT <b>0.3</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Access applications for the consortium and the teams to EuroHPC / AI Factory resources and data labs, scheduling of large-model training runs and transfer of the resulting generic models to the sandbox.</div>
+                            <div class="tk-desc">Access applications, subject to EuroHPC approval, for the consortium and the teams to EuroHPC / AI Factory resources and data labs, scheduling of large-model training runs and transfer of the resulting generic models to the sandbox.</div>
                         </details>
                         <details class="tk">
                             <summary>
@@ -2098,8 +2166,8 @@
                         <span class="wp-leader"><strong>Leader:</strong> GRANT GARANT</span>
                     </div>
                     <div class="wp-title">Challenge-Driven Competition: Open Call, Evaluation &amp; Team Support</div>
-                    <div class="wp-desc">Management of the €12M multi-stage competition required by the topic: Stage 1 open call → 10 teams (€300k each) → 4 finalists (€2.25M each). Competition specification, independent evaluation by the consortium with an external jury, monitoring and technical &amp; business support to the teams.</div>
-                    <div class="tk-wp-sum">6 tasks · <strong>64.6 PM</strong></div>
+                    <div class="wp-desc">Management of the €12M multi-stage competition required by the topic: Stage 1 open call → 10 teams (€300k each) → 4 finalists (€2.25M each). Competition specification, independent evaluation led by SYXIS VSI, monitoring and technical &amp; business support to the teams.</div>
+                    <div class="tk-wp-sum">6 tasks · <strong>62.6 PM</strong></div>
                     <div class="tk-list">
                         <details class="tk">
                             <summary>
@@ -2117,44 +2185,44 @@
                                 <span class="wp-task-id">T4.2</span>
                                 <span class="tk-main">
                                     <span class="tk-title">Stage 1 open call: launch, outreach &amp; applicant support</span>
-                                    <span class="tk-meta">Lead: <strong>GRANT GARANT</strong> · M05–M11 · <strong>8.9 PM</strong></span>
-                                    <span class="tk-chips"><span class="tk-chip lead" title="GRANT GARANT · 950 h">GRANT GARANT <b>6.6</b></span><span class="tk-chip" title="ESTEN s.r.o. · 80 h">ESTEN <b>0.6</b></span><span class="tk-chip" title="CleverStaff · 80 h">CleverStaff <b>0.6</b></span><span class="tk-chip" title="SINTEF · 60 h">SINTEF <b>0.4</b></span><span class="tk-chip" title="SYXIS VSI · 60 h">SYXIS <b>0.4</b></span><span class="tk-chip" title="AKCOAT · 40 h">AKCOAT <b>0.3</b></span></span>
+                                    <span class="tk-meta">Lead: <strong>GRANT GARANT</strong> · M05–M11 · <strong>8.8 PM</strong></span>
+                                    <span class="tk-chips"><span class="tk-chip lead" title="GRANT GARANT · 950 h">GRANT GARANT <b>6.6</b></span><span class="tk-chip" title="ESTEN s.r.o. · 80 h">ESTEN <b>0.6</b></span><span class="tk-chip" title="CleverStaff · 80 h">CleverStaff <b>0.6</b></span><span class="tk-chip" title="SYXIS VSI · 60 h">SYXIS <b>0.4</b></span><span class="tk-chip" title="SINTEF · 50 h">SINTEF <b>0.3</b></span><span class="tk-chip" title="AKCOAT · 40 h">AKCOAT <b>0.3</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Call launch at M07, info days, matchmaking to help SMEs form SME-led teams, and eligibility screening. Outreach focused on eligible countries, with special attention to Widening Member States.</div>
+                            <div class="tk-desc">Call launch at M07, info days, matchmaking to help SMEs form SME-led teams, receipt of applications and eligibility screening. Hands the list of eligible proposals to SYXIS VSI for evaluation and takes no part in scoring. Outreach focused on eligible countries, with special attention to Widening Member States.</div>
                         </details>
                         <details class="tk">
                             <summary>
                                 <span class="wp-task-id">T4.3</span>
                                 <span class="tk-main">
-                                    <span class="tk-title">Evaluation methodology, external jury &amp; stage-gate selections</span>
+                                    <span class="tk-title">Evaluation methodology &amp; stage-gate selections</span>
                                     <span class="tk-meta">Lead: <strong>SYXIS VSI</strong> · M03–M34 · <strong>12.4 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="SYXIS VSI · 1,350 h">SYXIS <b>9.4</b></span><span class="tk-chip" title="GRANT GARANT · 200 h">GRANT GARANT <b>1.4</b></span><span class="tk-chip" title="SINTEF · 100 h">SINTEF <b>0.7</b></span><span class="tk-chip" title="Univ. Alicante · 80 h">UA <b>0.6</b></span><span class="tk-chip" title="KIT Karlsruhe · 40 h">KIT <b>0.3</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Implemented by the consortium as required by the topic. Recruits an external expert jury and runs the three selections: Stage 1 → top 10 (M10), Stage 2 → top 4 finalists (M21, benchmark + demo day) and the grand finale (M34). Partners provide technical criteria but do not score.</div>
+                            <div class="tk-desc">Implemented by the consortium as required by the topic. Starting from the eligible proposals received from GRANT GARANT, SYXIS VSI defines the evaluation methodology, checks conflicts of interest and carries out the three selections: Stage 1 → top 10 (M11), Stage 2 → top 4 finalists (M22, benchmark + demo day) and the grand finale (M34), which identifies the best-performing solution. Where needed, SYXIS VSI may subcontract independent evaluators from its own budget; applicants cannot act as evaluators. Other partners provide technical criteria but do not score.</div>
                         </details>
                         <details class="tk">
                             <summary>
                                 <span class="wp-task-id">T4.4</span>
                                 <span class="tk-main">
-                                    <span class="tk-title">Progress monitoring &amp; technical verification of the teams</span>
-                                    <span class="tk-meta">Lead: <strong>SYXIS VSI</strong> · M12–M34 · <strong>11.9 PM</strong></span>
+                                    <span class="tk-title">Progress monitoring &amp; evaluation reporting</span>
+                                    <span class="tk-meta">Lead: <strong>SYXIS VSI</strong> · M13–M34 · <strong>11.9 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="SYXIS VSI · 1,320 h">SYXIS <b>9.2</b></span><span class="tk-chip" title="GRANT GARANT · 150 h">GRANT GARANT <b>1.0</b></span><span class="tk-chip" title="SINTEF · 120 h">SINTEF <b>0.8</b></span><span class="tk-chip" title="ESTEN s.r.o. · 120 h">ESTEN <b>0.8</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Milestone reviews per team (entry, mid-term, gate), benchmark runs and interface-contract conformance checks. Applies reductions or termination of sub-grants when targets are not met.</div>
+                            <div class="tk-desc">Milestone and deliverable reviews per team (entry, mid-term, gate). Consolidates the benchmark and interface-contract conformance results provided by the technical partners into a monitoring report per team and, when targets are not met, recommends reducing or terminating the sub-grant. SYXIS VSI does not assess the technology itself: any specialist technical assessment is carried out by independent evaluators (T4.3).</div>
                         </details>
                         <details class="tk">
                             <summary>
                                 <span class="wp-task-id">T4.5</span>
                                 <span class="tk-main">
-                                    <span class="tk-title">FSTP payments, reporting &amp; financial closure (MS7)</span>
-                                    <span class="tk-meta">Lead: <strong>GRANT GARANT</strong> · M11–M35 · <strong>7.8 PM</strong></span>
-                                    <span class="tk-chips"><span class="tk-chip lead" title="GRANT GARANT · 700 h">GRANT GARANT <b>4.9</b></span><span class="tk-chip" title="SYXIS VSI · 250 h">SYXIS <b>1.7</b></span><span class="tk-chip" title="SINTEF · 170 h">SINTEF <b>1.2</b></span></span>
+                                    <span class="tk-title">FSTP payments, reporting &amp; financial closure</span>
+                                    <span class="tk-meta">Lead: <strong>SINTEF</strong> · M12–M35 · <strong>5.9 PM</strong></span>
+                                    <span class="tk-chips"><span class="tk-chip lead" title="SINTEF · 485 h">SINTEF <b>3.4</b></span><span class="tk-chip" title="SYXIS VSI · 240 h">SYXIS <b>1.7</b></span><span class="tk-chip" title="GRANT GARANT · 125 h">GRANT GARANT <b>0.9</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Payment of the 10 Stage-2 and 4 Stage-3 grants against results certified by SYXIS VSI's audit (T4.4), FSTP reporting to the EC and financial closure of all sub-grants.</div>
+                            <div class="tk-desc">Payment of the 10 Stage-2 and 4 Stage-3 grants against the monitoring reports issued by SYXIS VSI (T4.4), FSTP reporting to the EC and financial closure of all sub-grants.</div>
                         </details>
                         <details class="tk">
                             <summary>
@@ -2165,7 +2233,7 @@
                                     <span class="tk-chips"><span class="tk-chip lead" title="CleverStaff · 950 h">CleverStaff <b>6.6</b></span><span class="tk-chip" title="Univ. Alicante · 300 h">UA <b>2.1</b></span><span class="tk-chip" title="INDElab / UvA · 220 h">INDElab <b>1.5</b></span><span class="tk-chip" title="ESTEN s.r.o. · 200 h">ESTEN <b>1.4</b></span><span class="tk-chip" title="GRANT GARANT · 200 h">GRANT GARANT <b>1.4</b></span><span class="tk-chip" title="KIT Karlsruhe · 160 h">KIT <b>1.1</b></span><span class="tk-chip" title="BSC / MareNostrum · 120 h">BSC <b>0.8</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Support required by the topic at every stage: technical mentoring by each scientific partner in its field (RAG, ontologies, predictive AI, MLOps, HPC) and business coaching (go-to-market, pricing, IPR) coordinated by GRANT GARANT.</div>
+                            <div class="tk-desc">Support required by the topic at every stage: technical mentoring by each scientific partner in its field (RAG, ontologies, predictive AI, MLOps, HPC) and business coaching (go-to-market, pricing, IPR) delivered by GRANT GARANT. CleverStaff coordinates the task and the support plan of each team.</div>
                         </details>
                     </div>
                 </div>
@@ -2180,7 +2248,7 @@
                         <span class="wp-leader"><strong>Leader:</strong> Vicky Foods</span>
                     </div>
                     <div class="wp-title">Industrial Challenges, Data &amp; TRL 5 Pilots</div>
-                    <div class="wp-desc">The pilots define the challenges, provide cleaned and anonymised datasets during development, and host the 4 finalists for on-premise TRL 5 validation in continuous bakery (Vicky Foods) and chemical/thermal coatings (AKCOAT, subject to eligibility verification).</div>
+                    <div class="wp-desc">The pilots define the challenges, provide cleaned and anonymised datasets during development, and host the 4 finalists for on-premise TRL 5 validation in continuous bakery (Vicky Foods) and chemical/thermal coatings (AKCOAT, not eligible as listed; to be confirmed with the EC).</div>
                     <div class="tk-wp-sum">5 tasks · <strong>38.0 PM</strong></div>
                     <div class="tk-list">
                         <details class="tk">
@@ -2199,7 +2267,7 @@
                                 <span class="wp-task-id">T5.2</span>
                                 <span class="tk-main">
                                     <span class="tk-title">Cleaned &amp; anonymised datasets for development (Stages 1–2)</span>
-                                    <span class="tk-meta">Lead: <strong>Vicky Foods</strong> · M02–M20 · <strong>7.3 PM</strong></span>
+                                    <span class="tk-meta">Lead: <strong>Vicky Foods</strong> · M02–M21 · <strong>7.3 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="Vicky Foods · 420 h">Vicky Foods <b>2.9</b></span><span class="tk-chip" title="AKCOAT · 420 h">AKCOAT <b>2.9</b></span><span class="tk-chip" title="Univ. Alicante · 120 h">UA <b>0.8</b></span><span class="tk-chip" title="ESTEN s.r.o. · 80 h">ESTEN <b>0.6</b></span></span>
                                 </span>
                             </summary>
@@ -2210,7 +2278,7 @@
                                 <span class="wp-task-id">T5.3</span>
                                 <span class="tk-main">
                                     <span class="tk-title">Plant readiness &amp; edge nodes for the finalists</span>
-                                    <span class="tk-meta">Lead: <strong>Vicky Foods</strong> · M16–M24 · <strong>7.3 PM</strong></span>
+                                    <span class="tk-meta">Lead: <strong>Vicky Foods</strong> · M16–M23 · <strong>7.3 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="Vicky Foods · 400 h">Vicky Foods <b>2.8</b></span><span class="tk-chip" title="AKCOAT · 380 h">AKCOAT <b>2.7</b></span><span class="tk-chip" title="ESTEN s.r.o. · 150 h">ESTEN <b>1.0</b></span><span class="tk-chip" title="CleverStaff · 120 h">CleverStaff <b>0.8</b></span></span>
                                 </span>
                             </summary>
@@ -2220,8 +2288,8 @@
                             <summary>
                                 <span class="wp-task-id">T5.4</span>
                                 <span class="tk-main">
-                                    <span class="tk-title">On-premise integration with live data, zero outbound (Stage 3)</span>
-                                    <span class="tk-meta">Lead: <strong>Vicky Foods</strong> · M22–M33 · <strong>9.2 PM</strong></span>
+                                    <span class="tk-title">On-premise integration with live data, no data egress (Stage 3)</span>
+                                    <span class="tk-meta">Lead: <strong>Vicky Foods</strong> · M24–M33 · <strong>9.2 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="Vicky Foods · 432 h">Vicky Foods <b>3.0</b></span><span class="tk-chip" title="AKCOAT · 430 h">AKCOAT <b>3.0</b></span><span class="tk-chip" title="INDElab / UvA · 150 h">INDElab <b>1.0</b></span><span class="tk-chip" title="Univ. Alicante · 150 h">UA <b>1.0</b></span><span class="tk-chip" title="CleverStaff · 150 h">CleverStaff <b>1.0</b></span></span>
                                 </span>
                             </summary>
@@ -2263,7 +2331,7 @@
                                     <span class="tk-chips"><span class="tk-chip lead" title="GRANT GARANT · 1,271 h">GRANT GARANT <b>8.9</b></span><span class="tk-chip" title="SINTEF · 80 h">SINTEF <b>0.6</b></span><span class="tk-chip" title="Univ. Alicante · 50 h">UA <b>0.3</b></span><span class="tk-chip" title="SYXIS VSI · 40 h">SYXIS <b>0.3</b></span><span class="tk-chip" title="ESTEN s.r.o. · 40 h">ESTEN <b>0.3</b></span><span class="tk-chip" title="KIT Karlsruhe · 40 h">KIT <b>0.3</b></span><span class="tk-chip" title="BSC / MareNostrum · 40 h">BSC <b>0.3</b></span><span class="tk-chip" title="INDElab / UvA · 30 h">INDElab <b>0.2</b></span><span class="tk-chip" title="CleverStaff · 30 h">CleverStaff <b>0.2</b></span><span class="tk-chip" title="Vicky Foods · 30 h">Vicky Foods <b>0.2</b></span><span class="tk-chip" title="AKCOAT · 30 h">AKCOAT <b>0.2</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Communication plan, website, demo days and publications. All communicable results (benchmarks, ontology, guides) are shared through the AI-on-Demand platform.</div>
+                            <div class="tk-desc">Communication plan, website, demo days, publications and a sponsorship search to raise the visibility of the challenge. All communicable results (benchmarks, ontology, guides) are shared through the AI-on-Demand platform.</div>
                         </details>
                         <details class="tk">
                             <summary>
@@ -2285,18 +2353,18 @@
                                     <span class="tk-chips"><span class="tk-chip lead" title="GRANT GARANT · 600 h">GRANT GARANT <b>4.2</b></span><span class="tk-chip" title="Vicky Foods · 60 h">Vicky Foods <b>0.4</b></span><span class="tk-chip" title="AKCOAT · 60 h">AKCOAT <b>0.4</b></span><span class="tk-chip" title="SINTEF · 60 h">SINTEF <b>0.4</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Measures required by the topic so that the finalists&#x27; solutions are adopted: pilot follow-up contracts, introductions to further manufacturers through EDIHs and the AURA marketplace.</div>
+                            <div class="tk-desc">Measures required by the topic so that the finalists&#x27; solutions are adopted: a partnership or contract offer to the best-performing team, uptake plans for all finalists and introductions to further manufacturers through the EDIHs.</div>
                         </details>
                         <details class="tk">
                             <summary>
                                 <span class="wp-task-id">T6.4</span>
                                 <span class="tk-main">
                                     <span class="tk-title">Exploitation, IPR &amp; sustainability (MS9)</span>
-                                    <span class="tk-meta">Lead: <strong>GRANT GARANT</strong> · M12–M36 · <strong>6.1 PM</strong></span>
+                                    <span class="tk-meta">Lead: <strong>GRANT GARANT</strong> · M01–M36 · <strong>6.1 PM</strong></span>
                                     <span class="tk-chips"><span class="tk-chip lead" title="GRANT GARANT · 500 h">GRANT GARANT <b>3.5</b></span><span class="tk-chip" title="SINTEF · 120 h">SINTEF <b>0.8</b></span><span class="tk-chip" title="ESTEN s.r.o. · 80 h">ESTEN <b>0.6</b></span><span class="tk-chip" title="SYXIS VSI · 80 h">SYXIS <b>0.6</b></span><span class="tk-chip" title="CleverStaff · 60 h">CleverStaff <b>0.4</b></span><span class="tk-chip" title="INDElab / UvA · 40 h">INDElab <b>0.3</b></span></span>
                                 </span>
                             </summary>
-                            <div class="tk-desc">Draft exploitation plan required at proposal stage and its update: ownership of team results, licensing terms in the marketplace, liability for oracle recommendations, and the post-project business model.</div>
+                            <div class="tk-desc">Draft exploitation plan required at proposal stage, focused on how the teams&#x27; solutions will be taken up with user-industry support, and its updates: ownership of team results, licensing terms, liability for oracle recommendations, the post-project business model and the business case for a future AURA marketplace.</div>
                         </details>
                     </div>
                 </div>
@@ -2307,12 +2375,12 @@
         </div>
 
         <details class="tk-summary">
-            <summary>Person-months &amp; budget per partner · total <strong>243.8 PM</strong> · <strong>€2.0M</strong></summary>
+            <summary>Person-months &amp; budget per partner · total <strong>242.3 PM</strong> · <strong>€2.0M</strong></summary>
             <div class="tk-table-wrap">
             <table class="tk-table">
                 <thead><tr><th>Partner</th><th>WP1</th><th>WP2</th><th>WP3</th><th>WP4</th><th>WP5</th><th>WP6</th><th>Total PM</th><th>Budget</th><th>% budget</th><th>HE eligibility</th></tr></thead>
-                <tbody><tr><th>SINTEF</th><td>14.6</td><td>0.4</td><td>0.3</td><td>3.9</td><td>0.7</td><td>4.7</td><td class="t">24.6</td><td class="b">300,000 €</td><td>15.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>GRANT GARANT</th><td>1.4</td><td class="z">–</td><td class="z">–</td><td>16.7</td><td class="z">–</td><td>17.4</td><td class="t">35.5</td><td class="b">280,000 €</td><td>14.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>SYXIS VSI</th><td>1.3</td><td class="z">–</td><td class="z">–</td><td>25.0</td><td>0.8</td><td>0.8</td><td class="t">27.9</td><td class="b">220,000 €</td><td>11.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>ESTEN s.r.o.</th><td>0.5</td><td>0.6</td><td>22.4</td><td>2.8</td><td>1.6</td><td>1.3</td><td class="t">29.2</td><td class="b">230,000 €</td><td>11.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Univ. Alicante</th><td>1.1</td><td>17.9</td><td>2.7</td><td>3.3</td><td>3.3</td><td>0.8</td><td class="t">29.1</td><td class="b">250,000 €</td><td>12.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>INDElab / UvA</th><td>0.1</td><td>11.5</td><td>0.8</td><td>1.5</td><td>1.5</td><td>0.5</td><td class="t">16.0</td><td class="b">160,000 €</td><td>8.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>KIT Karlsruhe</th><td>0.7</td><td>8.7</td><td>0.3</td><td>1.7</td><td>1.4</td><td>0.3</td><td class="t">13.0</td><td class="b">140,000 €</td><td>7.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>CleverStaff</th><td>0.1</td><td>9.1</td><td>5.0</td><td>7.2</td><td>1.9</td><td>0.6</td><td class="t">23.9</td><td class="b">120,000 €</td><td>6.0%</td><td><span class="el-badge el-chk">⚠ To verify</span></td></tr><tr><th>BSC / MareNostrum</th><td>0.1</td><td class="z">–</td><td>9.7</td><td>0.8</td><td class="z">–</td><td>1.0</td><td class="t">11.6</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Vicky Foods</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.4</td><td>12.6</td><td>0.6</td><td class="t">15.5</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>AKCOAT</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.7</td><td>14.2</td><td>0.6</td><td class="t">17.4</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-chk">⚠ To verify</span></td></tr></tbody>
-                <tfoot><tr><th>Total</th><td>20.9</td><td>50.4</td><td>41.8</td><td>64.1</td><td>38.0</td><td>28.6</td><td class="t">243.8</td><td class="b">2,000,000 €</td><td>100%</td><td></td></tr></tfoot>
+                <tbody><tr><th>SINTEF</th><td>14.6</td><td>0.4</td><td>0.3</td><td>6.1</td><td>0.7</td><td>4.7</td><td class="t">26.8</td><td class="b">300,000 €</td><td>15.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>GRANT GARANT</th><td>1.4</td><td class="z">–</td><td class="z">–</td><td>16.2</td><td class="z">–</td><td>17.4</td><td class="t">35.0</td><td class="b">280,000 €</td><td>14.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>SYXIS VSI</th><td>1.3</td><td class="z">–</td><td class="z">–</td><td>21.8</td><td>0.8</td><td>0.8</td><td class="t">24.7</td><td class="b">220,000 €</td><td>11.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>ESTEN s.r.o.</th><td>0.5</td><td>0.6</td><td>22.4</td><td>2.8</td><td>1.6</td><td>1.3</td><td class="t">29.2</td><td class="b">230,000 €</td><td>11.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Univ. Alicante</th><td>1.1</td><td>17.9</td><td>2.7</td><td>3.3</td><td>3.3</td><td>0.8</td><td class="t">29.1</td><td class="b">250,000 €</td><td>12.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>INDElab / UvA</th><td>0.1</td><td>11.5</td><td>0.8</td><td>1.5</td><td>1.5</td><td>0.5</td><td class="t">16.0</td><td class="b">160,000 €</td><td>8.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>KIT Karlsruhe</th><td>0.7</td><td>8.7</td><td>0.3</td><td>1.7</td><td>1.4</td><td>0.3</td><td class="t">13.0</td><td class="b">140,000 €</td><td>7.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>CleverStaff</th><td>0.1</td><td>9.1</td><td>5.0</td><td>7.2</td><td>1.9</td><td>0.6</td><td class="t">23.9</td><td class="b">120,000 €</td><td>6.0%</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr><tr><th>BSC / MareNostrum</th><td>0.1</td><td class="z">–</td><td>9.7</td><td>0.8</td><td class="z">–</td><td>1.0</td><td class="t">11.6</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Vicky Foods</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.4</td><td>12.6</td><td>0.6</td><td class="t">15.5</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>AKCOAT</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.7</td><td>14.2</td><td>0.6</td><td class="t">17.4</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr></tbody>
+                <tfoot><tr><th>Total</th><td>20.9</td><td>50.4</td><td>41.8</td><td>62.6</td><td>38.0</td><td>28.6</td><td class="t">242.3</td><td class="b">2,000,000 €</td><td>100%</td><td></td></tr></tfoot>
             </table>
             </div>
         </details>
@@ -2324,29 +2392,29 @@
             </div>
             <div class="pp-wrap">
                 <div class="pp-head"><span class="pp-badge">Before M01</span><strong>Proposal preparation: critical timeline to submission</strong></div>
-                <ol class="pp-line"><li class="pp p1"><span class="pp-dot"></span><span class="pp-date">17 Nov 2026</span><span class="pp-k">Call opens</span><span class="pp-t">Official opening of the Horizon Europe call on the EU Funding &amp; Tenders portal.</span></li><li class="pp p2"><span class="pp-dot"></span><span class="pp-date">Dec 2026 – Jan 2027</span><span class="pp-k">Consolidation</span><span class="pp-t">Industrial datasets from the pilots, Letters of Intent and final design of the architecture.</span></li><li class="pp p3"><span class="pp-dot"></span><span class="pp-date">Feb 2027</span><span class="pp-k">Writing</span><span class="pp-t">Excellence and Impact sections, legal design of the FSTP mechanism and KPIs.</span></li><li class="pp p4"><span class="pp-dot"></span><span class="pp-date">18 Mar 2027 · 17:00</span><span class="pp-k">Submission</span><span class="pp-t">Official closing and submission to Brussels (17:00 CET; confirm the exact time on the Funding &amp; Tenders portal).</span></li></ol>
+                <ol class="pp-line"><li class="pp p1"><span class="pp-dot"></span><span class="pp-date">17 Nov 2026</span><span class="pp-k">Call opens</span><span class="pp-t">Official opening of the Horizon Europe call on the EU Funding &amp; Tenders portal.</span></li><li class="pp p2"><span class="pp-dot"></span><span class="pp-date">Dec 2026 – Jan 2027</span><span class="pp-k">Consolidation</span><span class="pp-t">Industrial datasets from the pilots, Letters of Intent and final design of the architecture.</span></li><li class="pp p3"><span class="pp-dot"></span><span class="pp-date">Feb 2027</span><span class="pp-k">Writing</span><span class="pp-t">Excellence, Impact and Implementation sections, legal design of the FSTP mechanism and KPIs.</span></li><li class="pp p4"><span class="pp-dot"></span><span class="pp-date">18 Mar 2027 · 17:00</span><span class="pp-k">Submission</span><span class="pp-t">Official closing and submission to Brussels (17:00 Brussels time).</span></li></ol>
                 <div class="pp-foot">After submission: evaluation and grant agreement preparation by the EC. <strong>M01</strong> = project start date set in the grant agreement (to be confirmed).</div>
             </div>
             <div class="cal-calls">
                 <div class="cal-call" style="--cc:#ca8a04">
                     <div class="cal-call-top"><span class="cal-call-id">Stage 1</span><span class="cal-call-launch">Starts <strong>M07</strong></span></div>
                     <div class="cal-call-name">Open call &amp; selection of the top 10</div>
-                    <div class="cal-call-who">Single SMEs or SME-led teams (SME + research organisations / public bodies) from eligible countries · <strong>no grant · selection only</strong></div>
-                    <ul class="cal-steps"><li><span>Competition handbook &amp; datasets ready</span><strong>M06</strong></li><li><span>Call open</span><strong>M07–M09</strong></li><li><span>Evaluation by external jury</span><strong>M10</strong></li><li><span>10 teams selected &amp; contracted</span><strong>M11</strong></li></ul>
-                    <div class="cal-call-note">Applicants answer one of the two pilot challenges (A.1 bakery, A.2 coatings) building on the AURA reference framework. Indicatively 5 teams per challenge advance.</div>
+                    <div class="cal-call-who">Single SMEs or SME-led teams (SME lead + SMEs, research organisations, public bodies or secondary / higher education establishments) from eligible countries · <strong>no grant · selection only</strong></div>
+                    <ul class="cal-steps"><li><span>Competition handbook &amp; datasets ready</span><strong>M06</strong></li><li><span>Call open</span><strong>M07–M09</strong></li><li><span>Evaluation by SYXIS VSI</span><strong>M10–M11</strong></li><li><span>10 teams selected</span><strong>M11</strong></li><li><span>10 teams contracted</span><strong>M12</strong></li></ul>
+                    <div class="cal-call-note">Applicants answer one of the two pilot challenges (A.1 bakery, A.2 coatings) building on the AURA reference framework. The top 10 are taken from a single ranking across both challenges.</div>
                 </div>
                 <div class="cal-call" style="--cc:#0d9488">
-                    <div class="cal-call-top"><span class="cal-call-id">Stage 2</span><span class="cal-call-launch">Starts <strong>M12</strong></span></div>
+                    <div class="cal-call-top"><span class="cal-call-id">Stage 2</span><span class="cal-call-launch">Starts <strong>M13</strong></span></div>
                     <div class="cal-call-name">Prototyping in the sandbox · 10 teams</div>
                     <div class="cal-call-who">10 teams × €300,000 · <strong>€3.0M</strong></div>
-                    <ul class="cal-steps"><li><span>Prototyping (TRL 3 → 4)</span><strong>M12–M20</strong></li><li><span>Data used</span><strong>cleaned, anonymised pilot datasets</strong></li><li><span>Entry · mid-term review</span><strong>M12 · M16</strong></li><li><span>Gate: benchmark + demo day</span><strong>M20–M21</strong></li><li><span>4 finalists selected</span><strong>M21</strong></li></ul>
-                    <div class="cal-call-note">Teams work in the Gaia-X sandbox with the anonymised datasets, the reference ontology and the benchmark harness. Indicatively 2 finalists per challenge.</div>
+                    <ul class="cal-steps"><li><span>Prototyping (TRL 3 → 4)</span><strong>M13–M21</strong></li><li><span>Data used</span><strong>cleaned, anonymised pilot datasets</strong></li><li><span>Entry · mid-term review</span><strong>M13 · M17</strong></li><li><span>Gate: benchmark + demo day</span><strong>M22</strong></li><li><span>4 finalists selected</span><strong>M22</strong></li><li><span>4 teams contracted</span><strong>M23</strong></li></ul>
+                    <div class="cal-call-note">Teams work in the Gaia-X sandbox with the anonymised datasets, the reference ontology and the benchmark harness. The 4 highest-ranked solutions are taken from a single ranking, as the topic requires. Each finalist validates in the plant of its own challenge.</div>
                 </div>
                 <div class="cal-call" style="--cc:#7c3aed">
-                    <div class="cal-call-top"><span class="cal-call-id">Stage 3</span><span class="cal-call-launch">Starts <strong>M22</strong></span></div>
+                    <div class="cal-call-top"><span class="cal-call-id">Stage 3</span><span class="cal-call-launch">Starts <strong>M24</strong></span></div>
                     <div class="cal-call-name">Grand finale · TRL 5 in the pilot plants · 4 teams</div>
                     <div class="cal-call-who">4 teams × €2,250,000 (max €2.55M per third party) · <strong>€9.0M</strong></div>
-                    <ul class="cal-steps"><li><span>Plant integration &amp; validation (TRL 5)</span><strong>M22–M33</strong></li><li><span>Data used</span><strong>live plant data, zero outbound</strong></li><li><span>Entry · mid-term review</span><strong>M22 · M27</strong></li><li><span>Grand finale evaluation</span><strong>M34</strong></li><li><span>Uptake contracts with user industries</span><strong>M34–M36</strong></li></ul>
+                    <ul class="cal-steps"><li><span>Plant integration &amp; validation (TRL 5)</span><strong>M24–M33</strong></li><li><span>Data used</span><strong>live plant data, stays on site</strong></li><li><span>Entry · mid-term review</span><strong>M24 · M29</strong></li><li><span>Grand finale evaluation</span><strong>M34</strong></li><li><span>Uptake measures with user industries</span><strong>M35–M36</strong></li></ul>
                     <div class="cal-call-note">Finalists install their edge nodes (hardware funded from their grant) and run the full Predict · Guide · Act · Learn loop on the production lines.</div>
                 </div>
             </div>
@@ -2359,29 +2427,29 @@
                 <span><i class="lg lg-dG"></i>Decision gate</span>
                 <span><i class="lg lg-dM"></i>Milestone</span>
                 <span><i class="lg lg-dev"></i>Anonymised data shared</span>
-                <span><i class="lg lg-zero"></i>Zero outbound (pilot)</span>
+                <span><i class="lg lg-zero"></i>No data egress (pilot)</span>
             </div>
             <div class="gt-scroll"><div class="gt">
 <div class="gt-vline" style="--m:6;--vc:#ca8a04"><span>Stage 1</span></div>
-<div class="gt-vline" style="--m:11;--vc:#0d9488"><span>Stage 2</span></div>
-<div class="gt-vline" style="--m:21;--vc:#7c3aed"><span>Stage 3</span></div>
+<div class="gt-vline" style="--m:12;--vc:#0d9488"><span>Stage 2</span></div>
+<div class="gt-vline" style="--m:23;--vc:#7c3aed"><span>Stage 3</span></div>
 <div class="gt-row gt-hdr"><div class="gt-lab">Month</div><div class="gt-track"><div class="gt-yr" style="grid-column:1/13">Year 1</div><div class="gt-yr" style="grid-column:13/25">Year 2</div><div class="gt-yr" style="grid-column:25/37">Year 3</div><div class="gt-m" style="grid-column:1/2">1</div><div class="gt-m" style="grid-column:2/3">2</div><div class="gt-m gt-mq" style="grid-column:3/4">3</div><div class="gt-m" style="grid-column:4/5">4</div><div class="gt-m" style="grid-column:5/6">5</div><div class="gt-m gt-mq" style="grid-column:6/7">6</div><div class="gt-m" style="grid-column:7/8">7</div><div class="gt-m" style="grid-column:8/9">8</div><div class="gt-m gt-mq" style="grid-column:9/10">9</div><div class="gt-m" style="grid-column:10/11">10</div><div class="gt-m" style="grid-column:11/12">11</div><div class="gt-m gt-mq" style="grid-column:12/13">12</div><div class="gt-m" style="grid-column:13/14">13</div><div class="gt-m" style="grid-column:14/15">14</div><div class="gt-m gt-mq" style="grid-column:15/16">15</div><div class="gt-m" style="grid-column:16/17">16</div><div class="gt-m" style="grid-column:17/18">17</div><div class="gt-m gt-mq" style="grid-column:18/19">18</div><div class="gt-m" style="grid-column:19/20">19</div><div class="gt-m" style="grid-column:20/21">20</div><div class="gt-m gt-mq" style="grid-column:21/22">21</div><div class="gt-m" style="grid-column:22/23">22</div><div class="gt-m" style="grid-column:23/24">23</div><div class="gt-m gt-mq" style="grid-column:24/25">24</div><div class="gt-m" style="grid-column:25/26">25</div><div class="gt-m" style="grid-column:26/27">26</div><div class="gt-m gt-mq" style="grid-column:27/28">27</div><div class="gt-m" style="grid-column:28/29">28</div><div class="gt-m" style="grid-column:29/30">29</div><div class="gt-m gt-mq" style="grid-column:30/31">30</div><div class="gt-m" style="grid-column:31/32">31</div><div class="gt-m" style="grid-column:32/33">32</div><div class="gt-m gt-mq" style="grid-column:33/34">33</div><div class="gt-m" style="grid-column:34/35">34</div><div class="gt-m" style="grid-column:35/36">35</div><div class="gt-m gt-mq" style="grid-column:36/37">36</div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1">Project phases</span></div><div class="gt-track"><div class="gt-bar gt-phase" style="grid-column:1/12;--bc:#4f46e5" title="Phase 1 · Preparation &amp; Stage 1 open call"><span>Phase 1 · Preparation &amp; Stage 1 open call</span></div><div class="gt-bar gt-phase" style="grid-column:12/22;--bc:#0d9488" title="Phase 2 · Stage 2 prototyping (10 teams)"><span>Phase 2 · Stage 2 prototyping (10 teams)</span></div><div class="gt-bar gt-phase" style="grid-column:22/37;--bc:#7c3aed" title="Phase 3 · Stage 3 TRL 5 pilots &amp; uptake"><span>Phase 3 · Stage 3 TRL 5 pilots &amp; uptake</span></div></div></div>
-<div class="gt-row gt-msrow"><div class="gt-lab"><span class="gt-l1">Milestones</span><span class=gt-l2>MS1–MS9</span></div><div class="gt-track"><div class="gt-mk dM" style="grid-column:5/6" title="MS1 · M05 · Reference framework v1: ontology, interface contract, benchmark"><i></i><b>MS1</b></div><div class="gt-mk dM up" style="grid-column:6/7" title="MS2 · M06 · Competition handbook, sandbox &amp; anonymised datasets ready"><i></i><b>MS2</b></div><div class="gt-mk dM" style="grid-column:7/8" title="MS3 · M07 · Stage 1 open call launched"><i></i><b>MS3</b></div><div class="gt-mk dM" style="grid-column:11/12" title="MS4 · M11 · Top 10 teams selected and contracted"><i></i><b>MS4</b></div><div class="gt-mk dM" style="grid-column:21/22" title="MS5 · M21 · 4 finalists selected (Stage 2 gate)"><i></i><b>MS5</b></div><div class="gt-mk dM" style="grid-column:33/34" title="MS6 · M33 · Finalists&#x27; solutions validated at TRL 5 in the pilots"><i></i><b>MS6</b></div><div class="gt-mk dM up" style="grid-column:34/35" title="MS7 · M34 · Grand finale &amp; FSTP financial closure"><i></i><b>MS7</b></div><div class="gt-mk dM" style="grid-column:35/36" title="MS8 · M35 · Uptake contracts &amp; AURA marketplace live"><i></i><b>MS8</b></div><div class="gt-mk dM up" style="grid-column:36/37" title="MS9 · M36 · Exploitation &amp; sustainability plan delivered"><i></i><b>MS9</b></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1">Decision gates</span><span class=gt-l2>G1–G4</span></div><div class="gt-track"><div class="gt-mk dG" style="grid-column:6/7" title="G1 · M06 · Go / no-go Stage 1: handbook, datasets, sandbox and interface contract ready?"><i></i><b>G1</b></div><div class="gt-mk dG" style="grid-column:10/11" title="G2 · M10 · Stage 1 selection: top 10 teams"><i></i><b>G2</b></div><div class="gt-mk dG" style="grid-column:21/22" title="G3 · M21 · Stage 2 gate: benchmark results + demo day → 4 finalists"><i></i><b>G3</b></div><div class="gt-mk dG" style="grid-column:34/35" title="G4 · M34 · Grand finale: TRL 5 results and uptake readiness"><i></i><b>G4</b></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1">Pilot data regime</span><span class=gt-l2>development vs. pilot validation</span></div><div class="gt-track"><div class="gt-bar gt-dev" style="grid-column:2/22;" title="Cleaned &amp; anonymised pilot datasets shared for training (M02–M21)"><span>Development: cleaned, anonymised datasets shared via the sandbox</span></div><div class="gt-bar gt-zero" style="grid-column:22/37;" title="Zero outbound during pilot validation (M22–M36)"><span>Pilot validation: raw data stays in the plant</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1">Project phases</span></div><div class="gt-track"><div class="gt-bar gt-phase" style="grid-column:1/13;--bc:#4f46e5" title="Phase 1 · Preparation &amp; Stage 1 open call"><span>Phase 1 · Preparation &amp; Stage 1 open call</span></div><div class="gt-bar gt-phase" style="grid-column:13/24;--bc:#0d9488" title="Phase 2 · Stage 2 prototyping (10 teams)"><span>Phase 2 · Stage 2 prototyping (10 teams)</span></div><div class="gt-bar gt-phase" style="grid-column:24/37;--bc:#7c3aed" title="Phase 3 · Stage 3 TRL 5 pilots &amp; uptake"><span>Phase 3 · Stage 3 TRL 5 pilots &amp; uptake</span></div></div></div>
+<div class="gt-row gt-msrow"><div class="gt-lab"><span class="gt-l1">Milestones</span><span class=gt-l2>MS1–MS9</span></div><div class="gt-track"><div class="gt-mk dM" style="grid-column:5/6" title="MS1 · M05 · Reference framework v1: ontology, interface contract, benchmark"><i></i><b>MS1</b></div><div class="gt-mk dM up" style="grid-column:6/7" title="MS2 · M06 · Competition handbook, sandbox &amp; anonymised datasets ready"><i></i><b>MS2</b></div><div class="gt-mk dM" style="grid-column:7/8" title="MS3 · M07 · Stage 1 open call launched"><i></i><b>MS3</b></div><div class="gt-mk dM" style="grid-column:12/13" title="MS4 · M12 · Top 10 teams contracted"><i></i><b>MS4</b></div><div class="gt-mk dM" style="grid-column:22/23" title="MS5 · M22 · 4 finalists selected (Stage 2 gate)"><i></i><b>MS5</b></div><div class="gt-mk dM" style="grid-column:33/34" title="MS6 · M33 · Finalists&#x27; solutions validated at TRL 5 in the pilots"><i></i><b>MS6</b></div><div class="gt-mk dM up" style="grid-column:34/35" title="MS7 · M34 · Grand finale &amp; best solution identified"><i></i><b>MS7</b></div><div class="gt-mk dM" style="grid-column:35/36" title="MS8 · M35 · Partnership or contract offer to the best team &amp; uptake plans"><i></i><b>MS8</b></div><div class="gt-mk dM up" style="grid-column:36/37" title="MS9 · M36 · Exploitation &amp; sustainability plan delivered"><i></i><b>MS9</b></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1">Decision gates</span><span class=gt-l2>G1–G4</span></div><div class="gt-track"><div class="gt-mk dG" style="grid-column:6/7" title="G1 · M06 · Go / no-go Stage 1: handbook, datasets, sandbox and interface contract ready?"><i></i><b>G1</b></div><div class="gt-mk dG" style="grid-column:11/12" title="G2 · M11 · Stage 1 selection: top 10 teams"><i></i><b>G2</b></div><div class="gt-mk dG" style="grid-column:22/23" title="G3 · M22 · Stage 2 gate: benchmark results + demo day → 4 finalists"><i></i><b>G3</b></div><div class="gt-mk dG" style="grid-column:34/35" title="G4 · M34 · Grand finale: TRL 5 results and uptake readiness"><i></i><b>G4</b></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1">Pilot data regime</span><span class=gt-l2>development vs. pilot validation</span></div><div class="gt-track"><div class="gt-bar gt-dev" style="grid-column:2/24;" title="Cleaned &amp; anonymised pilot datasets available for training (M02–M23)"><span>Development: cleaned, anonymised datasets shared via the sandbox</span></div><div class="gt-bar gt-zero" style="grid-column:24/37;" title="No-data-egress during pilot validation (M24–M36)"><span>Pilot validation: raw data stays in the plant</span></div></div></div>
 <div class="gt-group"><div class="gt-lab">FSTP competition (€12M) &amp; evaluations</div><div class="gt-track"></div></div>
-<div class="gt-row gt-call"><div class="gt-lab"><span class="gt-l1"><span class="gt-tag" style="--cc:#ca8a04">Stage 1</span> Open call</span><span class=gt-l2>Launch M07 · selection only</span></div><div class="gt-track"><div class="gt-bar gt-pre" style="grid-column:5/7;" title="Competition handbook &amp; call preparation M05–M06"><span>Prep.</span></div><div class="gt-bar gt-open" style="grid-column:7/10;" title="Open call M07–M09"><span>Open call</span></div><div class="gt-bar gt-eval" style="grid-column:10/12;" title="Evaluation &amp; contracting M10–M11"><span></span></div></div></div>
-<div class="gt-row gt-call"><div class="gt-lab"><span class="gt-l1"><span class="gt-tag" style="--cc:#0d9488">Stage 2</span> Prototyping · 10 teams</span><span class=gt-l2>M12–M20 · 10 × €300k</span></div><div class="gt-track"><div class="gt-bar gt-run" style="grid-column:12/21;" title="Stage 2 M12–M20"><span>10 teams prototyping in the sandbox (TRL 3–4)</span></div><div class="gt-bar gt-eval" style="grid-column:21/22;" title="Gate evaluation M21"><span></span></div></div></div>
-<div class="gt-row gt-call"><div class="gt-lab"><span class="gt-l1"><span class="gt-tag" style="--cc:#7c3aed">Stage 3</span> TRL 5 in pilots · 4 teams</span><span class=gt-l2>M22–M34 · 4 × €2.25M</span></div><div class="gt-track"><div class="gt-bar gt-s3" style="grid-column:22/34;" title="Stage 3 M22–M33"><span>4 finalists integrate &amp; validate in the plants (TRL 5)</span></div><div class="gt-bar gt-eval" style="grid-column:34/35;" title="Grand finale M34"><span></span></div><div class="gt-bar gt-pre" style="grid-column:35/37;" title="Uptake contracts M35–M36"><span>Uptake</span></div></div></div>
-<div class="gt-row gt-audrow"><div class="gt-lab"><span class="gt-l1">Reviews &amp; evaluations</span><span class=gt-l2>SYXIS + external jury · E entry · M mid-term · G gate · F final</span></div><div class="gt-track"><div class="gt-mk dA" style="grid-column:10/11" title="Stage 1 evaluation M10"><i></i><b>S1</b></div><div class="gt-mk dA" style="grid-column:12/13" title="Entry review of the 10 teams · M12"><i></i><b>E</b></div><div class="gt-mk dA" style="grid-column:16/17" title="Mid-term review Stage 2 · M16"><i></i><b>M</b></div><div class="gt-mk dA" style="grid-column:20/21" title="Stage 2 gate evaluation · M20"><i></i><b>G</b></div><div class="gt-mk dA" style="grid-column:22/23" title="Entry review of the 4 finalists · M22"><i></i><b>E</b></div><div class="gt-mk dA" style="grid-column:27/28" title="Mid-term review Stage 3 · M27"><i></i><b>M</b></div><div class="gt-mk dA" style="grid-column:34/35" title="Grand finale evaluation · M34"><i></i><b>F</b></div></div></div>
+<div class="gt-row gt-call"><div class="gt-lab"><span class="gt-l1"><span class="gt-tag" style="--cc:#ca8a04">Stage 1</span> Open call</span><span class=gt-l2>Launch M07 · selection only</span></div><div class="gt-track"><div class="gt-bar gt-pre" style="grid-column:5/7;" title="Competition handbook &amp; call preparation M05–M06"><span>Prep.</span></div><div class="gt-bar gt-open" style="grid-column:7/10;" title="Open call M07–M09"><span>Open call</span></div><div class="gt-bar gt-eval" style="grid-column:10/13;" title="Evaluation &amp; contracting M10–M12"><span></span></div></div></div>
+<div class="gt-row gt-call"><div class="gt-lab"><span class="gt-l1"><span class="gt-tag" style="--cc:#0d9488">Stage 2</span> Prototyping · 10 teams</span><span class=gt-l2>M13–M22 · 10 × €300k</span></div><div class="gt-track"><div class="gt-bar gt-run" style="grid-column:13/22;" title="Stage 2 prototyping M13–M21"><span>10 teams prototyping in the sandbox (TRL 3–4)</span></div><div class="gt-bar gt-eval" style="grid-column:22/23;" title="Gate evaluation M22"><span></span></div></div></div>
+<div class="gt-row gt-call"><div class="gt-lab"><span class="gt-l1"><span class="gt-tag" style="--cc:#7c3aed">Stage 3</span> TRL 5 in pilots · 4 teams</span><span class=gt-l2>M24–M34 · 4 × €2.25M</span></div><div class="gt-track"><div class="gt-bar gt-s3" style="grid-column:24/34;" title="Stage 3 M24–M33"><span>4 finalists integrate &amp; validate in the plants (TRL 5)</span></div><div class="gt-bar gt-eval" style="grid-column:34/35;" title="Grand finale M34"><span></span></div><div class="gt-bar gt-pre" style="grid-column:35/37;" title="Uptake measures M35–M36"><span>Uptake</span></div></div></div>
+<div class="gt-row gt-audrow"><div class="gt-lab"><span class="gt-l1">Reviews &amp; evaluations</span><span class=gt-l2>SYXIS VSI · E entry · M mid-term · G gate · F final</span></div><div class="gt-track"><div class="gt-mk dA" style="grid-column:11/12" title="Stage 1 evaluation M10–M11"><i></i><b>S1</b></div><div class="gt-mk dA" style="grid-column:13/14" title="Entry review of the 10 teams · M13"><i></i><b>E</b></div><div class="gt-mk dA" style="grid-column:17/18" title="Mid-term review Stage 2 · M17"><i></i><b>M</b></div><div class="gt-mk dA" style="grid-column:22/23" title="Stage 2 gate evaluation · M22"><i></i><b>G</b></div><div class="gt-mk dA" style="grid-column:24/25" title="Entry review of the 4 finalists · M24"><i></i><b>E</b></div><div class="gt-mk dA" style="grid-column:29/30" title="Mid-term review Stage 3 · M29"><i></i><b>M</b></div><div class="gt-mk dA" style="grid-column:34/35" title="Grand finale evaluation · M34"><i></i><b>F</b></div></div></div>
 <div class="gt-group"><div class="gt-lab">WP1 · Project Coordination, FSTP Legal Framework &amp; Ethics</div><div class="gt-track"></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#64748b">T1.1</span> Project coordination &amp; EC liaison</span><span class=gt-l2>SINTEF · M01–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/37;--bc:#64748b" title="T1.1 · Project coordination &amp; EC liaison · M01–M36 · Lead SINTEF"><span>SINTEF</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#64748b">T1.2</span> FSTP legal framework of the 3-stage competition</span><span class=gt-l2>SINTEF · M01–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/35;--bc:#64748b" title="T1.2 · FSTP legal framework of the 3-stage competition · M01–M34 · Lead SINTEF"><span>SINTEF</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#64748b">T1.3</span> Risk, quality &amp; stage-gate management (MS1–MS9)</span><span class=gt-l2>SINTEF · M01–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/37;--bc:#64748b" title="T1.3 · Risk, quality &amp; stage-gate management (MS1–MS9) · M01–M36 · Lead SINTEF"><span>SINTEF</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#64748b">T1.4</span> Ethics, data protection &amp; EU AI Act compliance</span><span class=gt-l2>SINTEF · M01–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/37;--bc:#64748b" title="T1.4 · Ethics, data protection &amp; EU AI Act compliance · M01–M36 · Lead SINTEF"><span>SINTEF</span></div></div></div>
 <div class="gt-group"><div class="gt-lab">WP2 · Scientific Reference Framework &amp; Benchmarks</div><div class="gt-track"></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#0284c7">T2.1</span> 4-phase loop methodology &amp; measurable research objectives</span><span class=gt-l2>Univ. Alicante · M01–M24</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/25;--bc:#0284c7" title="T2.1 · 4-phase loop methodology &amp; measurable research objectives · M01–M24 · Lead Univ. Alicante"><span>Univ. Alicante</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#0284c7">T2.1</span> 4-step loop methodology &amp; measurable research objectives</span><span class=gt-l2>Univ. Alicante · M01–M24</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/25;--bc:#0284c7" title="T2.1 · 4-step loop methodology &amp; measurable research objectives · M01–M24 · Lead Univ. Alicante"><span>Univ. Alicante</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#0284c7">T2.2</span> Reference ontology: ISA-95 core aligned with AAS / OPC UA (MS1)</span><span class=gt-l2>INDElab / UvA · M01–M12</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/13;--bc:#0284c7" title="T2.2 · Reference ontology: ISA-95 core aligned with AAS / OPC UA (MS1) · M01–M12 · Lead INDElab / UvA"><span>INDElab / UvA</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#0284c7">T2.3</span> Dual Graph-RAG reference architecture &amp; Layer-2 oracle specification</span><span class=gt-l2>INDElab / UvA · M03–M20</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:3/21;--bc:#0284c7" title="T2.3 · Dual Graph-RAG reference architecture &amp; Layer-2 oracle specification · M03–M20 · Lead INDElab / UvA"><span>INDElab / UvA</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#0284c7">T2.4</span> AURA benchmark: Graph-RAG faithfulness &amp; industrial prompting</span><span class=gt-l2>Univ. Alicante · M03–M30</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:3/31;--bc:#0284c7" title="T2.4 · AURA benchmark: Graph-RAG faithfulness &amp; industrial prompting · M03–M30 · Lead Univ. Alicante"><span>Univ. Alicante</span></div></div></div>
@@ -2398,25 +2466,25 @@
 <div class="gt-group"><div class="gt-lab">WP4 · Challenge-Driven Competition: Open Call, Evaluation &amp; Team Support</div><div class="gt-track"></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.1</span> Competition specification: challenges, targets, KPIs, timeline &amp; rules</span><span class=gt-l2>GRANT GARANT · M01–M06</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/7;--bc:#4f46e5" title="T4.1 · Competition specification: challenges, targets, KPIs, timeline &amp; rules · M01–M06 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.2</span> Stage 1 open call: launch, outreach &amp; applicant support</span><span class=gt-l2>GRANT GARANT · M05–M11</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:5/12;--bc:#4f46e5" title="T4.2 · Stage 1 open call: launch, outreach &amp; applicant support · M05–M11 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.3</span> Evaluation methodology, external jury &amp; stage-gate selections</span><span class=gt-l2>SYXIS VSI · M03–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:3/35;--bc:#4f46e5" title="T4.3 · Evaluation methodology, external jury &amp; stage-gate selections · M03–M34 · Lead SYXIS VSI"><span>SYXIS VSI</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.4</span> Progress monitoring &amp; technical verification of the teams</span><span class=gt-l2>SYXIS VSI · M12–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:12/35;--bc:#4f46e5" title="T4.4 · Progress monitoring &amp; technical verification of the teams · M12–M34 · Lead SYXIS VSI"><span>SYXIS VSI</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.5</span> FSTP payments, reporting &amp; financial closure (MS7)</span><span class=gt-l2>GRANT GARANT · M11–M35</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:11/36;--bc:#4f46e5" title="T4.5 · FSTP payments, reporting &amp; financial closure (MS7) · M11–M35 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.3</span> Evaluation methodology &amp; stage-gate selections</span><span class=gt-l2>SYXIS VSI · M03–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:3/35;--bc:#4f46e5" title="T4.3 · Evaluation methodology &amp; stage-gate selections · M03–M34 · Lead SYXIS VSI"><span>SYXIS VSI</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.4</span> Progress monitoring &amp; evaluation reporting</span><span class=gt-l2>SYXIS VSI · M13–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:13/35;--bc:#4f46e5" title="T4.4 · Progress monitoring &amp; evaluation reporting · M13–M34 · Lead SYXIS VSI"><span>SYXIS VSI</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.5</span> FSTP payments, reporting &amp; financial closure</span><span class=gt-l2>SINTEF · M12–M35</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:12/36;--bc:#4f46e5" title="T4.5 · FSTP payments, reporting &amp; financial closure · M12–M35 · Lead SINTEF"><span>SINTEF</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#4f46e5">T4.6</span> Technical &amp; business support to the teams</span><span class=gt-l2>CleverStaff · M08–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:8/35;--bc:#4f46e5" title="T4.6 · Technical &amp; business support to the teams · M08–M34 · Lead CleverStaff"><span>CleverStaff</span></div></div></div>
 <div class="gt-group"><div class="gt-lab">WP5 · Industrial Challenges, Data &amp; TRL 5 Pilots</div><div class="gt-track"></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.1</span> Industrial challenges &amp; baseline KPIs</span><span class=gt-l2>Vicky Foods · M01–M06</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/7;--bc:#d97706" title="T5.1 · Industrial challenges &amp; baseline KPIs · M01–M06 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.2</span> Cleaned &amp; anonymised datasets for development (Stages 1–2)</span><span class=gt-l2>Vicky Foods · M02–M20</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:2/21;--bc:#d97706" title="T5.2 · Cleaned &amp; anonymised datasets for development (Stages 1–2) · M02–M20 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.3</span> Plant readiness &amp; edge nodes for the finalists</span><span class=gt-l2>Vicky Foods · M16–M24</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:16/25;--bc:#d97706" title="T5.3 · Plant readiness &amp; edge nodes for the finalists · M16–M24 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.4</span> On-premise integration with live data, zero outbound (Stage 3)</span><span class=gt-l2>Vicky Foods · M22–M33</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:22/34;--bc:#d97706" title="T5.4 · On-premise integration with live data, zero outbound (Stage 3) · M22–M33 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.2</span> Cleaned &amp; anonymised datasets for development (Stages 1–2)</span><span class=gt-l2>Vicky Foods · M02–M21</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:2/22;--bc:#d97706" title="T5.2 · Cleaned &amp; anonymised datasets for development (Stages 1–2) · M02–M21 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.3</span> Plant readiness &amp; edge nodes for the finalists</span><span class=gt-l2>Vicky Foods · M16–M23</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:16/24;--bc:#d97706" title="T5.3 · Plant readiness &amp; edge nodes for the finalists · M16–M23 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.4</span> On-premise integration with live data, no data egress (Stage 3)</span><span class=gt-l2>Vicky Foods · M24–M33</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:24/34;--bc:#d97706" title="T5.4 · On-premise integration with live data, no data egress (Stage 3) · M24–M33 · Lead Vicky Foods"><span>Vicky Foods</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#d97706">T5.5</span> TRL 5 validation &amp; Human-in-the-Loop governance (MS6)</span><span class=gt-l2>AKCOAT · M26–M34</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:26/35;--bc:#d97706" title="T5.5 · TRL 5 validation &amp; Human-in-the-Loop governance (MS6) · M26–M34 · Lead AKCOAT"><span>AKCOAT</span></div></div></div>
 <div class="gt-group"><div class="gt-lab">WP6 · Dissemination, Ecosystem Cohesion &amp; Exploitation</div><div class="gt-track"></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#7c3aed">T6.1</span> Communication, dissemination &amp; AI-on-Demand</span><span class=gt-l2>GRANT GARANT · M01–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/37;--bc:#7c3aed" title="T6.1 · Communication, dissemination &amp; AI-on-Demand · M01–M36 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#7c3aed">T6.2</span> Cohesion with Adra, GenAI4EU Hub, sister projects &amp; EU AI infrastructure</span><span class=gt-l2>SINTEF · M01–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/37;--bc:#7c3aed" title="T6.2 · Cohesion with Adra, GenAI4EU Hub, sister projects &amp; EU AI infrastructure · M01–M36 · Lead SINTEF"><span>SINTEF</span></div></div></div>
 <div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#7c3aed">T6.3</span> Winners&#x27; uptake: partnerships &amp; contracts with user industries (MS8)</span><span class=gt-l2>GRANT GARANT · M24–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:24/37;--bc:#7c3aed" title="T6.3 · Winners&#x27; uptake: partnerships &amp; contracts with user industries (MS8) · M24–M36 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
-<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#7c3aed">T6.4</span> Exploitation, IPR &amp; sustainability (MS9)</span><span class=gt-l2>GRANT GARANT · M12–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:12/37;--bc:#7c3aed" title="T6.4 · Exploitation, IPR &amp; sustainability (MS9) · M12–M36 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
+<div class="gt-row "><div class="gt-lab"><span class="gt-l1"><span class="gt-tid" style="--wc:#7c3aed">T6.4</span> Exploitation, IPR &amp; sustainability (MS9)</span><span class=gt-l2>GRANT GARANT · M01–M36</span></div><div class="gt-track"><div class="gt-bar gt-task" style="grid-column:1/37;--bc:#7c3aed" title="T6.4 · Exploitation, IPR &amp; sustainability (MS9) · M01–M36 · Lead GRANT GARANT"><span>GRANT GARANT</span></div></div></div>
             </div></div>
             <details class="tk-summary kd-wrap" open>
                 <summary>Key dates in chronological order</summary>
-                <div class="kd-grid"><div class="kd"><div class="kd-m">M02</div><ul><li><span class="kd-t dD">Data</span><span>Pilots start releasing <strong>cleaned, anonymised datasets</strong></span></li></ul></div><div class="kd"><div class="kd-m">M05</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS1</strong> Reference framework v1: ontology, interface contract, benchmark</span></li></ul></div><div class="kd"><div class="kd-m">M06</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS2</strong> Competition handbook, sandbox &amp; anonymised datasets ready</span></li><li><span class="kd-t dG">Gate</span><span><strong>G1</strong> Go / no-go Stage 1: handbook, datasets, sandbox and interface contract ready?</span></li></ul></div><div class="kd"><div class="kd-m">M07</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS3</strong> Stage 1 open call launched</span></li><li><span class="kd-t dC">Stage</span><span><strong>Stage 1 open call launched</strong> (open M07–M09)</span></li></ul></div><div class="kd"><div class="kd-m">M10</div><ul><li><span class="kd-t dG">Gate</span><span><strong>G2</strong> Stage 1 selection: top 10 teams</span></li></ul></div><div class="kd"><div class="kd-m">M11</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS4</strong> Top 10 teams selected and contracted</span></li></ul></div><div class="kd"><div class="kd-m">M12</div><ul><li><span class="kd-t dR">Stage</span><span><strong>Stage 2 starts</strong> · 10 teams × €300k in the sandbox</span></li><li><span class="kd-t dA">Review</span><span>Entry review of the 10 teams</span></li></ul></div><div class="kd"><div class="kd-m">M16</div><ul><li><span class="kd-t dA">Review</span><span>Mid-term review Stage 2</span></li></ul></div><div class="kd"><div class="kd-m">M20</div><ul><li><span class="kd-t dA">Review</span><span>Stage 2 gate evaluation</span></li></ul></div><div class="kd"><div class="kd-m">M21</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS5</strong> 4 finalists selected (Stage 2 gate)</span></li><li><span class="kd-t dG">Gate</span><span><strong>G3</strong> Stage 2 gate: benchmark results + demo day → 4 finalists</span></li></ul></div><div class="kd"><div class="kd-m">M22</div><ul><li><span class="kd-t dS">Stage</span><span><strong>Stage 3 starts</strong> · 4 finalists × €2.25M in the pilot plants</span></li><li><span class="kd-t dZ">Data</span><span><strong>Zero-outbound regime</strong> applies in the pilot plants</span></li><li><span class="kd-t dA">Review</span><span>Entry review of the 4 finalists</span></li></ul></div><div class="kd"><div class="kd-m">M27</div><ul><li><span class="kd-t dA">Review</span><span>Mid-term review Stage 3</span></li></ul></div><div class="kd"><div class="kd-m">M33</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS6</strong> Finalists&#x27; solutions validated at TRL 5 in the pilots</span></li></ul></div><div class="kd"><div class="kd-m">M34</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS7</strong> Grand finale &amp; FSTP financial closure</span></li><li><span class="kd-t dG">Gate</span><span><strong>G4</strong> Grand finale: TRL 5 results and uptake readiness</span></li><li><span class="kd-t dA">Review</span><span>Grand finale evaluation</span></li></ul></div><div class="kd"><div class="kd-m">M35</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS8</strong> Uptake contracts &amp; AURA marketplace live</span></li></ul></div><div class="kd"><div class="kd-m">M36</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS9</strong> Exploitation &amp; sustainability plan delivered</span></li></ul></div></div>
+                <div class="kd-grid"><div class="kd"><div class="kd-m">M02</div><ul><li><span class="kd-t dD">Data</span><span>Pilots start releasing <strong>cleaned, anonymised datasets</strong></span></li></ul></div><div class="kd"><div class="kd-m">M05</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS1</strong> Reference framework v1: ontology, interface contract, benchmark</span></li></ul></div><div class="kd"><div class="kd-m">M06</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS2</strong> Competition handbook, sandbox &amp; anonymised datasets ready</span></li><li><span class="kd-t dG">Gate</span><span><strong>G1</strong> Go / no-go Stage 1: handbook, datasets, sandbox and interface contract ready?</span></li></ul></div><div class="kd"><div class="kd-m">M07</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS3</strong> Stage 1 open call launched</span></li><li><span class="kd-t dC">Stage</span><span><strong>Stage 1 open call launched</strong> (open M07–M09)</span></li></ul></div><div class="kd"><div class="kd-m">M10</div><ul><li><span class="kd-t dA">Review</span><span>Stage 1 evaluation starts</span></li></ul></div><div class="kd"><div class="kd-m">M11</div><ul><li><span class="kd-t dG">Gate</span><span><strong>G2</strong> Stage 1 selection: top 10 teams</span></li></ul></div><div class="kd"><div class="kd-m">M12</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS4</strong> Top 10 teams contracted</span></li></ul></div><div class="kd"><div class="kd-m">M13</div><ul><li><span class="kd-t dR">Stage</span><span><strong>Stage 2 starts</strong> · 10 teams × €300k in the sandbox</span></li><li><span class="kd-t dA">Review</span><span>Entry review of the 10 teams</span></li></ul></div><div class="kd"><div class="kd-m">M17</div><ul><li><span class="kd-t dA">Review</span><span>Mid-term review Stage 2</span></li></ul></div><div class="kd"><div class="kd-m">M22</div><ul><li><span class="kd-t dA">Review</span><span>Stage 2 gate evaluation</span></li><li><span class="kd-t dM">Milestone</span><span><strong>MS5</strong> 4 finalists selected (Stage 2 gate)</span></li><li><span class="kd-t dG">Gate</span><span><strong>G3</strong> Stage 2 gate: benchmark results + demo day → 4 finalists</span></li></ul></div><div class="kd"><div class="kd-m">M23</div><ul><li><span class="kd-t dM">Contracting</span><span>Stage 3 FSTP agreements signed with the 4 finalists</span></li></ul></div><div class="kd"><div class="kd-m">M24</div><ul><li><span class="kd-t dS">Stage</span><span><strong>Stage 3 starts</strong> · 4 finalists × €2.25M in the pilot plants</span></li><li><span class="kd-t dZ">Data</span><span><strong>No-data-egress regime</strong> applies in the pilot plants</span></li><li><span class="kd-t dA">Review</span><span>Entry review of the 4 finalists</span></li></ul></div><div class="kd"><div class="kd-m">M29</div><ul><li><span class="kd-t dA">Review</span><span>Mid-term review Stage 3</span></li></ul></div><div class="kd"><div class="kd-m">M33</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS6</strong> Finalists&#x27; solutions validated at TRL 5 in the pilots</span></li></ul></div><div class="kd"><div class="kd-m">M34</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS7</strong> Grand finale &amp; best solution identified</span></li><li><span class="kd-t dG">Gate</span><span><strong>G4</strong> Grand finale: TRL 5 results and uptake readiness</span></li><li><span class="kd-t dA">Review</span><span>Grand finale evaluation</span></li></ul></div><div class="kd"><div class="kd-m">M35</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS8</strong> Partnership or contract offer to the best team &amp; uptake plans</span></li></ul></div><div class="kd"><div class="kd-m">M36</div><ul><li><span class="kd-t dM">Milestone</span><span><strong>MS9</strong> Exploitation &amp; sustainability plan delivered</span></li></ul></div></div>
             </details>
         </div>
     </section>
@@ -2428,7 +2496,7 @@
                 <span class="section-num-tag">07 / Geographic Presence</span>
                 <h2 class="section-title">Consortium Footprint & Participating Nations</h2>
                 <p class="section-desc">
-                    Representation across 9 nations, including 3 Widening Member States; Türkiye and Ukraine pending eligibility verification. Select any country filter chip below to refine the partner responsibility matrix.
+                    Representation across 9 nations, including 3 Widening Member States; Türkiye and Ukraine are not eligible as listed, to be confirmed with the European Commission. Select any country filter chip below to refine the partner responsibility matrix.
                 </p>
             </div>
         </div>
@@ -2481,12 +2549,12 @@
             <div class="country-chip" id="chip-Ukraine" onclick="filterByCountry('Ukraine')">
                 <span class="flag">🇺🇦</span>
                 <div class="c-name">Ukraine</div>
-                <div class="c-count">CleverStaff · ⚠ to verify</div>
+                <div class="c-count">CleverStaff · ✗ not eligible as listed</div>
             </div>
             <div class="country-chip" id="chip-Türkiye" onclick="filterByCountry('Türkiye')">
                 <span class="flag">🇹🇷</span>
                 <div class="c-name">Türkiye</div>
-                <div class="c-count">AKCOAT · ⚠ to verify</div>
+                <div class="c-count">AKCOAT · ✗ not eligible as listed</div>
             </div>
         </div>
     </section>
@@ -2563,7 +2631,7 @@
                     <tr class="partner-row" data-country="Czechia" data-status="Confirmed" data-type="WIDENING">
                         <td>
                             <a href="https://www.grant-garant.cz/" target="_blank" rel="noopener noreferrer" class="partner-link">
-                                <span class="partner-role-icon" title="Open Calls Outreach & B2B Commercialization">📈</span> GRANT GARANT <span class="external-icon">↗</span>
+                                <span class="partner-role-icon" title="Open Call Outreach & Uptake">📈</span> GRANT GARANT <span class="external-icon">↗</span>
                             </a>
                             <span class="badge-widening">WIDENING</span>
                         </td>
@@ -2576,7 +2644,7 @@
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Open Call applicant attraction focusing on Central Europe and Widening countries; business model definition; commercial exploitation roadmap and B2B marketplace strategy.
+                                Open Call management: applicant attraction focusing on Central Europe and Widening countries, receipt of applications and eligibility screening; business model definition; commercial exploitation roadmap and B2B marketplace strategy.
                             </div>
                         </td>
                         <td>
@@ -2588,24 +2656,24 @@
                     <tr class="partner-row" data-country="Lithuania" data-status="Pending" data-type="WIDENING">
                         <td>
                             <a href="https://syxis.eu/" target="_blank" rel="noopener noreferrer" class="partner-link">
-                                <span class="partner-role-icon" title="Independent Technical Audit & Neutral Evaluation">⚖️</span> SYXIS VSI <span class="external-icon">↗</span>
+                                <span class="partner-role-icon" title="Competition Evaluation & Monitoring">⚖️</span> SYXIS VSI <span class="external-icon">↗</span>
                             </a>
                             <span class="badge-widening">WIDENING</span>
                         </td>
                         <td>
                             <div class="resp-desc">Lithuania</div>
-                            <div class="country-text">Audit & Evaluation RTO</div>
+                            <div class="country-text">Evaluation & Monitoring Organisation</div>
                         </td>
                         <td>
-                            <div class="role-title">Independent Technical Audit & FSTP Evaluation Panel Chair</div>
+                            <div class="role-title">Competition Evaluation & Monitoring</div>
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Constitution and management of the independent expert evaluation panel for Open Calls; technical audits of SME prototypes; objective quality assurance of FSTP deliverables.
+                                Carries out the evaluation and the three selections from the eligible proposals handed over by GRANT GARANT, subcontracting independent evaluators from its own budget where needed; monitors the funded teams and consolidates their milestones, deliverables and benchmark results into the reports used for stage decisions and payments.
                             </div>
                         </td>
                         <td>
-                            <span class="wp-badge">WP4 Audit Panel Chair</span><br>
+                            <span class="wp-badge">WP4 Evaluation Lead</span><br>
                             <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
                         </td>
                     </tr>
@@ -2668,14 +2736,14 @@
                         </td>
                         <td>
                             <div class="resp-desc">Germany</div>
-                            <div class="country-text">Institutional RTO</div>
+                            <div class="country-text">University & Research Centre</div>
                         </td>
                         <td>
                             <div class="role-title">Predictive AI, Digital Twins & EU AI Act Explainability</div>
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Definition and supervision of EU AI Act explainability guidelines across all platform modules, ensuring every query, prediction, and output in the resulting system is strictly explainable; development of real-time predictive anomaly models and trustworthy digital twins.
+                                Definition and supervision of EU AI Act explainability guidelines and the human-oversight validation protocol; definition of the predictive AI and digital-twin benchmarks used to evaluate the teams.
                             </div>
                         </td>
                         <td>
@@ -2690,7 +2758,7 @@
                             </a>
                         </td>
                         <td>
-                            <div class="resp-desc">Ukraine <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. To be confirmed with the NCP / EC before submission.">⚠ HE eligibility to verify</span></div>
+                            <div class="resp-desc">Ukraine <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span></div>
                             <div class="country-text">B2B SaaS Enterprise SME</div>
                         </td>
                         <td>
@@ -2709,12 +2777,12 @@
 
                     <!-- BLOCK 3: SOVEREIGN INFRASTRUCTURE & MLOPS -->
                     <tr class="area-header-row area-b3">
-                        <td colspan="5">Block 03 · 24/7 Sovereign Cloud Infrastructure, MLOps & EuroHPC Supercomputing</td>
+                        <td colspan="5">Block 03 · Federated Testing Cloud, MLOps & EuroHPC Access</td>
                     </tr>
                     <tr class="partner-row" data-country="Slovakia" data-status="Confirmed" data-type="WIDENING">
                         <td>
                             <a href="https://www.esten.sk/" target="_blank" rel="noopener noreferrer" class="partner-link">
-                                <span class="partner-role-icon" title="24/7 Gaia-X Sovereign Cloud & MLOps Pipelines">☁️</span> ESTEN s.r.o. <span class="external-icon">↗</span>
+                                <span class="partner-role-icon" title="Gaia-X-aligned Federated Cloud & MLOps Pipelines">☁️</span> ESTEN s.r.o. <span class="external-icon">↗</span>
                             </a>
                             <span class="badge-widening">WIDENING</span>
                         </td>
@@ -2723,11 +2791,11 @@
                             <div class="country-text">Cloud Tech SME</div>
                         </td>
                         <td>
-                            <div class="role-title">Gaia-X Sovereign Cloud Operator, APIs & Knowledge Graphs</div>
+                            <div class="role-title">Federated Cloud Operator, APIs & Knowledge Graphs</div>
                         </td>
                         <td>
                             <div class="resp-desc">
-                                24/7 sovereign cloud infrastructure operation (Gaia-X standard); continuous AIOps/MLOps pipeline management; federated API services, sovereign Knowledge Graph storage, and deployment of testing Sandboxes for FSTP integrators.
+                                Federated testing cloud aligned with Gaia-X, without a production SLA; continuous AIOps/MLOps pipeline management; federated API services, sovereign Knowledge Graph storage, and deployment of the testing sandbox for the competing teams.
                             </div>
                         </td>
                         <td>
@@ -2750,7 +2818,7 @@
                         </td>
                         <td>
                             <div class="resp-desc">
-                                MareNostrum V supercomputing node provision for heavy industrial LLM/SLM pre-training and fine-tuning; federated learning aggregation; large-scale datahub repository curation.
+                                EuroHPC / AI Factory access for the consortium and the teams: MareNostrum 5 applications, scheduling of LLM/SLM training runs, shared GPU service and a catalogue of models, datasets and benchmarks.
                             </div>
                         </td>
                         <td>
@@ -2778,7 +2846,7 @@
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Real industrial challenge provision in continuous bakery line (Track A.1); Layer C on-premise GPU edge server deployment; plant telemetry data provision and final TRL 5 validation in plant.
+                                Real industrial challenge provision in continuous bakery line (challenge A.1); plant readiness for the finalists&#x27; Layer C edge nodes; plant telemetry data provision and final TRL 5 validation in plant.
                             </div>
                         </td>
                         <td>
@@ -2786,14 +2854,14 @@
                             <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
                         </td>
                     </tr>
-                    <tr class="partner-row" data-country="Türkiye" data-status="Pending" data-type="INDUSTRY">
+                    <tr class="partner-row" data-country="Türkiye" data-status="Confirmed" data-type="INDUSTRY">
                         <td>
                             <a href="https://www.akcoat.com/" target="_blank" rel="noopener noreferrer" class="partner-link">
                                 <span class="partner-role-icon" title="Chemical & Materials Pilot & TRL 5 Validator">🧪</span> AKCOAT <span class="external-icon">↗</span>
                             </a>
                         </td>
                         <td>
-                            <div class="resp-desc">Türkiye <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. To be confirmed with the NCP / EC before submission.">⚠ HE eligibility to verify</span></div>
+                            <div class="resp-desc">Türkiye <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span></div>
                             <div class="country-text">Chemical & Materials Industry</div>
                         </td>
                         <td>
@@ -2801,12 +2869,12 @@
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Physico-chemical manufacturing challenge provision (Track A.2); rheology & thermal curing dataset provision; Layer C on-premise GPU edge server deployment and TRL 5 validation in plant.
+                                Physico-chemical manufacturing challenge provision (challenge A.2); rheology & thermal curing dataset provision; plant readiness for the finalists&#x27; Layer C edge nodes and TRL 5 validation in plant.
                             </div>
                         </td>
                         <td>
                             <span class="wp-badge">WP5 Pilot</span><br>
-                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
                         </td>
                     </tr>
 
@@ -2815,47 +2883,47 @@
         </div>
     </section>
 
-    <!-- HORIZON EUROPE STRATEGIC IMPACT & COMPLIANCE -->
+    <!-- HORIZON EUROPE EXPECTED OUTCOMES & EXPLOITATION -->
     <section id="impact" class="section-card" style="border-top: 3px solid var(--accent-emerald);">
         <div class="section-header">
             <div class="section-header-left">
-                <span class="section-num-tag">09 / Horizon Europe Strategic Alignment</span>
-                <h2 class="section-title">Horizon Europe High-Level Impact & Policy Compliance</h2>
+                <span class="section-num-tag">09 / Topic Alignment</span>
+                <h2 class="section-title">Expected Outcomes &amp; Draft Exploitation Plan</h2>
                 <p class="section-desc">
-                    Strategic alignment with the EU AI Act, Gaia-X Sovereign Data Space, Widening Action Criteria, and FSTP SME Acceleration Goals.
+                    How AURA contributes to the three expected outcomes of the topic in the advanced manufacturing sector, and how the teams&#x27; solutions will be taken up. Expected results are pre-competitive.
                 </p>
             </div>
         </div>
 
         <div class="architecture-summary-grid">
             <div class="arch-summary-card federated" style="border-top-color: var(--accent-emerald);">
-                <div class="arch-summary-title">🛡️ Data Sovereignty & EU AI Act Compliance</div>
+                <div class="arch-summary-title">Technological progress</div>
                 <div class="arch-summary-text">
-                    Strict isolation of local factory telemetry (Layer C). All predictions, anomaly root causes, and Graph-RAG outputs are 100% explainable and verifiable under the EU AI Act safety framework (KIT & UA supervision).
+                    Challenge-oriented AI solutions for predictive maintenance and quality control move from TRL 2 to TRL 5, validated on real production lines against open benchmarks.
                 </div>
             </div>
 
             <div class="arch-summary-card boundary" style="border-top-color: #38bdf8;">
-                <div class="arch-summary-title">🇪🇺 Widening Integration & Regional Balance</div>
+                <div class="arch-summary-title">Competitiveness &amp; visibility</div>
                 <div class="arch-summary-text">
-                    <strong>Widening Member States</strong>: Czechia, Slovakia and Lithuania. Türkiye (AKCOAT) and Ukraine (CleverStaff) are not in the topic's participation list and must be verified with Horizon Europe before submission. Strong capacity building in Central & Eastern Europe.
+                    The open call, demo days and grand finale give European AI SMEs and teams visibility with user industries, and the results reach the community through the AI-on-demand platform.
                 </div>
             </div>
 
             <div class="arch-summary-card local" style="border-top-color: #a855f7;">
-                <div class="arch-summary-title">🚀 FSTP Acceleration & Cascade Funding</div>
+                <div class="arch-summary-title">AI adoption</div>
                 <div class="arch-summary-text">
-                    Managed by SINTEF, GRANT GARANT, and SYXIS VSI. €12.0M allocated in cascade funding to third-party SMEs, creating a self-sustaining B2B industrial AI marketplace.
+                    Explainable, human-supervised solutions are validated in the pilot plants, then reach further manufacturers through the EDIHs and the user-industry partners. Testing can use the Testing and Experimentation Facilities.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMMERCIAL VALUE FOOTER -->
+    <!-- DRAFT EXPLOITATION PLAN -->
     <footer class="commercial-footer">
-        <h3 class="commercial-title">Commercial Alliance & Consortium Sustainability Model</h3>
+        <h3 class="commercial-title">Draft Exploitation Plan: Uptake of the Teams&#x27; Solutions</h3>
         <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
-            The AURA consortium acts as the <strong>organizer, facilitator, and technical guarantor</strong> of the ecosystem. Through this framework, technology-buying enterprises deploy sovereign AI agents connected to their Standard Operating Procedures (SOPs) without data leakage risks (Layer C at Vicky Foods and AKCOAT), while provider SMEs integrate their API-consumable semantic "Oracles" into a self-sustaining industrial B2B marketplace commercially led by GRANT GARANT.
+            Each finalist keeps ownership of its results. <strong>After the FSTP grant, the best-performing team can conclude a partnership or contract with the user-industry partners</strong>, and the other finalists are introduced to further manufacturers through the EDIHs. T6.3 and T6.4 develop this plan, including licensing terms, liability for recommendations and the business case for a possible post-project AURA marketplace, led by GRANT GARANT.
         </p>
     </footer>
 </div>
@@ -2880,13 +2948,13 @@ function toggleAllTasks(open) {
         img.style.opacity = 0;
         setTimeout(() => {
             if (mode === 'dual') {
-                img.src = 'aura_three_layer_dual_projection.png';
+                img.src = 'aura_three_layer_dual_projection_v2.png';
                 btnDual.classList.add('active');
             } else if (mode === 'tech') {
-                img.src = 'aura_three_layer_architecture_dark.png';
+                img.src = 'aura_three_layer_architecture_dark_v2.png';
                 btnTech.classList.add('active');
             } else {
-                img.src = 'aura_master_architecture.png';
+                img.src = 'aura_master_architecture_v2.png';
                 btnExec.classList.add('active');
             }
             img.style.opacity = 1;

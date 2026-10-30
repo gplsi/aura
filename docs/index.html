@@ -652,6 +652,70 @@
             line-height: 1.55;
         }
 
+        /* WP TASK BREAKDOWN */
+        .wp-tasks {
+            list-style: none;
+            margin: 0.9rem 0 0;
+            padding: 0.7rem 0 0;
+            border-top: 1px dashed var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .wp-tasks-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .wp-task {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.15rem 0.55rem;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+
+        .wp-task-id {
+            grid-row: span 3;
+            align-self: start;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.1rem 0.4rem;
+            border-radius: 5px;
+            background: var(--b1-bg);
+            border: 1px solid var(--b1-border);
+            color: var(--b1-text);
+        }
+
+        .wp-task-title {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .wp-task-roles {
+            font-size: 0.72rem;
+            color: var(--b1-primary);
+        }
+
+        .wp-task-link {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0 0.3rem;
+            margin-left: 0.2rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+
         /* EXECUTION ROADMAP TIMELINE */
         .roadmap-container {
             display: flex;
@@ -1713,8 +1777,45 @@
                     </div>
                     <div class="wp-title">TRL 5 Industrial Validation Pilots</div>
                     <div class="wp-desc">
-                        Operational deployment and TRL 5 validation in real environments: continuous bakery line (Vicky Foods) and thermal/chemical coatings (AKCOAT).
+                        Operational deployment and TRL 5 validation in real environments across two flagship industrial testbeds: continuous bakery production (Vicky Foods) and advanced chemical/thermal coatings (AKCOAT).
                     </div>
+                    
+                    <ul class="wp-tasks">
+                        <li class="wp-tasks-label">Operational Task Breakdown (Pilots)</li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T5.1</span>
+                            <div>
+                                <span class="wp-task-title">Real Industrial Challenges & Plant Protocol Definition</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> Vicky Foods · <strong>Participants:</strong> AKCOAT, UA, INDElab</div>
+                                <div>Formalization of real industrial challenges in continuous bakery production line (Track A.1 / Vicky Foods) and physico-chemical coating processes (Track A.2 / AKCOAT); KPI specification and operational safety protocols design.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T5.2</span>
+                            <div>
+                                <span class="wp-task-title">On-Premise Edge GPU Server Deployment (Layer C)</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> Vicky Foods · <strong>Participants:</strong> AKCOAT, ESTEN, CleverStaff</div>
+                                <div>Installation, commissioning, and hardening of local GPU-accelerated edge computing nodes inside Vicky Foods and AKCOAT manufacturing plants, ensuring strict factory network air-gapping (Layer C / Bottom Level) and data sovereignty.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T5.3</span>
+                            <div>
+                                <span class="wp-task-title">Plant Telemetry Ingestion & Real-Time Data Streaming</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> Vicky Foods · <strong>Participants:</strong> AKCOAT, INDElab, UA</div>
+                                <div>Continuous sensor telemetry feeding, real-time industrial stream ingestion of baking/curing parameters, and population of the local Private Knowledge Graph (Layer 3) aligned with ISA-95 standards.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T5.4</span>
+                            <div>
+                                <span class="wp-task-title">TRL 5 Operational In-Plant Validation & HITL Governance</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> Vicky Foods · <strong>Participants:</strong> AKCOAT, KIT, SINTEF, SYXIS VSI</div>
+                                <div>Closed-loop Human-in-the-Loop TRL 5 validation in live manufacturing lines, real-time anomaly mitigation verification, and EU AI Act explainability & safety audit execution.</div>
+                            </div>
+                        </li>
+                    </ul>
+
                     <div class="wp-participants" style="margin-top: 0.8rem; font-size: 0.85rem; color: #a1b0cb; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.6rem;">
                         <strong>Participants:</strong> Vicky Foods, AKCOAT
                     </div>

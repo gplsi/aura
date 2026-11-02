@@ -872,6 +872,12 @@
         .fs-stage p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
         .fs-arrow { align-self: center; font-size: 1.6rem; color: var(--text-tertiary); }
         .fs-note { margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); text-align: left; }
+        .rep-note { display: block; margin-top: 0.3rem; font-size: 0.72rem; color: var(--text-tertiary); }
+        .rep-note-inline { font-size: 0.7rem; color: var(--text-tertiary); white-space: nowrap; }
+        .pilot-ex { margin-top: 0.55rem; padding: 0.5rem 0.65rem; border-left: 3px solid var(--border-medium); font-size: 0.8rem; color: var(--text-secondary); }
+        .pilot-ex strong { color: var(--text-primary); }
+        .pilot-ex ul { margin: 0.25rem 0 0; padding-left: 1.1rem; }
+        .pilot-ex li { margin: 0.15rem 0; }
         .sm-wrap { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); text-align: left; }
         .sm-title { margin: 0 0 0.4rem; font-size: 1.15rem; color: var(--text-primary); }
         .sm-lead { margin: 0 0 1.1rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
@@ -1393,12 +1399,12 @@
         <div class="tk-table-wrap" style="padding:0;">
             <table class="tk-table el-table">
                 <thead><tr><th>Partner</th><th>Country</th><th>Basis</th><th>Status</th></tr></thead>
-                <tbody><tr><td><strong>SINTEF</strong></td><td>Norway</td><td>Associated country listed in the topic</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>GRANT GARANT</strong></td><td>Czechia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>SYXIS VSI</strong></td><td>Lithuania</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>ESTEN s.r.o.</strong></td><td>Slovakia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Univ. Alicante</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>INDElab / UvA</strong></td><td>Netherlands</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>KIT Karlsruhe</strong></td><td>Germany</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>BSC / MareNostrum</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Vicky Foods</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>CleverStaff</strong></td><td>Ukraine</td><td>Associated to Horizon Europe, but not in the topic's eligible list</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr><tr><td><strong>AKCOAT</strong></td><td>Türkiye</td><td>Associated to Horizon Europe, but not in the topic's eligible list</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr></tbody>
+                <tbody><tr><td><strong>SINTEF</strong></td><td>Norway</td><td>Associated country listed in the topic</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>GRANT GARANT</strong></td><td>Czechia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>SYXIS VSI</strong></td><td>Lithuania</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>ESTEN s.r.o.</strong></td><td>Slovakia</td><td>EU Member State (Widening)</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Univ. Alicante</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>INDElab / UvA</strong></td><td>Netherlands</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>KIT Karlsruhe</strong></td><td>Germany</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>BSC / MareNostrum</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>Vicky Foods</strong></td><td>Spain</td><td>EU Member State</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><td><strong>CleverStaff (Voithos AI)</strong></td><td>Ukraine</td><td>Associated to Horizon Europe, but not in the topic's eligible list</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr><tr><td><strong>AKCOAT</strong></td><td>Türkiye</td><td>Associated to Horizon Europe, but not in the topic's eligible list</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr></tbody>
             </table>
         </div>
         <div class="el-actions">
             <div><strong>1 · AKCOAT</strong> Confirmed as a partner, but Türkiye is not in the topic&#x27;s eligible list; to be confirmed with the European Commission. Use an AKCOAT entity established in an eligible country, if one exists, or replace the coatings pilot with an eligible manufacturer. User-industry companies must be core partners.</div>
-            <div><strong>2 · CleverStaff</strong> Confirmed as a partner, but Ukraine is not in the topic&#x27;s eligible list; to be confirmed with the European Commission. Use an entity established in an eligible country, if one exists, or reassign T2.7 and T4.6 to an eligible partner and keep the budget in the consortium.</div>
+            <div><strong>2 · CleverStaff (Voithos AI)</strong> Confirmed as a partner, but Ukraine is not in the topic&#x27;s eligible list; to be confirmed with the European Commission. Use an entity established in an eligible country, if one exists, or reassign T2.7 and T4.6 to an eligible partner and keep the budget in the consortium.</div>
             <div><strong>3 · All partners</strong> Complete the Ownership Control Declaration, and confirm any open point with the National Contact Point before submission.</div>
         </div>
     </section>
@@ -1435,7 +1441,7 @@
                         <span class="wp-badge">WP4/WP6 Leader</span>
                     </li>
                     <li class="block-partner-item">
-                        <span>SYXIS VSI <span class="badge-status badge-pendiente" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Pending</span> <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— Evaluation &amp; Monitoring</span></span>
+                        <span>SYXIS VSI <span class="badge-status badge-pendiente" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Pending</span> <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— Evaluation &amp; Monitoring</span> <span class="rep-note-inline">· represented by OhMyGrant</span></span>
                         <span class="wp-badge">WP4 Evaluation</span>
                     </li>
                 </ul>
@@ -1464,7 +1470,7 @@
                         <span class="wp-badge">WP2 Tech Mentor</span>
                     </li>
                     <li class="block-partner-item">
-                        <span>CleverStaff <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Ukraine)</span> <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span> <span class="partner-keyword">— Agentic AI & Integration Mentor</span></span>
+                        <span>CleverStaff (Voithos AI) <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Ukraine)</span> <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span> <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="rep-note-inline">· represented by OhMyGrant</span></span>
                         <span class="wp-badge">WP2/WP3 Tech Mentor</span>
                     </li>
                 </ul>
@@ -1670,7 +1676,7 @@
                         <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">CleverStaff <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
+                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
                     </div>
                     <div class="partner-role-box">
                         <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
@@ -1725,7 +1731,7 @@
                         <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">CleverStaff <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
+                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
                     </div>
                     <div class="partner-role-box">
                         <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
@@ -1782,7 +1788,7 @@
                         <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">CleverStaff <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
+                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
                     </div>
                     <div class="partner-role-box">
                         <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
@@ -2379,7 +2385,7 @@
             <div class="tk-table-wrap">
             <table class="tk-table">
                 <thead><tr><th>Partner</th><th>WP1</th><th>WP2</th><th>WP3</th><th>WP4</th><th>WP5</th><th>WP6</th><th>Total PM</th><th>Budget</th><th>% budget</th><th>HE eligibility</th></tr></thead>
-                <tbody><tr><th>SINTEF</th><td>14.6</td><td>0.4</td><td>0.3</td><td>6.1</td><td>0.7</td><td>4.7</td><td class="t">26.8</td><td class="b">300,000 €</td><td>15.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>GRANT GARANT</th><td>1.4</td><td class="z">–</td><td class="z">–</td><td>16.2</td><td class="z">–</td><td>17.4</td><td class="t">35.0</td><td class="b">280,000 €</td><td>14.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>SYXIS VSI</th><td>1.3</td><td class="z">–</td><td class="z">–</td><td>21.8</td><td>0.8</td><td>0.8</td><td class="t">24.7</td><td class="b">220,000 €</td><td>11.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>ESTEN s.r.o.</th><td>0.5</td><td>0.6</td><td>22.4</td><td>2.8</td><td>1.6</td><td>1.3</td><td class="t">29.2</td><td class="b">230,000 €</td><td>11.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Univ. Alicante</th><td>1.1</td><td>17.9</td><td>2.7</td><td>3.3</td><td>3.3</td><td>0.8</td><td class="t">29.1</td><td class="b">250,000 €</td><td>12.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>INDElab / UvA</th><td>0.1</td><td>11.5</td><td>0.8</td><td>1.5</td><td>1.5</td><td>0.5</td><td class="t">16.0</td><td class="b">160,000 €</td><td>8.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>KIT Karlsruhe</th><td>0.7</td><td>8.7</td><td>0.3</td><td>1.7</td><td>1.4</td><td>0.3</td><td class="t">13.0</td><td class="b">140,000 €</td><td>7.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>CleverStaff</th><td>0.1</td><td>9.1</td><td>5.0</td><td>7.2</td><td>1.9</td><td>0.6</td><td class="t">23.9</td><td class="b">120,000 €</td><td>6.0%</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr><tr><th>BSC / MareNostrum</th><td>0.1</td><td class="z">–</td><td>9.7</td><td>0.8</td><td class="z">–</td><td>1.0</td><td class="t">11.6</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Vicky Foods</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.4</td><td>12.6</td><td>0.6</td><td class="t">15.5</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>AKCOAT</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.7</td><td>14.2</td><td>0.6</td><td class="t">17.4</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr></tbody>
+                <tbody><tr><th>SINTEF</th><td>14.6</td><td>0.4</td><td>0.3</td><td>6.1</td><td>0.7</td><td>4.7</td><td class="t">26.8</td><td class="b">300,000 €</td><td>15.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>GRANT GARANT</th><td>1.4</td><td class="z">–</td><td class="z">–</td><td>16.2</td><td class="z">–</td><td>17.4</td><td class="t">35.0</td><td class="b">280,000 €</td><td>14.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>SYXIS VSI</th><td>1.3</td><td class="z">–</td><td class="z">–</td><td>21.8</td><td>0.8</td><td>0.8</td><td class="t">24.7</td><td class="b">220,000 €</td><td>11.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>ESTEN s.r.o.</th><td>0.5</td><td>0.6</td><td>22.4</td><td>2.8</td><td>1.6</td><td>1.3</td><td class="t">29.2</td><td class="b">230,000 €</td><td>11.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Univ. Alicante</th><td>1.1</td><td>17.9</td><td>2.7</td><td>3.3</td><td>3.3</td><td>0.8</td><td class="t">29.1</td><td class="b">250,000 €</td><td>12.5%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>INDElab / UvA</th><td>0.1</td><td>11.5</td><td>0.8</td><td>1.5</td><td>1.5</td><td>0.5</td><td class="t">16.0</td><td class="b">160,000 €</td><td>8.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>KIT Karlsruhe</th><td>0.7</td><td>8.7</td><td>0.3</td><td>1.7</td><td>1.4</td><td>0.3</td><td class="t">13.0</td><td class="b">140,000 €</td><td>7.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>CleverStaff (Voithos AI)</th><td>0.1</td><td>9.1</td><td>5.0</td><td>7.2</td><td>1.9</td><td>0.6</td><td class="t">23.9</td><td class="b">120,000 €</td><td>6.0%</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr><tr><th>BSC / MareNostrum</th><td>0.1</td><td class="z">–</td><td>9.7</td><td>0.8</td><td class="z">–</td><td>1.0</td><td class="t">11.6</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>Vicky Foods</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.4</td><td>12.6</td><td>0.6</td><td class="t">15.5</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-ok">✓ Eligible</span></td></tr><tr><th>AKCOAT</th><td>0.5</td><td>1.1</td><td>0.3</td><td>0.7</td><td>14.2</td><td>0.6</td><td class="t">17.4</td><td class="b">100,000 €</td><td>5.0%</td><td><span class="el-badge el-chk">✗ Not eligible as listed</span></td></tr></tbody>
                 <tfoot><tr><th>Total</th><td>20.9</td><td>50.4</td><td>41.8</td><td>62.6</td><td>38.0</td><td>28.6</td><td class="t">242.3</td><td class="b">2,000,000 €</td><td>100%</td><td></td></tr></tfoot>
             </table>
             </div>
@@ -2549,7 +2555,7 @@
             <div class="country-chip" id="chip-Ukraine" onclick="filterByCountry('Ukraine')">
                 <span class="flag">🇺🇦</span>
                 <div class="c-name">Ukraine</div>
-                <div class="c-count">CleverStaff · ✗ not eligible as listed</div>
+                <div class="c-count">CleverStaff (Voithos AI) · ✗ not eligible as listed</div>
             </div>
             <div class="country-chip" id="chip-Türkiye" onclick="filterByCountry('Türkiye')">
                 <span class="flag">🇹🇷</span>
@@ -2566,7 +2572,7 @@
                 <span class="section-num-tag">08 / Consortium Responsibility Matrix</span>
                 <h2 class="section-title">Partner Responsibilities & Operational Block Breakdown</h2>
                 <p class="section-desc">
-                    Comprehensive mapping of all 11 consortium partners across the 4 Operational Blocks, detailing organization profile, strategic role, WP leadership, and confirmation status.
+                    Comprehensive mapping of all 11 consortium partners across the 4 Operational Blocks, detailing organization profile, strategic role, WP leadership, and confirmation status. <strong>CleverStaff and Voithos AI are the same partner.</strong> CleverStaff (Voithos AI) and SYXIS VSI are represented by OhMyGrant.
                 </p>
             </div>
         </div>
@@ -2658,6 +2664,7 @@
                             <a href="https://syxis.eu/" target="_blank" rel="noopener noreferrer" class="partner-link">
                                 <span class="partner-role-icon" title="Competition Evaluation & Monitoring">⚖️</span> SYXIS VSI <span class="external-icon">↗</span>
                             </a>
+                            <span class="rep-note">Represented by OhMyGrant</span>
                             <span class="badge-widening">WIDENING</span>
                         </td>
                         <td>
@@ -2756,6 +2763,7 @@
                             <a href="https://cleverstaff.net/" target="_blank" rel="noopener noreferrer" class="partner-link">
                                 <span class="partner-role-icon" title="Agentic AI Guidelines & Cloud Infrastructure Technologies">🤖</span> CleverStaff <span class="external-icon">↗</span>
                             </a>
+                            <span class="rep-note">Same company as Voithos AI · represented by OhMyGrant</span>
                         </td>
                         <td>
                             <div class="resp-desc">Ukraine <span class="el-badge el-chk" title="Türkiye and Ukraine are not in the participation list of topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-04. An eligible entity or a replacement is needed before submission.">✗ Not eligible as listed</span></div>
@@ -2848,6 +2856,13 @@
                             <div class="resp-desc">
                                 Real industrial challenge provision in continuous bakery line (challenge A.1); plant readiness for the finalists&#x27; Layer C edge nodes; plant telemetry data provision and final TRL 5 validation in plant.
                             </div>
+                            <div class="pilot-ex"><strong>Example challenges</strong> (illustrative; final challenges defined in T5.1):
+                                <ul>
+                                    <li>Anticipate oven or proofing deviations at least 2 hours before they cause under- or over-baked batches.</li>
+                                    <li>Detect early wear or jams in mixers, dividers and conveyors to reduce unplanned stops.</li>
+                                    <li>Guide operators to the right procedure when product weight, colour or shape drifts, to cut scrap.</li>
+                                </ul>
+                            </div>
                         </td>
                         <td>
                             <span class="wp-badge">WP5 Leader</span><br>
@@ -2870,6 +2885,13 @@
                         <td>
                             <div class="resp-desc">
                                 Physico-chemical manufacturing challenge provision (challenge A.2); rheology & thermal curing dataset provision; plant readiness for the finalists&#x27; Layer C edge nodes and TRL 5 validation in plant.
+                            </div>
+                            <div class="pilot-ex"><strong>Example challenges</strong> (illustrative; final challenges defined in T5.1):
+                                <ul>
+                                    <li>Detect viscosity and rheology deviations in coating batches in real time and suggest corrections.</li>
+                                    <li>Anticipate surface defects such as pinholes, bubbles or colour shifts from curing-oven data.</li>
+                                    <li>Adjust curing-oven profiles to reduce energy use while keeping coating quality.</li>
+                                </ul>
                             </div>
                         </td>
                         <td>

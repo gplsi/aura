@@ -2405,7 +2405,7 @@
             </div>
         </div>
 
-        <details class="tk-summary">
+        <details class="tk-summary" id="budget" style="scroll-margin-top: 110px;">
             <summary>Person-months &amp; budget per partner · total <strong>242.3 PM</strong> · <strong>€2.0M</strong></summary>
             <div class="tk-table-wrap">
             <table class="tk-table">
@@ -3090,6 +3090,16 @@ function toggleAllTasks(open) {
             header.style.display = hasVisible ? '' : 'none';
         });
     }
+
+    // Open the budget table when the URL points to #budget
+    function openBudgetFromHash() {
+        if (location.hash !== '#budget') return;
+        const budget = document.getElementById('budget');
+        budget.open = true;
+        budget.scrollIntoView();
+    }
+    window.addEventListener('load', openBudgetFromHash);
+    window.addEventListener('hashchange', openBudgetFromHash);
 </script>
 
 </body>

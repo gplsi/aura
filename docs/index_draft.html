@@ -886,6 +886,13 @@
         .sm-card { padding: 0.85rem 0.95rem; border: 1px solid var(--border-subtle); border-radius: 10px; }
         .sm-card h5 { margin: 0 0 0.3rem; font-size: 0.88rem; color: var(--text-primary); }
         .sm-card p { margin: 0; font-size: 0.83rem; line-height: 1.5; color: var(--text-secondary); }
+        .ch-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .ch-col h5 { margin: 0 0 0.55rem; font-size: 0.9rem; color: var(--text-primary); }
+        .ch-card { padding: 0.8rem 0.95rem; border: 1px solid var(--border-subtle); border-radius: 10px; margin-bottom: 0.65rem; }
+        .ch-card h6 { margin: 0 0 0.35rem; font-size: 0.86rem; color: var(--text-primary); }
+        .ch-card dl { margin: 0; display: grid; grid-template-columns: 5.2rem 1fr; gap: 0.2rem 0.6rem; font-size: 0.8rem; line-height: 1.45; }
+        .ch-card dt { font-weight: 700; color: var(--text-tertiary); }
+        .ch-card dd { margin: 0; color: var(--text-secondary); }
         .sm-tag { display: block; margin-bottom: 0.3rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-tertiary); }
         @media (max-width: 820px) { .fs-stages { grid-template-columns: 1fr; } .fs-arrow { transform: rotate(90deg); justify-self: center; } }
 
@@ -1887,6 +1894,24 @@
                     <div class="sm-card"><span class="sm-tag">3 · Act</span><p>The operator applies, changes or rejects the recommendation.</p></div>
                     <div class="sm-card"><span class="sm-tag">4 · Learn</span><p>The validated experience is added to the plant&#x27;s private knowledge graph.</p></div>
                 </div>
+
+                <h4 class="sm-sub">Example challenges for the open call (illustrative)</h4>
+                <p class="sm-lead" style="margin-bottom:0.8rem;">Each pilot publishes one challenge. These examples show the kind of industrial problem a team would solve inside it, always covering the full Predict → Guide → Act → Learn loop.</p>
+                <div class="ch-cols">
+                    <div class="ch-col">
+                        <h5>A.1 Bakery · Vicky Foods</h5>
+                        <div class="ch-card"><h6>A.1.a · Baking-quality drift</h6><dl><dt>Problem</dt><dd>Oven or proofing deviations produce under- or over-baked batches that are only detected at end-of-line inspection.</dd><dt>Solution</dt><dd>Predicts the drift before it happens, guides the operator to the right procedure, records what was done.</dd><dt>Data</dt><dd>Oven and proofing temperature and humidity, line speed, end-of-line weight and colour checks.</dd><dt>Target</dt><dd>Anomaly lead time ≥ 2 h · scrap −15%.</dd></dl></div>
+                        <div class="ch-card"><h6>A.1.b · Unplanned stops in mixers, dividers and conveyors</h6><dl><dt>Problem</dt><dd>Wear and jams cause unplanned stops; the know-how to fix them sits with a few experienced technicians.</dd><dt>Solution</dt><dd>Detects early wear signals, recommends the action from manuals and past repairs, learns from each intervention.</dd><dt>Data</dt><dd>Motor current and vibration, stop logs, maintenance records, equipment manuals.</dd><dt>Target</dt><dd>Fewer unplanned stops (baseline and target fixed in T5.1).</dd></dl></div>
+                        <div class="ch-card"><h6>A.1.c · Product weight and shape drift</h6><dl><dt>Problem</dt><dd>Weight, shape or colour drift with flour batch or dough conditions, and the response varies between shifts.</dd><dt>Solution</dt><dd>Flags the drift, suggests the adjustment citing the source procedure, captures the operator&#x27;s feedback.</dd><dt>Data</dt><dd>Checkweigher, vision inspection, raw-material batch records, SOPs.</dd><dt>Target</dt><dd>Precision &gt; 85% · 100% of recommendations traceable to source.</dd></dl></div>
+                    </div>
+                    <div class="ch-col">
+                        <h5>A.2 Coatings · AKCOAT <span style="font-weight:400;color:var(--text-tertiary);">(eligibility to be confirmed with the EC)</span></h5>
+                        <div class="ch-card"><h6>A.2.a · Rheology deviation in batches</h6><dl><dt>Problem</dt><dd>Off-spec viscosity is found late, in lab quality control, and the batch needs rework.</dd><dt>Solution</dt><dd>Detects the deviation in real time and suggests a correction within the approved formulation limits; the operator decides.</dd><dt>Data</dt><dd>Inline and lab viscosity, formulation, temperature, mixing times.</dd><dt>Target</dt><dd>Real-time rheology deviation detection.</dd></dl></div>
+                        <div class="ch-card"><h6>A.2.b · Surface defects after curing</h6><dl><dt>Problem</dt><dd>Pinholes, bubbles or colour shifts appear after curing and lead to rejected parts.</dd><dt>Solution</dt><dd>Anticipates the defect from batch and curing-oven data and recommends the preventive action.</dd><dt>Data</dt><dd>Curing-oven zone temperatures, batch records, defect inspection results.</dd><dt>Target</dt><dd>Surface-defect rejects −20%.</dd></dl></div>
+                        <div class="ch-card"><h6>A.2.c · Energy-aware curing profiles</h6><dl><dt>Problem</dt><dd>Curing ovens run conservative profiles that use more energy than the coating needs.</dd><dt>Solution</dt><dd>Recommends profile adjustments that keep quality, and learns which settings work for each product.</dd><dt>Data</dt><dd>Oven zone temperatures, energy meters, quality-control results.</dd><dt>Target</dt><dd>Oven energy −12% at equal quality.</dd></dl></div>
+                    </div>
+                </div>
+                <p class="fs-note">Data sources and targets are to be confirmed with Vicky Foods and AKCOAT. The final problem statements are fixed in T5.1 and published with the Stage 1 call.</p>
             </div>
             <div class="tk-table-wrap" style="margin-top:1.25rem;">
             <h3 style="margin:0 0 0.4rem;font-size:1.05rem;">Stage targets &amp; KPIs (proposed; baselines fixed in T5.1)</h3>

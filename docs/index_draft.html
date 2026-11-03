@@ -1356,6 +1356,7 @@
             <li><a href="#edge-engine">Edge Engine</a></li>
             <li><a href="#roadmap">Project Roadmap</a></li>
             <li><a href="#work-packages">Work Packages</a></li>
+            <li><a href="#budget">Budget</a></li>
             <li><a href="#geographic">Geographic Reach</a></li>
             <li><a href="#matrix">Partner Matrix</a></li>
             <li><a href="#impact">Strategic Impact</a></li>
@@ -3100,6 +3101,7 @@ function toggleAllTasks(open) {
     }
     window.addEventListener('load', openBudgetFromHash);
     window.addEventListener('hashchange', openBudgetFromHash);
+    document.querySelectorAll('a[href="#budget"]').forEach(a => a.addEventListener('click', () => setTimeout(openBudgetFromHash, 0)));
 </script>
 
 </body>

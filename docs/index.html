@@ -879,6 +879,16 @@
             font-weight: 600;
         }
 
+        /* FSTP 3-STAGE STYLING */
+        .fs-stages { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0.8rem; align-items: stretch; text-align: left; }
+        .fs-stage { border: 1px solid var(--border-subtle); border-top: 4px solid var(--sc); border-radius: 10px; padding: 1.1rem; background: var(--bg-surface); }
+        .fs-n { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--sc); }
+        .fs-stage h4 { margin: 0.35rem 0; font-size: 1.05rem; color: var(--text-primary); }
+        .fs-amt { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.4rem; }
+        .fs-stage p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+        .fs-arrow { align-self: center; font-size: 1.6rem; color: var(--text-tertiary); }
+        .fs-note { margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); text-align: left; }
+
         /* TOOLBAR & FILTERS */
         .toolbar {
             display: flex;
@@ -1250,8 +1260,8 @@
                         <span class="wp-badge">WP4/WP6 Leader</span>
                     </li>
                     <li class="block-partner-item">
-                        <span>SYXIS VSI <span class="badge-status badge-pendiente" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Pending</span> <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— SME Auditor</span> <span class="rep-note-inline">· represented by OhMyGrant</span></span>
-                        <span class="wp-badge">WP4 Audit</span>
+                        <span>SYXIS VSI <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— FSTP Evaluation & Monitoring</span> <span class="rep-note-inline">· represented by OhMyGrant</span></span>
+                        <span class="wp-badge">WP4 Evaluation Lead</span>
                     </li>
                 </ul>
             </div>
@@ -1355,7 +1365,7 @@
             <div class="arch-summary-card federated">
                 <div class="arch-summary-title">01. Top Level: Federated Cloud & EuroHPC (Layers A & B)</div>
                 <div class="arch-summary-text">
-                    ISA-95 Core Ontology (Layer 1), Track B Sectoral Semantic Oracles (Layer 2: HACCP, REACH, CLP), BSC MareNostrum V supercomputing for massive industrial model training, and continuous MLOps pipelines in Gaia-X sovereign cloud (ESTEN).
+                    ISA-95 Core Ontology (Layer 1), Sectoral Semantic Oracles (Layer 2: HACCP, REACH, CLP) specified by the consortium and built by competing teams, EuroHPC supercomputing access for industrial model training (via BSC), and continuous MLOps pipelines in Gaia-X sovereign cloud (ESTEN).
                 </div>
             </div>
 
@@ -1450,18 +1460,18 @@
                 <div class="phase-header">
                     <div class="phase-title-group">
                         <span class="phase-badge badge-p1">Phase 1</span>
-                        <h3 class="phase-name">Establishment: Project Guidelines & Mentorship Framework</h3>
+                        <h3 class="phase-name">Establishment: Core Scientific Guidelines &amp; Stage 1 Open Call</h3>
                     </div>
                     <span class="phase-timeframe">Months 01 – 12</span>
                 </div>
                 <p class="section-desc">
-                    <strong>Focus:</strong> Preparation of the €12M FSTP mechanics, establishment of core scientific/technical guidelines, and setup of the Mentorship Network before launching Open Calls.
+                    <strong>Focus:</strong> Preparation of the €12M FSTP 3-stage competition, establishment of core scientific/technical guidelines (ISA-95, Graph-RAG), sandbox setup, and Stage 1 Open Call selection.
                 </p>
                 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b1-primary);">
                     <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
-                        <strong style="color: var(--text-primary);">MS1 (M06):</strong> Core Scientific Guidelines & ISA-95 Ontology Standardised &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS2 (M09):</strong> Sovereign Cloud Sandbox & EuroHPC Access Ready &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS3 (M12):</strong> FSTP Open Call #1 Officially Launched
+                        <strong style="color: var(--text-primary);">MS1 (M06):</strong> Core Scientific Guidelines &amp; ISA-95 Reference Ontology Standardised &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS2 (M07):</strong> Stage 1 Open Call Officially Launched &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS3 (M12):</strong> 10 SME-led Teams Selected for Stage 2
                     </p>
                 </div>
                 <div class="phase-partners-grid">
@@ -1471,26 +1481,26 @@
                     <div class="partner-role-box">
                         <div class="pr-entity">GRANT GARANT <span class="partner-keyword">— SME Open Calls</span> <span class="pr-wp">B1 · WP4/WP6</span></div>
                     </div>
-                    <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
-                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— SME Auditor</span> <span class="pr-wp">B1 · WP4</span></div>
+                    <div class="partner-role-box">
+                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— FSTP Evaluation &amp; Monitoring</span> <span class="pr-wp">B1 · WP4</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP &amp; Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies &amp; Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance &amp; Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
+                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI &amp; Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud &amp; Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center &amp; Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
                     </div>
                     <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
                         <div class="pr-entity">Vicky Foods <span class="partner-keyword">— Bakery Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
@@ -1506,18 +1516,18 @@
                 <div class="phase-header">
                     <div class="phase-title-group">
                         <span class="phase-badge badge-p2">Phase 2</span>
-                        <h3 class="phase-name">Iterative Execution: FSTP Open Calls, Auditing & SME Deployment</h3>
+                        <h3 class="phase-name">Stage 2 Execution: Prototyping in Sovereign Sandbox (10 Teams · €3.0M)</h3>
                     </div>
-                    <span class="phase-timeframe">Months 13 – 30</span>
+                    <span class="phase-timeframe">Months 13 – 23</span>
                 </div>
                 <p class="section-desc">
-                    <strong>Focus:</strong> Cyclical process repeating across multiple €12M FSTP calls (Adoption Pilots, Tech Adaptation). SMEs apply, are selected, mentored, deployed, and strictly audited.
+                    <strong>Focus:</strong> The 10 funded teams build complete solutions in the Gaia-X sandbox using anonymised pilot datasets (TRL 3 → 4), supported by consortium mentors and monitored by SYXIS VSI. Benchmark and demo day select 4 finalists.
                 </p>
                 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b2-primary);">
                     <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
-                        <strong style="color: var(--text-primary);">MS4 (M18):</strong> Batch 1 SMEs (Adoption & Tech) Deployed & Mentored &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS5 (M24):</strong> FSTP Open Call #2 Launched &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS6 (M30):</strong> On-Premise Industrial Pilots Validated at TRL 5
+                        <strong style="color: var(--text-primary);">Mid-term Review (M17):</strong> Deliverable Reviews &amp; Progress Checks &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS4 (M22):</strong> Stage 2 Benchmark &amp; Demo Day: 4 Finalists Selected &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS5 (M23):</strong> Stage 3 Sub-Grant Agreements Signed
                     </p>
                 </div>
                 <div class="phase-partners-grid">
@@ -1528,25 +1538,25 @@
                         <div class="pr-entity">GRANT GARANT <span class="partner-keyword">— SME Open Calls</span> <span class="pr-wp">B1 · WP4/WP6</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— SME Auditor</span> <span class="pr-wp">B1 · WP4</span></div>
+                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— FSTP Evaluation &amp; Monitoring</span> <span class="pr-wp">B1 · WP4</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                        <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP &amp; Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                        <div class="pr-entity">INDElab / Univ. Amsterdam <span class="partner-keyword">— Ontologies &amp; Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
+                        <div class="pr-entity">KIT Karlsruhe <span class="partner-keyword">— AI Compliance &amp; Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI & Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
+                        <div class="pr-entity">CleverStaff (Voithos AI) <span class="partner-keyword">— Agentic AI &amp; Integration Mentor</span> <span class="pr-wp">B2 · WP2/WP3</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                        <div class="pr-entity">ESTEN s.r.o. <span class="partner-keyword">— Gaia-X Cloud &amp; Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center & Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
+                        <div class="pr-entity">BSC / MareNostrum <span class="partner-keyword">— EuroHPC Center &amp; Infra Mentor</span> <span class="pr-wp">B3 · WP3</span></div>
                     </div>
                     <div class="partner-role-box">
                         <div class="pr-entity">Vicky Foods <span class="partner-keyword">— Bakery Pilot</span> <span class="pr-wp">B4 · WP5</span></div>
@@ -1562,18 +1572,19 @@
                 <div class="phase-header">
                     <div class="phase-title-group">
                         <span class="phase-badge badge-p3">Phase 3</span>
-                        <h3 class="phase-name">B2B Commercial Exploitation & Ecosystem Scaling</h3>
+                        <h3 class="phase-name">Stage 3 &amp; Uptake: In-Plant Validation (4 Finalists · €9.0M), Grand Finale &amp; Scaling</h3>
                     </div>
-                    <span class="phase-timeframe">Months 31 – 36</span>
+                    <span class="phase-timeframe">Months 24 – 36</span>
                 </div>
                 <p class="section-desc">
-                    <strong>Focus:</strong> Post-project sustainability, leveraging the validated SME projects to scale the AURA ecosystem commercially across Europe.
+                    <strong>Focus:</strong> The 4 finalists validate their complete solutions on Vicky Foods and AKCOAT lines up to TRL 5 with plant operators (HITL). Grand finale selects the best-performing solution; commercial uptake scaling follows.
                 </p>
                 <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b3-primary);">
                     <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
-                        <strong style="color: var(--text-primary);">MS7 (M32):</strong> SME Technical Audits & FSTP Financial Closure &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS8 (M34):</strong> AURA Marketplace & B2B Exploitation Packages Live &nbsp;&bull;&nbsp; 
-                        <strong style="color: var(--text-primary);">MS9 (M36):</strong> Final Ecosystem Scaling Strategy Delivered
+                        <strong style="color: var(--text-primary);">Mid-term Review (M29):</strong> Stage 3 Progress Check &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS6 (M33):</strong> Grand Finale &amp; Best-Performing Solution Selected &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS7 (M34):</strong> FSTP Sub-Grants Financially Closed &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS8 (M36):</strong> B2B Commercial Exploitation Strategy Delivered
                     </p>
                 </div>
                 <div class="phase-partners-grid">
@@ -1584,7 +1595,7 @@
                         <div class="pr-entity">GRANT GARANT <span class="partner-keyword">— SME Open Calls</span> <span class="pr-wp">B1 · WP4/WP6</span></div>
                     </div>
                     <div class="partner-role-box">
-                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— SME Auditor</span> <span class="pr-wp">B1 · WP4</span></div>
+                        <div class="pr-entity">SYXIS VSI <span class="partner-keyword">— FSTP Evaluation & Monitoring</span> <span class="pr-wp">B1 · WP4</span></div>
                     </div>
                     <div class="partner-role-box" style="opacity: 0.35; filter: grayscale(80%);">
                         <div class="pr-entity">Universidad de Alicante <span class="partner-keyword">— NLP & Tech Mentor</span> <span class="pr-wp">B2 · WP2</span></div>
@@ -1622,7 +1633,7 @@
                 <span class="section-num-tag">05 / Global Budget & FSTP Mechanics</span>
                 <h2 class="section-title">€14M Total Budget: Driving Market Uptake via €12M FSTP</h2>
                 <p class="section-desc">
-                    Out of the €14,000,000 total project budget, <strong>€12,000,000 is directly allocated to third-party SMEs (FSTP)</strong>, while the remaining €2,000,000 covers the consortium's core activities. Below is the distribution of the cascade funding across four key SME pillars.
+                    Out of the €14,000,000 total project budget, <strong>€12,000,000 is directly allocated to third-party SMEs (FSTP)</strong>, while the remaining €2,000,000 covers the consortium's core activities. The cascade funding follows the 3-stage challenge-driven competition fixed by the topic.
                 </p>
             </div>
         </div>
@@ -1647,50 +1658,34 @@
 
             <!-- FSTP Breakdown Title -->
             <div style="margin-top: 4rem; margin-bottom: 2rem; text-align: left; padding-left: 1rem; border-left: 4px solid #eab308;">
-                <h3 style="margin: 0; color: #eab308; font-size: 1.4rem; font-weight: 600;">Breakdown of the €12.0M FSTP Cascade Funding</h3>
-                <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">Detailed distribution of the SME adoption pillars.</p>
+                <h3 style="margin: 0; color: #ca8a04; font-size: 1.4rem; font-weight: 600;">The €12.0M FSTP as a 3-Stage Challenge Competition</h3>
+                <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">FSTP awarded strictly as cascade grants to single SMEs or SME-led teams across 2 industrial pilot challenges. Maximum €2.55M per third party.</p>
             </div>
 
-            <!-- 4 Pillars Grid -->
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: left;">
-                
-                <!-- Adoption Pilots -->
-                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b1-primary);">
-                    <h4 style="color: var(--b1-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Adoption Pilots (50%)</h4>
-                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€6.0M</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
-                        Direct funding for implementing AURA solutions in real industrial environments (~30-40 projects).
-                    </p>
+            <!-- 3 Stages Grid -->
+            <div class="fs-stages">
+                <div class="fs-stage" style="--sc:#ca8a04">
+                    <div class="fs-n">Stage 1 · M07–M12</div>
+                    <h4>Open Call &amp; Selection</h4>
+                    <div class="fs-amt">Selection</div>
+                    <p>Teams respond to Challenge A.1 (Bakery) or A.2 (Coatings). Independent evaluation led by SYXIS VSI selects the <strong>Top 10</strong> teams.</p>
                 </div>
-
-                <!-- Tech Adaptation -->
-                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b2-primary);">
-                    <h4 style="color: var(--b2-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Tech Adaptation (25%)</h4>
-                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€3.0M</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
-                        Support for SMEs to customize and integrate AURA components into existing systems (~20-25 projects).
-                    </p>
+                <div class="fs-arrow">→</div>
+                <div class="fs-stage" style="--sc:#0d9488">
+                    <div class="fs-n">Stage 2 · M13–M22</div>
+                    <h4>Prototyping · 10 Teams</h4>
+                    <div class="fs-amt">€3.0M</div>
+                    <p><strong>10 × €300,000</strong>. Complete prototypes (TRL 3–4) developed in the sovereign Gaia-X sandbox using anonymised pilot data. Benchmark &amp; Demo Day select the <strong>Top 4</strong> finalists.</p>
                 </div>
-
-                <!-- Training -->
-                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b3-primary);">
-                    <h4 style="color: var(--b3-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Training (15%)</h4>
-                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€1.8M</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
-                        Upskilling programs and workshops for industrial workers using AURA technology.
-                    </p>
+                <div class="fs-arrow">→</div>
+                <div class="fs-stage" style="--sc:#7c3aed">
+                    <div class="fs-n">Stage 3 · M24–M34</div>
+                    <h4>Plant Validation · 4 Finalists</h4>
+                    <div class="fs-amt">€9.0M</div>
+                    <p><strong>4 × €2,250,000</strong>. Direct plant integration and TRL 5 validation on live lines at Vicky Foods and AKCOAT (raw data remains on-premise). Grand Finale awards best-performing solution.</p>
                 </div>
-
-                <!-- Mentoring -->
-                <div style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid var(--border-color); border-top: 4px solid var(--b4-primary);">
-                    <h4 style="color: var(--b4-primary); margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 600;">Mentoring (10%)</h4>
-                    <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">€1.2M</div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.5;">
-                        Expert continuous technical support and mentor network for successful deployment.
-                    </p>
-                </div>
-
             </div>
+            <p class="fs-note">Training, mentoring and evaluation are <strong>not</strong> paid as FSTP: they are carried out by the consortium within its €2.0M core budget (WP4), as the topic requires.</p>
         </div>
     </section>
 
@@ -1761,12 +1756,73 @@
                         <span class="wp-id">WP4</span>
                         <span class="wp-leader"><strong>Leader:</strong> GRANT GARANT</span>
                     </div>
-                    <div class="wp-title">FSTP Open Calls, Auditing & Mentorship</div>
+                    <div class="wp-title">Three-Stage FSTP Competition, Evaluation & Monitoring</div>
                     <div class="wp-desc">
-                        Orchestration of the €12M cascade funding: SME attraction, independent evaluation panel, and hands-on technical acceleration mentorship.
+                        Orchestration of the €12M cascade funding: open calls, applicant support, independent stage-gate evaluations, milestone monitoring reports, and team mentorship.
                     </div>
+
+                    <ul class="wp-tasks">
+                        <li class="wp-tasks-label">Operational Task Breakdown (FSTP & Evaluation)</li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.1</span>
+                            <div>
+                                <span class="wp-task-title">Competition Design, Rules & Conflict-of-Interest Policy</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> GRANT GARANT · <strong>Participants:</strong> SINTEF, SYXIS VSI · M1–M7</div>
+                                <div>Governance rules, participation criteria, ethical compliance, and strict conflict-of-interest policies ensuring independent evaluation.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.2</span>
+                            <div>
+                                <span class="wp-task-title">Open Call Management, Outreach & Eligibility Screening</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> GRANT GARANT · <strong>Participants:</strong> SINTEF, SYXIS VSI, CleverStaff · M5–M12</div>
+                                <div>Call launch, applicant support, info days, and eligibility screening. Eligible proposals are transferred to SYXIS VSI for evaluation; GRANT GARANT takes no part in scoring.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.3</span>
+                            <div>
+                                <span class="wp-task-title">Evaluation Methodology & Stage-Gate Selections (Top 10, 4 Finalists, Grand Finale)</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> SYXIS VSI · <strong>Participants:</strong> Independent Expert Evaluators · M3–M34</div>
+                                <div>SYXIS VSI defines the evaluation methodology, checks conflicts of interest, and leads the evaluation across the three selections: Stage 1 (top 10 teams), Stage 2 (4 finalists), and the Grand Finale. SYXIS brings expertise in FSTP schemes and evaluation management without requiring in-house AI specialists (technical evaluations are performed by independent external experts; mentoring partners cannot score applicants; applicants cannot act as evaluators). <strong style="color: #f59e0b;">Budget note:</strong> Evaluator costs cannot be paid via FSTP (which is 100% cascade grants to SMEs) and must be absorbed within the €2.0M core budget (SYXIS can structure this either as Direct Expert Contracts [Cat. A.2, generating 25% overhead and retaining PMs] or Subcontracting [Cat. B, without overhead]).</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.4</span>
+                            <div>
+                                <span class="wp-task-title">Progress Monitoring & Deliverable Reporting</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> SYXIS VSI · <strong>Participants:</strong> SINTEF, GRANT GARANT, ESTEN · M12–M35</div>
+                                <div>Milestone reviews and deliverable tracking. SYXIS VSI prepares one monitoring report per team, consolidating the technical benchmark and interface-contract conformance results provided by technical partners to condition and unlock sub-grant payments.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.5</span>
+                            <div>
+                                <span class="wp-task-title">FSTP Sub-Grant Payments & EC Financial Reporting</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> SINTEF · <strong>Participants:</strong> SYXIS VSI, GRANT GARANT · M10–M35</div>
+                                <div>Execution of sub-grant agreements and disbursement of stage payments to competing teams conditioned on the monitoring reports issued by SYXIS VSI; official FSTP reporting to the European Commission.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.6</span>
+                            <div>
+                                <span class="wp-task-title">Technical Mentoring & Business Coaching</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> CleverStaff · <strong>Participants:</strong> UA, INDElab, KIT, BSC, ESTEN, GRANT GARANT · M8–M34</div>
+                                <div>Domain-specific technical mentoring by scientific/technical partners and business coaching by GRANT GARANT. Strict firewall rule: partners that mentor teams do not score them.</div>
+                            </div>
+                        </li>
+                        <li class="wp-task">
+                            <span class="wp-task-id">T4.7</span>
+                            <div>
+                                <span class="wp-task-title">Demo Days, Grand Finale & Industrial Uptake</span>
+                                <div class="wp-task-roles"><strong>Leader:</strong> GRANT GARANT · <strong>Participants:</strong> SINTEF, SYXIS VSI, Vicky Foods, AKCOAT · M30–M36</div>
+                                <div>Organisation of demo days and the grand finale; post-challenge uptake support into industrial pilot plants.</div>
+                            </div>
+                        </li>
+                    </ul>
+
                     <div class="wp-participants" style="margin-top: 0.8rem; font-size: 0.85rem; color: #a1b0cb; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.6rem;">
-                        <strong>Participants:</strong> GRANT GARANT, SYXIS VSI
+                        <strong>Participants:</strong> GRANT GARANT (Leader), SYXIS VSI (Evaluation & Monitoring Lead), SINTEF, CleverStaff, ESTEN, UA, INDElab, KIT, BSC, Vicky Foods, AKCOAT
                     </div>
                 </div>
             </div>
@@ -1813,7 +1869,7 @@
                             <div>
                                 <span class="wp-task-title">TRL 5 Operational In-Plant Validation & HITL Governance</span>
                                 <div class="wp-task-roles"><strong>Leader:</strong> Vicky Foods · <strong>Participants:</strong> AKCOAT, KIT, SINTEF, SYXIS VSI</div>
-                                <div>Closed-loop Human-in-the-Loop TRL 5 validation in live manufacturing lines, real-time anomaly mitigation verification, and EU AI Act explainability & safety audit execution.</div>
+                                <div>Closed-loop Human-in-the-Loop TRL 5 validation in live manufacturing lines, real-time anomaly mitigation verification, technical compliance by industrial/scientific partners, and milestone deliverable verification for monitoring reports by SYXIS VSI.</div>
                             </div>
                         </li>
                     </ul>
@@ -1973,7 +2029,7 @@
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Strategic, administrative, and legal project management; contractual design and global direction of the Financial Support to Third Parties (FSTP) program; European Commission liaison.
+                                Strategic, administrative, and legal project management; contractual design and global direction of the Financial Support to Third Parties (FSTP) program; disbursement of FSTP sub-grant payments conditioned on SYXIS VSI monitoring reports and reporting to the European Commission.
                             </div>
                         </td>
                         <td>
@@ -1997,7 +2053,7 @@
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Open Call applicant attraction focusing on Central Europe and Widening countries; business model definition; commercial exploitation roadmap and B2B marketplace strategy.
+                                Open Call launch, applicant support, info days, and eligibility screening (transferring eligible proposals to SYXIS VSI without participating in scoring); organisation of demo days and grand finale; business coaching, commercial exploitation roadmap and B2B marketplace strategy.
                             </div>
                         </td>
                         <td>
@@ -2006,35 +2062,40 @@
                             <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
                         </td>
                     </tr>
-                    <tr class="partner-row" data-country="Lithuania" data-status="Pending" data-type="WIDENING">
+                    <tr class="partner-row" data-country="Lithuania" data-status="Confirmed" data-type="WIDENING">
                         <td>
                             <a href="https://syxis.eu/" target="_blank" rel="noopener noreferrer" class="partner-link">
-                                <span class="partner-role-icon" title="Independent Technical Audit & Neutral Evaluation">⚖️</span> SYXIS VSI <span class="external-icon">↗</span>
+                                <span class="partner-role-icon" title="Independent FSTP Evaluation & Progress Monitoring">⚖️</span> SYXIS VSI <span class="external-icon">↗</span>
                             </a>
                             <span class="rep-note">Represented by OhMyGrant</span>
                             <span class="badge-widening">WIDENING</span>
                         </td>
                         <td>
                             <div class="resp-desc">Lithuania</div>
-                            <div class="country-text">Audit & Evaluation RTO</div>
+                            <div class="country-text">FSTP Evaluation & Monitoring (RTO)</div>
                         </td>
                         <td>
-                            <div class="role-title">Independent Technical Audit & FSTP Evaluation Panel Chair</div>
+                            <div class="role-title">Independent FSTP Evaluation & Progress Monitoring Lead</div>
                         </td>
                         <td>
                             <div class="resp-desc">
-                                Constitution and management of the independent expert evaluation panel for Open Calls; technical audits of SME prototypes; objective quality assurance of FSTP deliverables.
+                                Definition of evaluation methodology and conflict-of-interest checks; leadership of the independent evaluation across the three selections (top 10 teams, 4 finalists, and grand finale). Milestone and deliverable monitoring, preparing one monitoring report per team using benchmark and conformance results provided by technical partners to release FSTP payments. Expertise in FSTP schemes, evaluation management, and monitoring without requiring in-house AI specialists (technical evaluations are performed by independent external experts; mentoring partners cannot score applicants; applicants cannot act as evaluators).
+                                <div style="margin-top:0.45rem; padding:0.45rem 0.65rem; border-left:3px solid #f59e0b; background:rgba(245,158,11,0.08); border-radius:4px; font-size:0.75rem; color:#fde68a; line-height:1.45;">
+                                    📌 <strong>Budget Guidance for SYXIS:</strong> External evaluators cannot be funded from the €12M FSTP cascade budget (restricted to sub-grants). They must be funded within SYXIS&#x27;s €220k core budget. SYXIS can structure this via:
+                                    <strong>(Option A) Direct Expert Contracts (Cat. A.2):</strong> engages individual experts as natural persons (eligible for 25% overhead, keeping current 24.7 PM); or
+                                    <strong>(Option B) Subcontracting (Cat. B):</strong> procures external evaluation services (~€35k–€45k without overhead, reducing internal PM to ~17 PM). Coordination with SINTEF will confirm preferred modality after EC query feedback.
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <span class="wp-badge">WP4 Audit Panel Chair</span><br>
-                            <span class="badge-status badge-pendiente" style="margin-top:0.4rem;">Pending</span>
+                            <span class="wp-badge">WP4 Evaluation Lead</span><br>
+                            <span class="badge-status badge-confirmado" style="margin-top:0.4rem;">Confirmed</span>
                         </td>
                     </tr>
 
                     <!-- BLOCK 2: SCIENTIFIC & TECHNICAL -->
                     <tr class="area-header-row area-b2">
-                        <td colspan="5">Block 02 · Scientific-Technical Leadership, Guidelines, Agentic Systems & Mentorship</td>
+                        <td colspan="5">Block 02 · Scientific-Technical Leadership, Guidelines, Agentic Systems & Mentorship (Firewall: Mentoring partners provide technical benchmarks but do not score competing teams)</td>
                     </tr>
                     <tr class="partner-row" data-country="Spain" data-status="Confirmed" data-type="RTO">
                         <td>

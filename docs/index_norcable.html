@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA — Sovereign Industrial AI Ecosystem | Concept Note for Industrial Pilots</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Fresh Modern Light Canvas */
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-surface-elevated: #f1f5f9;
+            --bg-surface-hover: #e2e8f0;
+
+            --border-subtle: #e2e8f0;
+            --border-medium: #cbd5e1;
+            --border-focus: #94a3b8;
+
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --text-tertiary: #64748b;
+
+            /* AURA 4 Blocks Color Identity */
+            --b1-primary: #4f46e5;
+            --b1-bg: #eef2ff;
+            --b1-border: #c7d2fe;
+            --b1-text: #3730a3;
+
+            --b2-primary: #0284c7;
+            --b2-bg: #e0f2fe;
+            --b2-border: #bae6fd;
+            --b2-text: #075985;
+
+            --b3-primary: #059669;
+            --b3-bg: #ecfdf5;
+            --b3-border: #a7f3d0;
+            --b3-text: #065f46;
+
+            --b4-primary: #d97706;
+            --b4-bg: #fffbeb;
+            --b4-border: #fde68a;
+            --b4-text: #92400e;
+
+            --accent-emerald: #10b981;
+            --accent-widening: #7c3aed;
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+            --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+
+            --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(148, 163, 184, 0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 90%, rgba(100, 116, 139, 0.05), transparent);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        /* TOP NAVIGATION BAR */
+        .top-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar-content {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #4f46e5, #0284c7);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+
+        .brand-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .brand-text span {
+            color: var(--text-tertiary);
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-left: 0.4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--b1-primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-secondary {
+            padding: 0.55rem 1.1rem;
+            background: #ffffff;
+            border: 1px solid var(--border-medium);
+            color: var(--text-primary);
+            border-radius: var(--radius-sm);
+            font-size: 0.825rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-surface-hover);
+            border-color: var(--b1-primary);
+            color: var(--b1-primary);
+        }
+
+        .btn-primary {
+            padding: 0.55rem 1.25rem;
+            background: linear-gradient(135deg, #4f46e5, #0284c7);
+            border: none;
+            color: #ffffff;
+            border-radius: var(--radius-sm);
+            font-size: 0.825rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+        }
+
+        /* HERO PROPOSAL HEADER */
+        header.proposal-hero {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.75rem;
+            margin-bottom: 2.25rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        header.proposal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #0284c7, #059669, #d97706);
+        }
+
+        .hero-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.35rem 0.9rem;
+            background: var(--b1-bg);
+            border: 1px solid var(--b1-border);
+            color: var(--b1-text);
+            border-radius: 999px;
+            font-size: 0.775rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.85rem;
+        }
+
+        .hero-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 980px;
+            line-height: 1.65;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-body);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--b1-primary);
+        }
+
+        .stat-label {
+            font-size: 0.825rem;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-top: 0.15rem;
+        }
+
+        /* SECTION CARDS */
+        .section-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            margin-bottom: 2.25rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        .section-header-left {
+            max-width: 850px;
+        }
+
+        .section-num-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.775rem;
+            font-weight: 700;
+            color: var(--b1-primary);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .section-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.35rem;
+            line-height: 1.6;
+        }
+
+        /* TOGGLE BUTTON BAR */
+        .view-toggle-bar {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: var(--bg-body);
+            padding: 0.3rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .toggle-btn {
+            padding: 0.45rem 0.85rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.775rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .toggle-btn.active {
+            background: #ffffff;
+            color: var(--b1-primary);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-medium);
+        }
+
+        /* DIAGRAM CONTAINER (High Tech Viewport) */
+        .diagram-container {
+            width: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 2px solid #cbd5e1;
+            background: #0f172a;
+            margin-top: 1rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+        }
+
+        .diagram-container img {
+            width: 100%;
+            height: auto;
+            max-height: 720px;
+            object-fit: contain;
+            display: block;
+            transition: opacity 0.25s ease;
+        }
+
+        /* THREE LAYER SUMMARY GRID */
+        .architecture-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .arch-summary-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .arch-summary-card.federated { border-top: 4px solid var(--b2-primary); }
+        .arch-summary-card.boundary { border-top: 4px solid #e11d48; }
+        .arch-summary-card.local { border-top: 4px solid var(--b4-primary); }
+
+        .arch-summary-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .arch-summary-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* MODULE BLOCKS GRID */
+        .blocks-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .block-module-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .block-module-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .block-module-card.b1 { border-top: 5px solid var(--b1-primary); }
+        .block-module-card.b2 { border-top: 5px solid var(--b2-primary); }
+        .block-module-card.b3 { border-top: 5px solid var(--b3-primary); }
+        .block-module-card.b4 { border-top: 5px solid var(--b4-primary); }
+
+        .block-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.725rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .b1 .block-tag { color: var(--b1-primary); }
+        .b2 .block-tag { color: var(--b2-primary); }
+        .b3 .block-tag { color: var(--b3-primary); }
+        .b4 .block-tag { color: var(--b4-primary); }
+
+        .block-module-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .block-module-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .block-partners-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .block-partner-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.825rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 0.4rem 0.6rem;
+            background: var(--bg-surface-elevated);
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .block-partner-role {
+            font-weight: 400;
+            color: var(--text-tertiary);
+        }
+
+        .partner-keyword {
+            font-size: 0.725rem;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            margin-left: 0.35rem;
+            font-style: italic;
+        }
+
+        .wp-badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .b1 .wp-badge { background: var(--b1-bg); color: var(--b1-text); border: 1px solid var(--b1-border); }
+        .b2 .wp-badge { background: var(--b2-bg); color: var(--b2-text); border: 1px solid var(--b2-border); }
+        .b3 .wp-badge { background: var(--b3-bg); color: var(--b3-text); border: 1px solid var(--b3-border); }
+        .b4 .wp-badge { background: var(--b4-bg); color: var(--b4-text); border: 1px solid var(--b4-border); }
+
+        /* 4-STAGE GRID CARDS */
+        .loop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .loop-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .loop-card-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.725rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+
+        .loop-card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .loop-card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* WORK PACKAGES GRID */
+        .wp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .wp-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .wp-card:hover {
+            border-color: var(--b1-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .wp-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .wp-id {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 0.2rem 0.6rem;
+            background: var(--b1-bg);
+            border: 1px solid var(--b1-border);
+            color: var(--b1-text);
+            border-radius: 6px;
+        }
+
+        .wp-leader {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--b1-primary);
+        }
+
+        .wp-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.45rem;
+        }
+
+        .wp-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* WP TASK BREAKDOWN */
+        .wp-tasks {
+            list-style: none;
+            margin: 0.9rem 0 0;
+            padding: 0.7rem 0 0;
+            border-top: 1px dashed var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .wp-tasks-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .wp-task {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.15rem 0.55rem;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+
+        .wp-task-id {
+            grid-row: span 3;
+            align-self: start;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.1rem 0.4rem;
+            border-radius: 5px;
+            background: var(--b1-bg);
+            border: 1px solid var(--b1-border);
+            color: var(--b1-text);
+        }
+
+        .wp-task-title {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .wp-task-roles {
+            font-size: 0.72rem;
+            color: var(--b1-primary);
+        }
+
+        .wp-task-link {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0 0.3rem;
+            margin-left: 0.2rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+
+        /* WP TASK ALLOCATION (collapsible tasks) */
+        .wp-grid-tasks { grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); align-items: start; }
+        .wp-grid-tasks .wp-card:hover { transform: none; }
+        .tk-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+        .tk-legend { display: flex; gap: 0.4rem; font-size: 0.75rem; }
+        .tk-actions { display: flex; gap: 0.4rem; }
+        .tk-btn { font: inherit; font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-surface); color: var(--text-secondary); cursor: pointer; }
+        .tk-btn:hover { border-color: var(--b1-primary); color: var(--b1-primary); }
+        .tk-wp-sum { margin-top: 0.6rem; font-size: 0.75rem; color: var(--b1-text); background: var(--b1-bg); border: 1px solid var(--b1-border); border-radius: 6px; padding: 0.25rem 0.55rem; display: inline-block; }
+        .tk-list { margin-top: 0.8rem; border-top: 1px dashed var(--border-subtle); }
+        .tk { border-bottom: 1px dashed var(--border-subtle); }
+        .tk > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 0.55rem; padding: 0.6rem 0; align-items: start; }
+        .tk > summary::-webkit-details-marker { display: none; }
+        .tk > summary::after { content: "+"; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-tertiary); width: 1rem; text-align: center; }
+        .tk[open] > summary::after { content: "−"; color: var(--b1-primary); }
+        .tk > summary:hover .tk-title { color: var(--b1-primary); }
+        .tk > summary:focus-visible { outline: 2px solid var(--b1-primary); outline-offset: 2px; border-radius: 4px; }
+        .tk .wp-task-id { grid-row: auto; }
+        .tk-main { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+        .tk-title { font-size: 0.83rem; font-weight: 700; color: var(--text-primary); line-height: 1.4; }
+        .tk-meta { font-size: 0.72rem; color: var(--text-tertiary); }
+        .tk-meta strong { color: var(--text-secondary); }
+        .tk-chips { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.15rem; }
+        .tk-chip { font-size: 0.68rem; padding: 0.05rem 0.4rem; border-radius: 999px; border: 1px solid var(--border-subtle); background: var(--bg-surface-elevated); color: var(--text-secondary); white-space: nowrap; }
+        .tk-chip b { font-weight: 700; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+        .tk-chip.lead { background: var(--b1-primary); border-color: var(--b1-primary); color: #fff; }
+        .tk-chip.lead b { color: #fff; }
+        .tk-desc { font-size: 0.8rem; line-height: 1.55; color: var(--text-secondary); padding: 0 1.4rem 0.75rem 2.6rem; }
+        .tk-summary { margin-top: 1.5rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-surface); }
+        .tk-summary > summary { cursor: pointer; padding: 0.85rem 1.1rem; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--text-primary); }
+        .tk-table-wrap { overflow-x: auto; padding: 0 1.1rem; }
+        .tk-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+        .tk-table th, .tk-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border-subtle); text-align: right; white-space: nowrap; }
+        .tk-table th:first-child { text-align: left; }
+        .tk-table thead th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary); }
+        .tk-table td.z { color: var(--border-focus); }
+        .tk-table td.t { font-weight: 700; color: var(--text-primary); }
+        .tk-table td.b, .tk-table th:nth-last-child(2) { border-left: 2px solid var(--border-medium); }
+        .tk-table td.b { font-weight: 700; color: var(--b1-text); }
+        .tk-table tfoot th, .tk-table tfoot td { font-weight: 700; border-top: 2px solid var(--border-medium); }
+        .tk-note { font-size: 0.75rem; color: var(--text-tertiary); padding: 0.75rem 1.1rem 1rem; }
+        @media print { .tk-toolbar { display: none; } .tk .tk-desc { display: block; } }
+
+        /* EXECUTION CALENDAR (Gantt) */
+        .cal-wrap { margin-top: 2rem; }
+        .cal-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+        .cal-sub { font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.3rem; }
+        .cal-calls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 1rem; margin-top: 1.1rem; }
+        .cal-call { border: 1px solid var(--border-subtle); border-top: 4px solid var(--cc); border-radius: var(--radius-md); background: var(--bg-surface); padding: 1rem 1.1rem; }
+        .cal-call-top { display: flex; justify-content: space-between; align-items: center; }
+        .cal-call-id { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 0.8rem; color: #fff; background: var(--cc); padding: 0.15rem 0.55rem; border-radius: 6px; }
+        .cal-call-launch { font-size: 0.8rem; color: var(--text-secondary); }
+        .cal-call-launch strong { font-size: 1rem; color: var(--text-primary); }
+        .cal-call-name { font-weight: 700; font-size: 0.92rem; margin-top: 0.55rem; color: var(--text-primary); }
+        .cal-call-who { font-size: 0.75rem; color: var(--text-tertiary); margin-top: 0.2rem; }
+        .cal-steps { list-style: none; margin-top: 0.6rem; border-top: 1px dashed var(--border-subtle); }
+        .cal-steps li { display: flex; justify-content: space-between; gap: 0.6rem; font-size: 0.78rem; padding: 0.28rem 0; border-bottom: 1px dashed var(--border-subtle); color: var(--text-secondary); }
+        .cal-steps li strong { color: var(--text-primary); text-align: right; font-variant-numeric: tabular-nums; }
+        .cal-call-note { font-size: 0.75rem; color: var(--text-tertiary); margin-top: 0.55rem; line-height: 1.5; }
+        .gt-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; margin: 1.4rem 0 0.6rem; font-size: 0.75rem; color: var(--text-secondary); }
+        .gt-legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+        .lg { display: inline-block; width: 18px; height: 10px; border-radius: 3px; }
+        .lg-open { background: #eab308; } .lg-eval { background: repeating-linear-gradient(45deg,#fde68a 0 3px,#facc15 3px 6px); }
+        .lg-run { background: #14b8a6; } .lg-aud { background: #fee2e2; border: 1px solid #dc2626; }
+        .lg-dA, .lg-dG, .lg-dM { width: 10px; height: 10px; transform: rotate(45deg); border-radius: 2px; }
+        .lg-dA { background: #dc2626; } .lg-dG { background: #0f172a; } .lg-dM { background: #4f46e5; }
+        .lg-line { width: 0; height: 14px; border-left: 2px dashed #ca8a04; border-radius: 0; }
+        .gt-scroll { overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-surface); }
+        .gt { --lab: 330px; position: relative; min-width: 1150px; }
+        .gt-row { display: flex; min-height: 30px; border-bottom: 1px solid #f1f5f9; }
+        .gt-lab { flex: 0 0 var(--lab); width: var(--lab); position: sticky; left: 0; z-index: 3; background: var(--bg-surface); padding: 0.3rem 0.7rem; border-right: 1px solid var(--border-subtle); display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+        .gt-l1 { font-size: 0.74rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .gt-l2 { font-size: 0.66rem; color: var(--text-tertiary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .gt-track { flex: 1; display: grid; grid-template-columns: repeat(36, 1fr); align-items: center; position: relative;
+            background-image: repeating-linear-gradient(to right, transparent 0, transparent calc(100%/36 - 1px), #eef2f6 calc(100%/36 - 1px), #eef2f6 calc(100%/36)),
+                              linear-gradient(to right, transparent 33.333%, rgba(148,163,184,0.07) 33.333%, rgba(148,163,184,0.07) 66.666%, transparent 66.666%); }
+        .gt-hdr { position: sticky; top: 0; z-index: 4; background: var(--bg-surface-elevated); border-bottom: 1px solid var(--border-medium); }
+        .gt-hdr .gt-lab { background: var(--bg-surface-elevated); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); }
+        .gt-hdr .gt-track { grid-template-rows: auto auto; background-image: none; }
+        .gt-yr { grid-row: 1; text-align: center; font-size: 0.7rem; font-weight: 800; color: var(--text-secondary); border-left: 1px solid var(--border-medium); padding: 0.2rem 0; text-transform: uppercase; letter-spacing: 0.06em; }
+        .gt-m { grid-row: 2; text-align: center; font-size: 0.62rem; color: var(--text-tertiary); padding-bottom: 0.2rem; font-variant-numeric: tabular-nums; }
+        .gt-mq { font-weight: 800; color: var(--text-secondary); }
+        .gt-group { display: flex; background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
+        .gt-group .gt-lab { background: var(--bg-surface-elevated); font-family: 'Space Grotesk', sans-serif; font-size: 0.74rem; font-weight: 800; color: var(--text-primary); padding: 0.4rem 0.7rem; }
+        .gt-group .gt-track { background-image: none; }
+        .gt-bar { grid-row: 1; height: 18px; border-radius: 5px; display: flex; align-items: center; overflow: hidden; margin: 0 1px; position: relative; z-index: 1; }
+        .gt-bar span { font-size: 0.64rem; font-weight: 700; color: #fff; padding: 0 0.4rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .gt-task { background: var(--bc); }
+        .gt-phase { background: var(--bc); height: 22px; }
+        .gt-open { background: #eab308; } .gt-open span { color: #422006; }
+        .gt-eval { background: repeating-linear-gradient(45deg,#fde68a 0 4px,#facc15 4px 8px); }
+        .gt-pre { background: #fef9c3; border: 1px dashed #ca8a04; } .gt-pre span { color: #854d0e; }
+        .gt-run { background: #14b8a6; }
+        .gt-aud { background: #fee2e2; border: 1px solid #dc2626; } .gt-aud span { color: #991b1b; }
+        .gt-call { min-height: 36px; } .gt-call .gt-l1 { font-weight: 700; }
+        .gt-tag { display: inline-block; font-size: 0.64rem; font-weight: 800; color: #fff; background: var(--cc); padding: 0 0.35rem; border-radius: 4px; margin-right: 0.2rem; }
+        .gt-tid { display: inline-block; font-family: 'Space Grotesk', sans-serif; font-size: 0.64rem; font-weight: 800; color: var(--wc); margin-right: 0.15rem; }
+        .gt-mk { grid-row: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 2; }
+        .gt-mk i { width: 11px; height: 11px; transform: rotate(45deg); border-radius: 2px; }
+        .gt-mk b { font-size: 0.6rem; font-weight: 800; line-height: 1.1; margin-top: 2px; white-space: nowrap; }
+        .gt-mk.dM i { background: #4f46e5; } .gt-mk.dM b { color: #3730a3; }
+        .gt-mk.dG i { background: #0f172a; } .gt-mk.dG b { color: #0f172a; }
+        .gt-mk.dA i { background: #dc2626; } .gt-mk.dA b { color: #991b1b; }
+        .gt-vline { position: absolute; top: 0; bottom: 0; left: calc(var(--lab) + (100% - var(--lab)) * var(--m) / 36); border-left: 2px dashed #ca8a04; z-index: 2; pointer-events: none; }
+        .gt-vline span { position: absolute; bottom: 4px; left: 3px; font-size: 0.6rem; font-weight: 800; color: #854d0e; background: #fef9c3; padding: 0 0.25rem; border-radius: 3px; white-space: nowrap; }
+        .kd-wrap > summary { list-style: revert; }
+        .kd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 0.6rem; padding: 0 1.1rem 1.1rem; }
+        .kd { display: flex; gap: 0.7rem; border: 1px solid var(--border-subtle); border-radius: 10px; padding: 0.55rem 0.7rem; }
+        .kd-m { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1rem; color: var(--text-primary); min-width: 2.6rem; }
+        .kd ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .kd li { display: flex; gap: 0.45rem; align-items: baseline; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; }
+        .kd li strong { color: var(--text-primary); }
+        .kd-t { flex: 0 0 auto; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.05rem 0.35rem; border-radius: 4px; color: #fff; }
+        .kd-t.dM { background: #4f46e5; } .kd-t.dG { background: #0f172a; } .kd-t.dC { background: #ca8a04; } .kd-t.dR { background: #0d9488; } .kd-t.dA { background: #dc2626; }
+        @media (max-width: 640px) { .gt { --lab: 200px; } }
+
+        .gt-msrow { min-height: 44px; } .gt-mk.up b { order: -1; margin: 0 0 2px; }
+        .lg-s3 { background: #7c3aed; } .lg-dev { background: #dbeafe; border: 1px solid #3b82f6; } .lg-zero { background: #fee2e2; border: 1px solid #dc2626; }
+        .gt-s3 { background: #7c3aed; }
+        .gt-dev { background: #dbeafe; border: 1px solid #3b82f6; } .gt-dev span { color: #1e3a8a; }
+        .gt-zero { background: #fee2e2; border: 1px solid #dc2626; } .gt-zero span { color: #991b1b; }
+        .gt .gt-vline { border-left-color: var(--vc, #ca8a04); } .gt .gt-vline span { background: var(--vc, #ca8a04); color: #fff; }
+        .kd-t.dS { background: #7c3aed; } .kd-t.dD { background: #2563eb; } .kd-t.dZ { background: #b91c1c; }
+
+        .pp-wrap { margin-top: 1.1rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: linear-gradient(180deg, #f8fafc, #ffffff); padding: 1rem 1.2rem 0.9rem; }
+        .pp-head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; font-size: 0.92rem; color: var(--text-primary); }
+        .pp-badge { font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; background: #0f172a; padding: 0.12rem 0.5rem; border-radius: 5px; }
+        .pp-line { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; position: relative; }
+        .pp-line::before { content: ""; position: absolute; top: 7px; left: 8px; right: 8px; height: 3px; border-radius: 2px; background: linear-gradient(to right, #22d3ee, #a3e635 60%, #f59e0b); }
+        .pp { position: relative; display: flex; flex-direction: column; gap: 0.15rem; padding-top: 1.4rem; }
+        .pp-dot { position: absolute; top: 0; left: 0; width: 17px; height: 17px; border-radius: 50%; background: #fff; border: 4px solid var(--pc); }
+        .pp.p1 { --pc: #06b6d4; } .pp.p2 { --pc: #14b8a6; } .pp.p3 { --pc: #84cc16; } .pp.p4 { --pc: #f59e0b; }
+        .pp-date { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 0.95rem; color: var(--text-primary); }
+        .pp.p4 .pp-date { color: #b45309; font-size: 1.05rem; }
+        .pp-k { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--pc); filter: brightness(0.8); }
+        .pp-t { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; }
+        .pp-foot { margin-top: 0.9rem; padding-top: 0.6rem; border-top: 1px dashed var(--border-subtle); font-size: 0.75rem; color: var(--text-tertiary); }
+        @media (max-width: 700px) { .pp-line { grid-template-columns: 1fr; gap: 0.8rem; } .pp-line::before { top: 8px; bottom: 8px; left: 7px; right: auto; width: 3px; height: auto; background: linear-gradient(to bottom, #22d3ee, #a3e635 60%, #f59e0b); } .pp { padding: 0 0 0 1.8rem; } }
+
+        /* ELIGIBILITY & FSTP STAGES (v3) */
+        .el-badge { display: inline-block; font-size: 0.66rem; font-weight: 800; padding: 0.08rem 0.45rem; border-radius: 999px; white-space: nowrap; vertical-align: middle; letter-spacing: 0.01em; }
+        .el-ok { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+        .el-chk { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
+        .el-panel { border-top: 3px solid #f59e0b; }
+        .el-table td, .el-table th { text-align: left !important; white-space: normal !important; }
+        .el-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0.8rem; margin-top: 1rem; }
+        .el-actions > div { font-size: 0.82rem; color: var(--text-secondary); background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 0.7rem 0.85rem; line-height: 1.5; }
+        .el-actions strong { display: block; color: #92400e; margin-bottom: 0.2rem; }
+        .fs-stages { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0.8rem; align-items: stretch; text-align: left; }
+        .fs-stage { border: 1px solid var(--border-subtle); border-top: 4px solid var(--sc); border-radius: 10px; padding: 1.1rem; background: var(--bg-surface); }
+        .fs-n { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--sc); }
+        .fs-stage h4 { margin: 0.35rem 0; font-size: 1.05rem; color: var(--text-primary); }
+        .fs-amt { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.4rem; }
+        .fs-stage p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+        .fs-arrow { align-self: center; font-size: 1.6rem; color: var(--text-tertiary); }
+        .fs-note { margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-secondary); text-align: left; }
+        .rep-note { display: block; margin-top: 0.3rem; font-size: 0.72rem; color: var(--text-tertiary); }
+        .rep-note-inline { font-size: 0.7rem; color: var(--text-tertiary); white-space: nowrap; }
+        .pilot-ex { margin-top: 0.55rem; padding: 0.5rem 0.65rem; border-left: 3px solid var(--border-medium); font-size: 0.8rem; color: var(--text-secondary); }
+        .pilot-ex strong { color: var(--text-primary); }
+        .pilot-ex ul { margin: 0.25rem 0 0; padding-left: 1.1rem; }
+        .pilot-ex li { margin: 0.15rem 0; }
+        .sm-wrap { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); text-align: left; }
+        .sm-title { margin: 0 0 0.4rem; font-size: 1.15rem; color: var(--text-primary); }
+        .sm-lead { margin: 0 0 1.1rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+        .sm-sub { margin: 1.4rem 0 0.6rem; font-size: 0.95rem; color: var(--text-primary); }
+        .sm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem; }
+        .sm-card { padding: 0.85rem 0.95rem; border: 1px solid var(--border-subtle); border-radius: 10px; }
+        .sm-card h5 { margin: 0 0 0.3rem; font-size: 0.88rem; color: var(--text-primary); }
+        .sm-card p { margin: 0; font-size: 0.83rem; line-height: 1.5; color: var(--text-secondary); }
+        .ch-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .ch-col h5 { margin: 0 0 0.55rem; font-size: 0.9rem; color: var(--text-primary); }
+        .ch-card { padding: 0.8rem 0.95rem; border: 1px solid var(--border-subtle); border-radius: 10px; margin-bottom: 0.65rem; }
+        .ch-card h6 { margin: 0 0 0.35rem; font-size: 0.86rem; color: var(--text-primary); }
+        .ch-card dl { margin: 0; display: grid; grid-template-columns: 5.2rem 1fr; gap: 0.2rem 0.6rem; font-size: 0.8rem; line-height: 1.45; }
+        .ch-card dt { font-weight: 700; color: var(--text-tertiary); }
+        .ch-card dd { margin: 0; color: var(--text-secondary); }
+        .sm-tag { display: block; margin-bottom: 0.3rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-tertiary); }
+        @media (max-width: 820px) { .fs-stages { grid-template-columns: 1fr; } .fs-arrow { transform: rotate(90deg); justify-self: center; } }
+
+        /* EXECUTION ROADMAP TIMELINE */
+        .roadmap-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+
+        .roadmap-phase-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            position: relative;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .roadmap-phase-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .roadmap-phase-card.phase-1 { border-left: 5px solid var(--b1-primary); }
+        .roadmap-phase-card.phase-2 { border-left: 5px solid var(--b2-primary); }
+        .roadmap-phase-card.phase-3 { border-left: 5px solid var(--accent-widening); }
+        .roadmap-phase-card.phase-4 { border-left: 5px solid var(--b3-primary); }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .phase-title-group {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .phase-badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-p1 { background: var(--b1-bg); color: var(--b1-text); border: 1px solid var(--b1-border); }
+        .badge-p2 { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .badge-p3 { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .badge-p4 { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        .phase-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .phase-timeframe {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            background: var(--bg-body);
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .phase-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+
+        .partner-role-box {
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.9rem 1.1rem;
+            transition: var(--transition);
+        }
+
+        .partner-role-box:hover {
+            border-color: var(--border-medium);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .pr-entity {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.925rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+
+        .pr-wp {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.1rem 0.4rem;
+            background: rgba(148, 163, 184, 0.12);
+            color: var(--accent-gold-bright);
+            border-radius: 3px;
+        }
+
+        .pr-task {
+            font-size: 0.825rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        /* COUNTRY SUMMARY CHIPS */
+        .country-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .country-chip {
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .country-chip:hover, .country-chip.active {
+            border-color: var(--accent-gold);
+            background: rgba(148, 163, 184, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .country-chip .flag {
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+
+        .country-chip .c-name {
+            font-size: 0.825rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .country-chip .c-count {
+            font-size: 0.725rem;
+            color: var(--accent-gold-bright);
+            font-weight: 600;
+        }
+
+        /* TOOLBAR & FILTERS */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+            background: var(--bg-surface);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 0.55rem 1rem 0.55rem 2.25rem;
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.85rem;
+            width: 320px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            color: var(--text-tertiary);
+        }
+
+        .filter-select {
+            padding: 0.55rem 1rem;
+            background: var(--bg-body);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        /* MATRIX TABLE */
+        .table-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        thead tr {
+            background: var(--bg-surface-elevated);
+            border-bottom: 1.5px solid var(--border-medium);
+        }
+
+        th {
+            padding: 1rem 1.25rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text-secondary);
+            font-weight: 700;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background 0.15s ease;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-surface-elevated);
+        }
+
+        td {
+            padding: 1.2rem 1.25rem;
+            vertical-align: top;
+            font-size: 0.875rem;
+        }
+
+        .area-header-row td {
+            background: rgba(148, 163, 184, 0.08);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.75rem 1.25rem;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .partner-link {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition);
+        }
+
+        .partner-link:hover {
+            color: var(--b1-primary);
+        }
+
+        .partner-role-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: rgba(148, 163, 184, 0.12);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .external-icon {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        .country-text {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            margin-top: 0.15rem;
+        }
+
+        .role-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .resp-desc {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+
+        .wp-badge {
+            display: inline-block;
+            padding: 0.15rem 0.45rem;
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            font-size: 0.685rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .badge-status {
+            display: inline-block;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .badge-confirmado {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+        }
+
+        .badge-pendiente {
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-medium);
+            color: var(--text-secondary);
+        }
+
+        .badge-widening {
+            display: inline-block;
+            padding: 0.12rem 0.4rem;
+            background: rgba(225, 29, 72, 0.12);
+            border: 1px solid rgba(225, 29, 72, 0.35);
+            color: var(--accent-widening);
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 0.775rem;
+            color: var(--text-tertiary);
+            margin-top: 0.35rem;
+            white-space: pre-line;
+        }
+
+        .commercial-footer {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .commercial-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--b1-primary), var(--b2-primary));
+        }
+
+        .commercial-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.65rem;
+        }
+
+        @media print {
+            .top-navbar, .btn-group, .toolbar, .view-toggle-bar {
+                display: none !important;
+            }
+            body {
+                background: #fff;
+                color: #000;
+                padding: 0;
+            }
+            header.proposal-hero, .section-card, .table-container, .commercial-footer {
+                background: #fff;
+                border: 1px solid #ccc;
+                box-shadow: none;
+                color: #000;
+            }
+            .hero-title, .section-title, .partner-link, .role-title, .wp-title {
+                color: #000 !important;
+            }
+            .hero-subtitle, .section-desc, .resp-desc, .wp-desc {
+                color: #333 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP NAVIGATION BAR -->
+<nav class="top-navbar">
+    <div class="navbar-content">
+        <a href="#" class="brand-logo">
+            <div class="brand-mark">A</div>
+            <div class="brand-text">AURA <span>Sovereign AI Ecosystem</span></div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#operational-blocks">Operational Blocks</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#edge-engine">Edge Engine</a></li>
+            <li><a href="#roadmap">Project Roadmap</a></li>
+            <li><a href="#fstp-mechanics">Budget &amp; FSTP</a></li>
+            <li><a href="#impact">Strategic Impact</a></li>
+        </ul>
+
+        <div class="header-actions">
+            <button class="btn-secondary" onclick="window.print()">Print Note (PDF)</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- HERO PROPOSAL HEADER -->
+    <header class="proposal-hero">
+        <div class="hero-meta">Horizon Europe RIA · Apply AI: Challenge-Driven AI Innovation Booster · Sector: Advanced Manufacturing</div>
+        <h1 class="hero-title">AURA — Master Technical Architecture &amp; Industrial Pilot Concept</h1>
+        <p class="hero-subtitle">
+            A B2B Sovereign Industrial AI Ecosystem based on Dual Architecture (Federated Cloud vs. On-Premise Factory Edge) uniting 11 complementary European entities across RTOs, top-tier research universities, supercomputing centers, and continuous manufacturing testbeds.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-value">€14.0M</span>
+                <span class="stat-label">Total Project Budget</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">€12.0M</span>
+                <span class="stat-label">FSTP Cascade Funding (SMEs)</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">6 Work Packages</span>
+                <span class="stat-label">Structured Program Governance</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">TRL 5 Validation</span>
+                <span class="stat-label">Zero-Egress Factory Pilots</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 01. CONSORTIUM OPERATIONAL BLOCKS -->
+    <section id="operational-blocks" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">01 / Consortium Program Architecture</span>
+                <h2 class="section-title">The 4 Operational Blocks &amp; Strategic Mutual Alignment</h2>
+                <p class="section-desc">
+                    AURA's consortium ecosystem is structured into 4 specialized operational blocks. Beyond direct project funding, each block is driven by distinct non-financial and strategic incentives, creating an aligned consortium focused on pilot success.
+                </p>
+            </div>
+        </div>
+
+        <div class="blocks-showcase-grid">
+            <!-- BLOCK 1 -->
+            <div class="block-module-card b1">
+                <div>
+                    <span class="block-tag">BLOCK 01 · OPERATIONAL</span>
+                    <h3 class="block-module-title">🌐 Operational Governance &amp; B2B Commercialization</h3>
+                    <p class="block-module-desc">
+                        Global Horizon Europe consortium management, legal direction, competition and open call administration, independent evaluation, and uptake of the winning solutions.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>Research Institute / RTO <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Norway)</span> <span class="partner-keyword">— Coordinator</span></span>
+                        <span class="wp-badge">WP1 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>Innovation &amp; Acceleration Body <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Czechia)</span> <span class="partner-keyword">— Competition &amp; Open Call</span></span>
+                        <span class="wp-badge">WP4/WP6 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>Evaluation &amp; Monitoring RTO <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Lithuania)</span> <span class="partner-keyword">— Independent Evaluation</span></span>
+                        <span class="wp-badge">WP4 Evaluation</span>
+                    </li>
+                </ul>
+                <div style="margin-top:1.25rem; padding:0.85rem; background:rgba(79, 70, 229, 0.05); border:1px solid var(--b1-border); border-radius:var(--radius-sm); font-size:0.825rem; line-height:1.5; color:var(--text-secondary);">
+                    <strong style="color:var(--b1-text); display:block; margin-bottom:0.35rem; font-family:var(--font-heading);">💎 Non-Financial Strategic Value:</strong>
+                    • Leadership of the premier European AI Booster ecosystem for advanced manufacturing.<br>
+                    • Direct network building with top-performing deep-tech SMEs across Europe.<br>
+                    • Proven European credentials in large-scale cascade innovation governance (€12M FSTP).
+                </div>
+            </div>
+
+            <!-- BLOCK 2 -->
+            <div class="block-module-card b2">
+                <div>
+                    <span class="block-tag">BLOCK 02 · SCIENTIFIC-TECH</span>
+                    <h3 class="block-module-title">🔬 Scientific Engine &amp; Cognitive AI Systems</h3>
+                    <p class="block-module-desc">
+                        Domain Knowledge Graphs, ISA-95 core ontologies, Graph-RAG interactive systems, EU AI Act explainability, predictive anomaly models, and agentic workflows.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>University AI &amp; NLP Lab <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Spain)</span> <span class="partner-keyword">— NLP &amp; Tech Mentor</span></span>
+                        <span class="wp-badge">WP2 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>University Ontologies Institute <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Netherlands)</span> <span class="partner-keyword">— Ontologies &amp; Tech Mentor</span></span>
+                        <span class="wp-badge">WP2 Tech Mentor</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>Technical Research University <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Germany)</span> <span class="partner-keyword">— AI Compliance &amp; Tech Mentor</span></span>
+                        <span class="wp-badge">WP2 Tech Mentor</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>Industrial AI Engineering SME <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="partner-keyword">— Agentic AI &amp; Integration Mentor</span></span>
+                        <span class="wp-badge">WP2/WP3 Tech Mentor</span>
+                    </li>
+                </ul>
+                <div style="margin-top:1.25rem; padding:0.85rem; background:rgba(2, 132, 199, 0.05); border:1px solid var(--b2-border); border-radius:var(--radius-sm); font-size:0.825rem; line-height:1.5; color:var(--text-secondary);">
+                    <strong style="color:var(--b2-text); display:block; margin-bottom:0.35rem; font-family:var(--font-heading);">💎 Non-Financial Strategic Value:</strong>
+                    • Access to real, highly complex continuous industrial manufacturing telemetry.<br>
+                    • Empirical validation of Graph-RAG and Multi-Agent frameworks on live production lines.<br>
+                    • High-impact scientific publications and benchmark leadership in applied industrial AI.
+                </div>
+            </div>
+
+            <!-- BLOCK 3 -->
+            <div class="block-module-card b3">
+                <div>
+                    <span class="block-tag">BLOCK 03 · INFRASTRUCTURE</span>
+                    <h3 class="block-module-title">☁️ Sovereign Cloud &amp; HPC Supercomputing</h3>
+                    <p class="block-module-desc">
+                        Gaia-X-aligned federated testing cloud, continuous MLOps/AIOps pipelines, federated APIs, and EuroHPC / AI Factory access for large-model training, subject to approval.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>Cloud Infrastructure SME <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Slovakia)</span> <span class="partner-keyword">— Gaia-X Cloud &amp; Infra Mentor</span></span>
+                        <span class="wp-badge">WP3 Leader</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>Tier-1 Supercomputing Center <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Spain)</span> <span class="partner-keyword">— EuroHPC Center &amp; Infra Mentor</span></span>
+                        <span class="wp-badge">WP3 Infra Mentor</span>
+                    </li>
+                </ul>
+                <div style="margin-top:1.25rem; padding:0.85rem; background:rgba(5, 150, 105, 0.05); border:1px solid var(--b3-border); border-radius:var(--radius-sm); font-size:0.825rem; line-height:1.5; color:var(--text-secondary);">
+                    <strong style="color:var(--b3-text); display:block; margin-bottom:0.35rem; font-family:var(--font-heading);">💎 Non-Financial Strategic Value:</strong>
+                    • Strategic positioning as reference European infrastructure providers (EuroHPC, Gaia-X, IDSA).<br>
+                    • Stress-testing federated computing and data space architectures on heavy manufacturing loads.<br>
+                    • Reusable European deployment blueprints for cloud-to-edge sovereign computing.
+                </div>
+            </div>
+
+            <!-- BLOCK 4 -->
+            <div class="block-module-card b4">
+                <div>
+                    <span class="block-tag">BLOCK 04 · TESTERS &amp; PILOTS</span>
+                    <h3 class="block-module-title">🏭 Industrial Testers &amp; TRL 5 Edge Pilots</h3>
+                    <p class="block-module-desc">
+                        Real-world plant telemetry validation on Layer C on-premise GPU Edge servers across continuous manufacturing testbeds.
+                    </p>
+                </div>
+                <ul class="block-partners-list">
+                    <li class="block-partner-item">
+                        <span>Continuous Agro-Food Industry <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Confirmed</span> <span class="block-partner-role">(Spain)</span> <span class="partner-keyword">— Pilot Challenge A.1</span></span>
+                        <span class="wp-badge">WP5 Co-Lead</span>
+                    </li>
+                    <li class="block-partner-item">
+                        <span>Continuous Manufacturing Pilot <span class="badge-status badge-confirmado" style="font-size:0.55rem; padding:0.1rem 0.3rem; margin:0 0.3rem; vertical-align:middle;">Candidate Pilot</span> <span class="block-partner-role">(Norway)</span> <span class="partner-keyword">— Pilot Challenge A.2</span></span>
+                        <span class="wp-badge">WP5 Co-Lead</span>
+                    </li>
+                </ul>
+                <div style="margin-top:1.25rem; padding:0.85rem; background:rgba(217, 119, 6, 0.05); border:1px solid var(--b4-border); border-radius:var(--radius-sm); font-size:0.825rem; line-height:1.5; color:var(--text-secondary);">
+                    <strong style="color:var(--b4-text); display:block; margin-bottom:0.35rem; font-family:var(--font-heading);">💎 Non-Financial Strategic Value:</strong>
+                    • Conversion of plant tacit operator wisdom into permanent, proprietary digital assets (Private Knowledge Graph).<br>
+                    • Concrete scrap reduction, energy efficiency improvements, and avoided unplanned line downtime.<br>
+                    • Complete technological sovereignty: zero vendor lock-in and zero confidential data leakage to public clouds.<br>
+                    • Priority access and commercial right of first refusal for the winning European AI solutions.
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="architecture" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">02 / Technical Topology</span>
+                <h2 class="section-title">Three-Layer Technical Architecture (Sovereignty & Scalability)</h2>
+                <p class="section-desc">
+                    Unified topology linking the Federated <strong>Top Level</strong> (comprising Layer A EuroHPC supercomputing & Layer B Gaia-X-aligned federated cloud), the <strong>Middle Barrier</strong> for absolute data sovereignty, and the Local <strong>Bottom Level</strong> for on-premise industrial edge nodes (Layer C).
+                </p>
+            </div>
+
+            <div class="view-toggle-bar">
+                <button class="toggle-btn active" id="btn-arch-dual" onclick="switchArchitectureView('dual')">Combined Dual Projection</button>
+                <button class="toggle-btn" id="btn-arch-tech" onclick="switchArchitectureView('tech')">Technical Blueprint</button>
+                <button class="toggle-btn" id="btn-arch-exec" onclick="switchArchitectureView('exec')">Executive Infographic</button>
+            </div>
+        </div>
+
+        <div class="diagram-container">
+            <img id="img-architecture-main" src="aura_three_layer_dual_projection_v2.png" alt="AURA Three-Layer Sovereign Architecture — Combined Dual Projection">
+        </div>
+
+        <div class="architecture-summary-grid">
+            <div class="arch-summary-card federated">
+                <div class="arch-summary-title">01. Top Level: Federated Cloud & EuroHPC (Layers A & B)</div>
+                <div class="arch-summary-text">
+                    ISA-95 Core Ontology (Layer 1), Sector oracles (Layer 2: HACCP, REACH, CLP) specified by the consortium and built by the teams, EuroHPC / AI Factory compute for large-model training (EuroHPC Tier-1 supercomputer access to be requested through EuroHPC supercomputing center, subject to approval), and continuous MLOps pipelines in the Gaia-X-aligned federated cloud (Sovereign Cloud Lead).
+                </div>
+            </div>
+
+            <div class="arch-summary-card boundary">
+                <div class="arch-summary-title">02. Middle Barrier: Absolute Data Sovereignty</div>
+                <div class="arch-summary-text">
+                    Security perimeter: signed models and knowledge packages reach the edge through plant-initiated requests or a mirror repository. <strong>During pilot validation raw plant data stays inside the factory.</strong> During development, only cleaned and anonymised datasets are shared.
+                </div>
+            </div>
+
+            <div class="arch-summary-card local">
+                <div class="arch-summary-title">03. Bottom Level: On-Premise Industrial Edge (Layer C)</div>
+                <div class="arch-summary-text">
+                    Sovereign GPU edge servers inside <strong>Pilot Plant 1</strong> (Bakery Pilot) and <strong>Pilot Plant 2</strong> (Chemical Coatings Pilot) plants. Private Knowledge Graph (Layer 3), 4-Agent Cognitive Engine with closed-loop Human-in-the-Loop operation.
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="edge-engine" class="section-card" style="border-top: 3px solid var(--b4-primary);">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">03 / Operational Assistance</span>
+                <h2 class="section-title">The AURA Edge Engine: 4-Step Closed Loop in Factory Plant</h2>
+                <p class="section-desc">
+                    Continuous operational conversion of operator tacit experience into explicit Private Knowledge Graph intelligence across plant diagnostic workflows. The loop runs inside the plant and is fed by federated cloud services and knowledge. <strong>Data regime:</strong> during development (Stages 1–2) the pilots share cleaned, anonymised datasets for training; during pilot validation (Stage 3) raw plant data never leaves the factory.
+                </p>
+            </div>
+
+            <div class="view-toggle-bar">
+                <button class="toggle-btn active" id="btn-loop-dual" onclick="switchLoopView('dual')">Combined Dual Projection</button>
+                <button class="toggle-btn" id="btn-loop-tech" onclick="switchLoopView('tech')">Technical 4-Step Loop</button>
+                <button class="toggle-btn" id="btn-loop-exec" onclick="switchLoopView('exec')">Executive Flow</button>
+            </div>
+        </div>
+
+        <div class="diagram-container" style="margin-bottom: 1.5rem;">
+            <img id="img-loop-main" src="aura_edge_engine_dual_projection_v2.png" alt="The AURA Edge Engine: Empowering the Human Operator — Combined Dual Projection">
+        </div>
+
+        <div class="loop-grid">
+            <div class="loop-card" style="border-top: 3px solid var(--b1-primary);">
+                <div class="loop-card-num" style="color: var(--b1-primary);">01 · PREDICT</div>
+                <div class="loop-card-title">1. Predict</div>
+                <div class="loop-card-desc">
+                    AI anticipates quality anomalies and machinery failure probabilities based on localized sensor telemetry (>2h in advance).
+                </div>
+            </div>
+
+            <div class="loop-card" style="border-top: 3px solid var(--b2-primary);">
+                <div class="loop-card-num" style="color: var(--b2-primary);">02 · GUIDE</div>
+                <div class="loop-card-title">2. Guide</div>
+                <div class="loop-card-desc">
+                    Cognitive Engine (Dual Graph-RAG agents) provides explainable, step-by-step resolution recommendations citing official SOPs.
+                </div>
+            </div>
+
+            <div class="loop-card" style="border-top: 3px solid var(--b3-primary);">
+                <div class="loop-card-num" style="color: var(--b3-primary);">03 · ACT</div>
+                <div class="loop-card-title">3. Act</div>
+                <div class="loop-card-desc">
+                    Human-at-the-Edge decision. Expert operator executes, modifies, or overrides recommendation, registering diagnostics.
+                </div>
+            </div>
+
+            <div class="loop-card" style="border-top: 3px solid var(--b4-primary);">
+                <div class="loop-card-num" style="color: var(--b4-primary);">04 · LEARN</div>
+                <div class="loop-card-title">4. Learn</div>
+                <div class="loop-card-desc">
+                    Operator tacit diagnostics captured, validated by Judge Agent, and fed back dynamically into the Private Knowledge Graph.
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="roadmap" class="section-card" style="border-top: 3px solid #38bdf8;">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">04 / Execution Strategy & Roadmap</span>
+                <h2 class="section-title">Consortium Implementation Roadmap (Sequential Execution Blocks)</h2>
+                <p class="section-desc">
+                    Three-phase execution aligned with the 3-stage challenge-driven competition required by the topic: preparation and open call, prototyping by 10 teams, and TRL 5 validation of 4 finalists in the pilot plants followed by uptake.
+                </p>
+            </div>
+        </div>
+
+        <div class="roadmap-container">
+            <!-- PHASE 1 -->
+            <div class="roadmap-phase-card phase-1">
+                <div class="phase-header">
+                    <div class="phase-title-group">
+                        <span class="phase-badge badge-p1">Phase 1</span>
+                        <h3 class="phase-name">Preparation: Reference Framework, Competition Handbook & Stage 1 Open Call</h3>
+                    </div>
+                    <span class="phase-timeframe">Months 01 – 12</span>
+                </div>
+                <p class="section-desc">
+                    <strong>Focus:</strong> Reference ontology, interface contract and benchmarks; competition handbook with challenges, KPIs and evaluation criteria; cleaned and anonymised pilot datasets in the sandbox; Stage 1 open call (M07), pre-screening by Evaluation Lead to up to 20 shortlisted proposals and selection of the top 10 teams by the consortium selection committee.
+                </p>
+                <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b1-primary);">
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">MS1 (M05):</strong> Reference framework v1 &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS2 (M06):</strong> Competition handbook, KPI set &amp; sample datasets ready &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS3 (M07):</strong> Stage 1 open call launched &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS4 (M12):</strong> Top 10 teams contracted; full datasets, sandbox &amp; benchmark v1 ready
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- PHASE 2 -->
+            <div class="roadmap-phase-card phase-2">
+                <div class="phase-header">
+                    <div class="phase-title-group">
+                        <span class="phase-badge badge-p2">Phase 2</span>
+                        <h3 class="phase-name">Stage 2: Prototyping by 10 SME-led Teams (€300k each)</h3>
+                    </div>
+                    <span class="phase-timeframe">Months 13 – 23</span>
+                </div>
+                <p class="section-desc">
+                    <strong>Focus:</strong> The 10 teams build their solutions in the Gaia-X sandbox with the anonymised pilot datasets (TRL 3 → 4), supported technically and commercially by the consortium and monitored by Evaluation Lead. After the benchmark and demo day, the consortium selection committee, with the two pilots holding the largest weight, selects the 4 finalists that go into the plants; their Stage 3 agreements are signed in M23.
+                </p>
+                <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b2-primary);">
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">Mid-term review (M17)</strong> &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS5 (M22):</strong> 4 finalists selected
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- PHASE 3 -->
+            <div class="roadmap-phase-card phase-3">
+                <div class="phase-header">
+                    <div class="phase-title-group">
+                        <span class="phase-badge badge-p3">Phase 3</span>
+                        <h3 class="phase-name">Stage 3: TRL 5 Validation in the Pilot Plants (€2.25M per finalist) & Uptake</h3>
+                    </div>
+                    <span class="phase-timeframe">Months 24 – 36</span>
+                </div>
+                <p class="section-desc">
+                    <strong>Focus:</strong> The 4 finalists install their edge nodes and validate the full loop on the production lines with no plant data leaving the site. Grand finale at M34, followed by uptake measures with the user industries.
+                </p>
+                <div style="margin-top: 1rem; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--b3-primary);">
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">MS6 (M33):</strong> TRL 5 validated &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS7 (M34):</strong> Grand finale &amp; best solution identified &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS8 (M35):</strong> Partnership or contract offer to the best team &amp; uptake plans &nbsp;&bull;&nbsp; 
+                        <strong style="color: var(--text-primary);">MS9 (M36):</strong> Exploitation &amp; sustainability plan
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+<section id="fstp-mechanics" class="section-card">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">05 / Global Budget & FSTP Mechanics</span>
+                <h2 class="section-title">€14M Total Budget: Driving Market Uptake via €12M FSTP</h2>
+                <p class="section-desc">
+                    Out of the €14,000,000 total project budget, <strong>€12,000,000 is directly allocated to third-party SMEs (FSTP)</strong>, while the remaining €2,000,000 covers the consortium's core activities. The cascade funding follows the 3-stage challenge-driven competition fixed by the topic. The call is expected to select <strong>3 projects</strong> under this topic.
+                </p>
+            </div>
+        </div>
+
+        <div style="background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; margin-top: 2rem; text-align: center;">
+            
+            <!-- Global Budget Breakdown -->
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <div style="padding: 1.5rem 2rem; border: 2px solid #3b82f6; border-radius: 12px; background-color: rgba(59, 130, 246, 0.05); box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1); min-width: 250px;">
+                    <h3 style="color: #3b82f6; font-size: 2.5rem; font-weight: 700; margin: 0; font-family: var(--font-heading);">€14.0M</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">Total Project Budget</p>
+                </div>
+                <div style="padding: 1.5rem 2rem; border: 2px solid #eab308; border-radius: 12px; background-color: rgba(234, 179, 8, 0.05); box-shadow: 0 4px 20px rgba(234, 179, 8, 0.1); min-width: 250px;">
+                    <h3 style="color: #eab308; font-size: 2.5rem; font-weight: 700; margin: 0; font-family: var(--font-heading);">€12.0M</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">FSTP Cascade Funding (SMEs)</p>
+                </div>
+                <div style="padding: 1.5rem 2rem; border: 2px solid #8b5cf6; border-radius: 12px; background-color: rgba(139, 92, 246, 0.05); box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1); min-width: 250px;">
+                    <h3 style="color: #8b5cf6; font-size: 2.5rem; font-weight: 700; margin: 0; font-family: var(--font-heading);">€2.0M</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">Consortium Core Activities</p>
+                </div>
+            </div>
+
+            <!-- FSTP Breakdown Title -->
+            <div style="margin-top: 4rem; margin-bottom: 2rem; text-align: left; padding-left: 1rem; border-left: 4px solid #eab308;">
+                <h3 style="margin: 0; color: #ca8a04; font-size: 1.4rem; font-weight: 600;">The €12.0M FSTP as a 3-stage competition</h3>
+                <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">FSTP only as grants, to single SMEs or SME-led teams (SME lead + SMEs, research organisations, public bodies or secondary / higher education establishments) from eligible countries. Maximum €2.55M per third party.</p>
+            </div>
+            <div class="fs-stages">
+                <div class="fs-stage" style="--sc:#ca8a04"><div class="fs-n">Stage 1 · M07–M12</div><h4>Open call &amp; selection</h4><div class="fs-amt">Selection</div><p>Teams answer one of the two pilot challenges. A pre-screening run by the independent evaluation body shortlists <strong>up to 20 proposals</strong> above a minimum score; the consortium reviews them and selects the <strong>top 10</strong>.</p></div>
+                <div class="fs-arrow">→</div>
+                <div class="fs-stage" style="--sc:#0d9488"><div class="fs-n">Stage 2 · M13–M22</div><h4>Prototyping · 10 teams</h4><div class="fs-amt">€3.0M</div><p><strong>10 × €300,000</strong>. Prototypes (TRL 3–4) in the sandbox using cleaned, anonymised pilot data. After the benchmark + demo day, the consortium and, above all, the pilots select the <strong>top 4</strong>.</p></div>
+                <div class="fs-arrow">→</div>
+                <div class="fs-stage" style="--sc:#7c3aed"><div class="fs-n">Stage 3 · M24–M34</div><h4>Grand finale · 4 teams</h4><div class="fs-amt">€9.0M</div><p><strong>4 × €2,250,000</strong>. Integration and TRL 5 validation in the the industrial pilot plants with no plant data leaving the site, then uptake measures.</p></div>
+            </div>
+            <p class="fs-note">Training, mentoring and evaluation are <strong>not</strong> paid as FSTP: they are carried out by the consortium within its €2.0M (WP4), as the topic requires. the independent evaluation body may use external evaluators, paid from its own budget, for the Stage 1 pre-screening; every funding decision is taken by the consortium.</p>
+
+            <div class="sm-wrap" id="solution-model">
+                <h3 class="sm-title">Solution model: what each team builds</h3>
+                <p class="sm-lead"><strong>Each team delivers one complete, modular solution for one industrial challenge, built on the common AURA framework.</strong> The topic sets the competition; it does not prescribe the technical solution. This model is AURA&#x27;s proposal, and teams remain free to choose their technologies.</p>
+
+                <h4 class="sm-sub">Three different concepts</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><span class="sm-tag">Competition</span><h5>3 stages</h5><p>Open call → up to 20 shortlisted → 10 funded teams → 4 finalists and grand finale. The three stages are defined by the topic; the shortlist is AURA&#x27;s own filter inside Stage 1.</p></div>
+                    <div class="sm-card"><span class="sm-tag">Industrial problem</span><h5>2 challenges</h5><p>A.1 Bakery (Pilot A.1) and A.2 Coatings (Pilot A.2). Defined by the user industries.</p></div>
+                    <div class="sm-card"><span class="sm-tag">What the solution does</span><h5>4-step loop</h5><p>Predict → Guide → Act → Learn. Every solution must cover all four steps.</p></div>
+                </div>
+
+                <h4 class="sm-sub">Rules for the teams</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><h5>One challenge per team</h5><p>Each team chooses A.1 or A.2 and develops its solution for that challenge.</p></div>
+                    <div class="sm-card"><h5>One complete solution</h5><p>Each team delivers all four steps of the loop as one working solution.</p></div>
+                    <div class="sm-card"><h5>Modular inside the team</h5><p>A single SME can build every module, or an SME-led team can share them.</p></div>
+                    <div class="sm-card"><h5>One responsible lead</h5><p>The lead SME integrates the modules and answers for the complete solution.</p></div>
+                    <div class="sm-card"><h5>Common framework</h5><p>All teams must comply with the same interface contract, reference ontology and benchmarks, so results can be compared. The AURA reference designs (T2.3, T2.7) are optional: teams choose their own technology.</p></div>
+                    <div class="sm-card"><h5>Built to be reused</h5><p>Plant-specific elements are configured separately, so the solution can move to other plants after the project.</p></div>
+                </div>
+                <p class="fs-note"><strong>Not funded:</strong> separate modules from different teams for the consortium to integrate later. Teams compete with complete solutions, as the topic identifies the best-performing solution.</p>
+
+                <h4 class="sm-sub">What each team delivers per stage</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><span class="sm-tag">Stage 1 · Proposal</span><p>Chosen challenge, architecture covering the four steps, and allocation of modules within the team.</p></div>
+                    <div class="sm-card"><span class="sm-tag">Stage 2 · Prototype</span><p>Complete prototype in the sandbox, using anonymised data, tested against the benchmarks and the interface contract.</p></div>
+                    <div class="sm-card"><span class="sm-tag">Stage 3 · Plant validation</span><p>Integrated solution validated on the production line of its challenge, with operators, up to TRL 5.</p></div>
+                </div>
+
+                <h4 class="sm-sub">Example: how Challenge A.1 follows the 4-step loop</h4>
+                <div class="sm-grid">
+                    <div class="sm-card"><span class="sm-tag">1 · Predict</span><p>Anticipates a quality anomaly or a failure on the bakery line.</p></div>
+                    <div class="sm-card"><span class="sm-tag">2 · Guide</span><p>Recommends what to do and cites the official procedures.</p></div>
+                    <div class="sm-card"><span class="sm-tag">3 · Act</span><p>The operator applies, changes or rejects the recommendation.</p></div>
+                    <div class="sm-card"><span class="sm-tag">4 · Learn</span><p>The validated experience is added to the plant&#x27;s private knowledge graph.</p></div>
+                </div>
+
+                <h4 class="sm-sub">Example challenges for the open call (illustrative)</h4>
+                <p class="sm-lead" style="margin-bottom:0.8rem;">Each pilot publishes one challenge. These examples show the kind of industrial problem a team would solve inside it, always covering the full Predict → Guide → Act → Learn loop.</p>
+                <div class="ch-cols">
+                    <div class="ch-col">
+                        <h5>A.1 Bakery · Pilot A.1</h5>
+                        <div class="ch-card"><h6>A.1.a · Baking-quality drift</h6><dl><dt>Problem</dt><dd>Oven or proofing deviations produce under- or over-baked batches that are only detected at end-of-line inspection.</dd><dt>Solution</dt><dd>Predicts the drift before it happens, guides the operator to the right procedure, records what was done.</dd><dt>Data</dt><dd>Oven and proofing temperature and humidity, line speed, end-of-line weight and colour checks.</dd><dt>Target</dt><dd>Anomaly lead time ≥ 2 h · scrap −15%.</dd></dl></div>
+                        <div class="ch-card"><h6>A.1.b · Unplanned stops in mixers, dividers and conveyors</h6><dl><dt>Problem</dt><dd>Wear and jams cause unplanned stops; the know-how to fix them sits with a few experienced technicians.</dd><dt>Solution</dt><dd>Detects early wear signals, recommends the action from manuals and past repairs, learns from each intervention.</dd><dt>Data</dt><dd>Motor current and vibration, stop logs, maintenance records, equipment manuals.</dd><dt>Target</dt><dd>Fewer unplanned stops (baseline and target fixed in T5.1).</dd></dl></div>
+                        <div class="ch-card"><h6>A.1.c · Product weight and shape drift</h6><dl><dt>Problem</dt><dd>Weight, shape or colour drift with flour batch or dough conditions, and the response varies between shifts.</dd><dt>Solution</dt><dd>Flags the drift, suggests the adjustment citing the source procedure, captures the operator&#x27;s feedback.</dd><dt>Data</dt><dd>Checkweigher, vision inspection, raw-material batch records, SOPs.</dd><dt>Target</dt><dd>Precision &gt; 85% · 100% of recommendations traceable to source.</dd></dl></div>
+                    </div>
+                    <div class="ch-col">
+                        <h5>A.2 Coatings · Pilot A.2 <span style="font-weight:400;color:var(--text-tertiary);">(eligibility to be confirmed with the EC)</span></h5>
+                        <div class="ch-card"><h6>A.2.a · Rheology deviation in batches</h6><dl><dt>Problem</dt><dd>Off-spec viscosity is found late, in lab quality control, and the batch needs rework.</dd><dt>Solution</dt><dd>Detects the deviation in real time and suggests a correction within the approved formulation limits; the operator decides.</dd><dt>Data</dt><dd>Inline and lab viscosity, formulation, temperature, mixing times.</dd><dt>Target</dt><dd>Real-time rheology deviation detection.</dd></dl></div>
+                        <div class="ch-card"><h6>A.2.b · Surface defects after curing</h6><dl><dt>Problem</dt><dd>Pinholes, bubbles or colour shifts appear after curing and lead to rejected parts.</dd><dt>Solution</dt><dd>Anticipates the defect from batch and curing-oven data and recommends the preventive action.</dd><dt>Data</dt><dd>Curing-oven zone temperatures, batch records, defect inspection results.</dd><dt>Target</dt><dd>Surface-defect rejects −20%.</dd></dl></div>
+                        <div class="ch-card"><h6>A.2.c · Energy-aware curing profiles</h6><dl><dt>Problem</dt><dd>Curing ovens run conservative profiles that use more energy than the coating needs.</dd><dt>Solution</dt><dd>Recommends profile adjustments that keep quality, and learns which settings work for each product.</dd><dt>Data</dt><dd>Oven zone temperatures, energy meters, quality-control results.</dd><dt>Target</dt><dd>Oven energy −12% at equal quality.</dd></dl></div>
+                    </div>
+                </div>
+                <p class="fs-note">Data sources and targets are to be confirmed with the industrial pilot. The final problem statements are fixed in T5.1 and published with the Stage 1 call.</p>
+            </div>
+            <div class="tk-table-wrap" style="margin-top:1.25rem;">
+            <h3 style="margin:0 0 0.4rem;font-size:1.05rem;">Stage targets &amp; KPIs (proposed; baselines fixed in T5.1)</h3>
+            <table class="tk-table">
+                <thead><tr><th>Challenge</th><th>Quantitative KPIs</th><th>Stage 2 (sandbox)</th><th>Stage 3 (plant)</th></tr></thead>
+                <tbody><tr><th>A.1 Bakery (Pilot A.1)</th><td>Anomaly lead time ≥ 2 h · precision &gt; 85% · 100% of recommendations traceable to source · scrap −15%</td><td>Lead time, precision and traceability on benchmarks</td><td>All KPIs measured on the line</td></tr><tr><th>A.2 Coatings (Pilot A.2, not eligible as listed; to be confirmed with the EC)</th><td>Real-time rheology deviation detection · surface-defect rejects −20% · oven energy −12%</td><td>Detection and traceability on benchmarks</td><td>All KPIs measured on the line</td></tr><tr><th>Both (qualitative &amp; HITL)</th><td>Operator acceptance · time-to-resolution · override rate</td><td>Interface-contract conformance and AI Act requirements</td><td>Measured under the T2.6 protocol</td></tr></tbody>
+            </table>
+            <h3 style="margin:1.1rem 0 0.4rem;font-size:1.05rem;">Evaluation criteria per stage (proposed)</h3>
+            <table class="tk-table">
+                <thead><tr><th>Stage</th><th>Criteria and weights</th></tr></thead>
+                <tbody><tr><th>Stage 1 → top 10</th><td>Technical excellence and fit to the challenge 35% · coverage of the 4 steps and interface contract 25% · team capacity 20% · impact and exploitation 20%. Applied twice: by the the independent evaluation body pre-screening (all eligible proposals → up to 20 shortlisted, all above the minimum threshold) and by the consortium selection committee (shortlist → top 10).</td></tr><tr><th>Stage 2 → top 4</th><td>Technical KPIs in the sandbox 35% (automatic benchmark) · interface contract and AI Act 20% · monitoring report 15% · plant fit and deployment plan 30%, scored jointly by the two pilots for all 10 teams</td></tr><tr><th>Stage 3 → best solution</th><td>Plant KPIs 40% · operator acceptance (HITL) 20% · explainability and compliance 20% · exploitation plan, reusability and industry agreements 20%</td></tr></tbody>
+            </table>
+            <p class="fs-note">Selection uses a single ranking per stage, as the topic requires; in Stage 1 the pre-screening ranking fixes the shortlist and the committee ranking fixes the top 10. <strong>Shortlist rule:</strong> only proposals above a minimum threshold are shortlisted (proposed: 60% of the total score and a minimum per criterion, fixed in the competition handbook); the 20 best-ranked of them pass, proposals tied in 20th place all pass, and if 20 or fewer eligible proposals are received there is no pre-screening beyond the threshold check. <strong>Independence:</strong> two independent external experts sit in the selection committee with a vote at every funding decision. <strong>Plant criterion:</strong> the two pilots score the Stage 2 plant fit of all 10 teams together, not each one only the teams of its own challenge, with the same scoring grid and in a consensus session chaired by the independent evaluation body, so the ranking stays comparable across challenges. At every stage each team is scored on its attainment of its own challenge targets, relative to the T5.1 baselines, so solutions from both challenges compete on equal terms; in the grand finale the highest overall score is the best-performing solution. Each pilot commits in writing to host up to four finalists (T5.3), so the ranking never depends on plant capacity. If all four finalists come from the same challenge, one or two of them also replicate their solution in the other plant as a reusability test, so both plants validate. Whether a published rule of at least one finalist per challenge, above the threshold, is compatible with the topic is to be confirmed with the European Commission.</p>
+            <h4 style="margin:1.2rem 0 0.5rem 0;">FSTP payment schedule (proposed)</h4>
+            <div class="tk-table-wrap" style="padding:0;">
+            <table class="tk-table">
+                <thead><tr><th>Stage</th><th>Instalment</th><th>Trigger</th><th>Month</th><th>Share</th><th>Per team</th><th>Total</th></tr></thead>
+                <tbody><tr><th>Stage 2</th><td>Pre-financing</td><td>FSTP agreement signed</td><td>M12</td><td>40%</td><td>€120,000</td><td>€1.2M</td></tr><tr><th>Stage 2</th><td>Final payment</td><td>Deliverables accepted after the Stage 2 evaluation</td><td>M22</td><td>60%</td><td>€180,000</td><td>€1.8M</td></tr><tr><th>Stage 3</th><td>Pre-financing</td><td>FSTP agreement signed</td><td>M23</td><td>30%</td><td>€675,000</td><td>€2.7M</td></tr><tr><th>Stage 3</th><td>Interim payment</td><td>Mid-term review passed</td><td>M29</td><td>40%</td><td>€900,000</td><td>€3.6M</td></tr><tr><th>Stage 3</th><td>Final payment</td><td>Final deliverables accepted after the grand finale</td><td>M34–M35</td><td>30%</td><td>€675,000</td><td>€2.7M</td></tr><tr><th>Total</th><td colspan="5"></td><td>€12.0M</td></tr></tbody>
+            </table>
+            </div>
+            <p class="fs-note">The consortium coordinator, holds the €12.0M FSTP budget in addition to its share of the €2.0M core budget, signs the FSTP agreements and pays the teams (T1.2, T4.5). Payments depend on accepted deliverables and the independent evaluation body's monitoring reports, not on the final ranking. Instalments may be reduced or withheld if the agreed targets are not met.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="impact" class="section-card" style="border-top: 3px solid var(--accent-emerald);">
+        <div class="section-header">
+            <div class="section-header-left">
+                <span class="section-num-tag">09 / Topic Alignment</span>
+                <h2 class="section-title">Expected Outcomes &amp; Draft Exploitation Plan</h2>
+                <p class="section-desc">
+                    How AURA contributes to the three expected outcomes of the topic in the advanced manufacturing sector, and how the teams&#x27; solutions will be taken up. Expected results are pre-competitive. The call is expected to select 3 projects under this topic.
+                </p>
+            </div>
+        </div>
+
+        <div class="architecture-summary-grid">
+            <div class="arch-summary-card federated" style="border-top-color: var(--accent-emerald);">
+                <div class="arch-summary-title">Technological progress</div>
+                <div class="arch-summary-text">
+                    Challenge-oriented AI solutions for predictive maintenance and quality control move from TRL 2 to TRL 5, validated on real production lines against open benchmarks.
+                </div>
+            </div>
+
+            <div class="arch-summary-card boundary" style="border-top-color: #38bdf8;">
+                <div class="arch-summary-title">Competitiveness &amp; visibility</div>
+                <div class="arch-summary-text">
+                    The open call, demo days and grand finale give European AI SMEs and teams visibility with user industries, and the results reach the community through the AI-on-demand platform.
+                </div>
+            </div>
+
+            <div class="arch-summary-card local" style="border-top-color: #a855f7;">
+                <div class="arch-summary-title">AI adoption</div>
+                <div class="arch-summary-text">
+                    Explainable, human-supervised solutions are validated in the pilot plants, then reach further manufacturers through the EDIHs and the user-industry partners. Testing can use the Testing and Experimentation Facilities.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DRAFT EXPLOITATION PLAN -->
+    <footer class="commercial-footer">
+        <h3 class="commercial-title">Draft Exploitation Plan: Uptake of the Teams&#x27; Solutions</h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+            Each finalist keeps ownership of its results. <strong>After the FSTP grant, the best-performing team can conclude a partnership or contract with the user-industry partners</strong>, and the other finalists are introduced to further manufacturers through the EDIHs. T6.3 and T6.4 develop this plan, including licensing terms, liability for recommendations and the business case for a possible post-project AURA marketplace, led by Open Call Lead.
+        </p>
+    </footer>
+</div>
+
+<script>
+function toggleAllTasks(open) {
+    document.querySelectorAll('#work-packages details.tk').forEach(function (d) { d.open = open; });
+}
+
+    let activeCountryFilter = 'ALL';
+
+    function switchArchitectureView(mode) {
+        const img = document.getElementById('img-architecture-main');
+        const btnDual = document.getElementById('btn-arch-dual');
+        const btnTech = document.getElementById('btn-arch-tech');
+        const btnExec = document.getElementById('btn-arch-exec');
+
+        btnDual.classList.remove('active');
+        btnTech.classList.remove('active');
+        btnExec.classList.remove('active');
+
+        img.style.opacity = 0;
+        setTimeout(() => {
+            if (mode === 'dual') {
+                img.src = 'aura_three_layer_dual_projection_v2.png';
+                btnDual.classList.add('active');
+            } else if (mode === 'tech') {
+                img.src = 'aura_three_layer_architecture_dark_v2.png';
+                btnTech.classList.add('active');
+            } else {
+                img.src = 'aura_master_architecture_v2.png';
+                btnExec.classList.add('active');
+            }
+            img.style.opacity = 1;
+        }, 150);
+    }
+
+    function switchLoopView(mode) {
+        const img = document.getElementById('img-loop-main');
+        const btnDual = document.getElementById('btn-loop-dual');
+        const btnTech = document.getElementById('btn-loop-tech');
+        const btnExec = document.getElementById('btn-loop-exec');
+
+        btnDual.classList.remove('active');
+        btnTech.classList.remove('active');
+        btnExec.classList.remove('active');
+
+        img.style.opacity = 0;
+        setTimeout(() => {
+            if (mode === 'dual') {
+                img.src = 'aura_edge_engine_dual_projection_v2.png';
+                btnDual.classList.add('active');
+            } else if (mode === 'tech') {
+                img.src = 'aura_edge_engine_4steps_dark_v2.png';
+                btnTech.classList.add('active');
+            } else {
+                img.src = 'aura_bucle_4_etapas.png';
+                btnExec.classList.add('active');
+            }
+            img.style.opacity = 1;
+        }, 150);
+    }
+
+    function filterByCountry(countryName) {
+        activeCountryFilter = countryName;
+        
+        document.querySelectorAll('.country-chip').forEach(chip => {
+            chip.classList.remove('active');
+        });
+
+        const activeChip = document.getElementById(`chip-${countryName}`);
+        if (activeChip) activeChip.classList.add('active');
+
+        filterRows();
+    }
+
+    function filterRows() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const status = document.getElementById('statusFilter').value;
+        const type = document.getElementById('typeFilter').value;
+
+        const rows = document.querySelectorAll('.partner-row');
+        const areaHeaders = document.querySelectorAll('.area-header-row');
+
+        rows.forEach(row => {
+            const text = row.innerText.toLowerCase();
+            const rowCountry = row.getAttribute('data-country');
+            const rowStatus = row.getAttribute('data-status');
+            const rowType = row.getAttribute('data-type');
+
+            const matchesQuery = text.includes(query);
+            const matchesStatus = status === 'ALL' || rowStatus === status;
+            const matchesCountry = activeCountryFilter === 'ALL' || rowCountry === activeCountryFilter;
+
+            let matchesType = true;
+            if (type === 'WIDENING') matchesType = rowType === 'WIDENING';
+            if (type === 'RTO') matchesType = rowType === 'RTO';
+            if (type === 'INDUSTRY') matchesType = rowType === 'INDUSTRY';
+
+            if (matchesQuery && matchesStatus && matchesCountry && matchesType) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        areaHeaders.forEach(header => {
+            let next = header.nextElementSibling;
+            let hasVisible = false;
+            while (next && !next.classList.contains('area-header-row')) {
+                if (next.style.display !== 'none') {
+                    hasVisible = true;
+                    break;
+                }
+                next = next.nextElementSibling;
+            }
+            header.style.display = hasVisible ? '' : 'none';
+        });
+    }
+
+    // Open the budget table when the URL points to #budget
+    function openBudgetFromHash() {
+        if (location.hash !== '#budget') return;
+        const budget = document.getElementById('budget');
+        budget.open = true;
+        budget.scrollIntoView();
+    }
+    window.addEventListener('load', openBudgetFromHash);
+    window.addEventListener('hashchange', openBudgetFromHash);
+    document.querySelectorAll('a[href="#budget"]').forEach(a => a.addEventListener('click', () => setTimeout(openBudgetFromHash, 0)));
+</script>
+
+    <!-- COMMERCIAL VALUE FOOTER -->
+    <div class="commercial-footer">
+        <div class="commercial-title">💡 Commercial Alliance &amp; Sustainability Model</div>
+        <p style="font-size: 0.925rem; color: var(--text-muted); line-height: 1.6;">
+            The AURA consortium acts as the <strong>organizer, facilitator, and technical guarantor</strong> of the ecosystem. Through this framework, technology-buying enterprises deploy sovereign AI agents connected to their Standard Operating Procedures (SOPs) without data leakage risks (Layer C at the industrial pilot plants), while provider SMEs integrate their API-consumable semantic "Oracles" into a self-sustaining industrial B2B marketplace.
+        </p>
+    </div>
+</div>
+
+<script>
+function toggleAllTasks(open) {
+    document.querySelectorAll('#work-packages details.tk').forEach(function (d) { d.open = open; });
+}
+
+    let activeCountryFilter = 'ALL';
+
+    function switchArchitectureView(mode) {
+        const img = document.getElementById('img-architecture-main');
+        const btnDual = document.getElementById('btn-arch-dual');
+        const btnTech = document.getElementById('btn-arch-tech');
+        const btnExec = document.getElementById('btn-arch-exec');
+
+        btnDual.classList.remove('active');
+        btnTech.classList.remove('active');
+        btnExec.classList.remove('active');
+
+        img.style.opacity = 0;
+        setTimeout(() => {
+            if (mode === 'dual') {
+                img.src = 'aura_three_layer_dual_projection_v2.png';
+                btnDual.classList.add('active');
+            } else if (mode === 'tech') {
+                img.src = 'aura_three_layer_architecture_dark_v2.png';
+                btnTech.classList.add('active');
+            } else {
+                img.src = 'aura_master_architecture_v2.png';
+                btnExec.classList.add('active');
+            }
+            img.style.opacity = 1;
+        }, 150);
+    }
+
+    function switchLoopView(mode) {
+        const img = document.getElementById('img-loop-main');
+        const btnDual = document.getElementById('btn-loop-dual');
+        const btnTech = document.getElementById('btn-loop-tech');
+        const btnExec = document.getElementById('btn-loop-exec');
+
+        btnDual.classList.remove('active');
+        btnTech.classList.remove('active');
+        btnExec.classList.remove('active');
+
+        img.style.opacity = 0;
+        setTimeout(() => {
+            if (mode === 'dual') {
+                img.src = 'aura_edge_engine_dual_projection_v2.png';
+                btnDual.classList.add('active');
+            } else if (mode === 'tech') {
+                img.src = 'aura_edge_engine_4steps_dark_v2.png';
+                btnTech.classList.add('active');
+            } else {
+                img.src = 'aura_bucle_4_etapas.png';
+                btnExec.classList.add('active');
+            }
+            img.style.opacity = 1;
+        }, 150);
+    }
+
+    function filterByCountry(countryName) {
+        activeCountryFilter = countryName;
+        
+        document.querySelectorAll('.country-chip').forEach(chip => {
+            chip.classList.remove('active');
+        });
+
+        const activeChip = document.getElementById(`chip-${countryName}`);
+        if (activeChip) activeChip.classList.add('active');
+
+        filterRows();
+    }
+
+    function filterRows() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const status = document.getElementById('statusFilter').value;
+        const type = document.getElementById('typeFilter').value;
+
+        const rows = document.querySelectorAll('.partner-row');
+        const areaHeaders = document.querySelectorAll('.area-header-row');
+
+        rows.forEach(row => {
+            const text = row.innerText.toLowerCase();
+            const rowCountry = row.getAttribute('data-country');
+            const rowStatus = row.getAttribute('data-status');
+            const rowType = row.getAttribute('data-type');
+
+            const matchesQuery = text.includes(query);
+            const matchesStatus = status === 'ALL' || rowStatus === status;
+            const matchesCountry = activeCountryFilter === 'ALL' || rowCountry === activeCountryFilter;
+
+            let matchesType = true;
+            if (type === 'WIDENING') matchesType = rowType === 'WIDENING';
+            if (type === 'RTO') matchesType = rowType === 'RTO';
+            if (type === 'INDUSTRY') matchesType = rowType === 'INDUSTRY';
+
+            if (matchesQuery && matchesStatus && matchesCountry && matchesType) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        areaHeaders.forEach(header => {
+            let next = header.nextElementSibling;
+            let hasVisible = false;
+            while (next && !next.classList.contains('area-header-row')) {
+                if (next.style.display !== 'none') {
+                    hasVisible = true;
+                    break;
+                }
+                next = next.nextElementSibling;
+            }
+            header.style.display = hasVisible ? '' : 'none';
+        });
+    }
+
+    // Open the budget table when the URL points to #budget
+    function openBudgetFromHash() {
+        if (location.hash !== '#budget') return;
+        const budget = document.getElementById('budget');
+        budget.open = true;
+        budget.scrollIntoView();
+    }
+    window.addEventListener('load', openBudgetFromHash);
+    window.addEventListener('hashchange', openBudgetFromHash);
+    document.querySelectorAll('a[href="#budget"]').forEach(a => a.addEventListener('click', () => setTimeout(openBudgetFromHash, 0)));
+</script>
+
+</body>
+</html>

@@ -20,7 +20,7 @@ def cloud_band(d, x1, y1, x2, y2, scale=1.0):
     d.text((x1+30+int(150*scale), y1+29), "FEDERATED SOVEREIGN CLOUD  ·  Gaia-X 24/7 + EuroHPC  (outside the plant)", fill=WHITE, font=F(int(16*scale),True), anchor="lm")
     items = [("Core Ontology ISA-95", "Layer 1 · shared data model", "INDElab / UvA"),
              ("Sector Oracles", "Layer 2 · HACCP/EFSA · REACH/CLP", "built by the competing teams"),
-             ("Generic AI models", "LLM/SLM trained on MareNostrum 5", "BSC · EuroHPC"),
+             ("Generic AI models", "LLM/SLM trained via EuroHPC access calls", "BSC guidance · EuroHPC"),
              ("MLOps pipeline", "signed, versioned knowledge packages", "ESTEN")]
     n=len(items); gap=14; iw=(x2-x1-32-gap*(n-1))/n
     cy1=y1+58; cy2=y2-14
@@ -44,7 +44,7 @@ def boundary(d, x1, x2, y, xs_down, label_x, top=None):
     d.text((label_x,y), t, fill=WHITE, font=f, anchor="mm")
 
 def steps(d, x0, y0, total_w, h, fed=True):
-    data=[("STEP 1","1. PREDICT","Generic predictive models",["Real-time sensor log analysis","Anomaly detection on local GPU","Failure anticipation (>2 h)","Dough / enamel quality alerts"]),
+    data=[("STEP 1","1. PREDICT","Generic predictive models",["Real-time sensor log analysis","Anomaly detection on local GPU","Failure anticipation (>2 h)","Dough / compound quality alerts"]),
           ("STEP 2","2. GUIDE","Ontology + sector oracles",["Dual Graph-RAG: oracles + private graph","Explainable step-by-step SOPs","Root-cause evidence","AI Act-aligned rationale"]),
           ("STEP 3","3. ACT","Updated SOPs & compliance rules",["Human-at-the-Edge decision","Operator executes or overrides","Plant line adjustment","Outcome logged locally"]),
           ("STEP 4","4. LEARN","New model versions (pull)",["Tacit experience capture","Judge Agent validation","Private Graph update","Knowledge stays in the plant"])]
@@ -130,7 +130,7 @@ end=local_box(d,48,end+24,976)
 d.rounded_rectangle((48,end+16,976,end+80),radius=10,fill=CARD,outline=(215,145,60),width=1)
 end-=6
 d.text((W/2,end+42),"Validated at TRL 5 in on-premise industrial edge pilots",fill=GOLD,font=F(16,True),anchor="mm")
-d.text((W/2,end+66),"Vicky Foods (continuous bakery dough telemetry)   |   AKCOAT (chemical rheology & thermal curing)",fill=WHITE,font=F(13),anchor="mm")
+d.text((W/2,end+66),"Vicky Foods (continuous bakery dough telemetry)   |   Industrial Pilot 2 (continuous polymer process: rheology & curing)",fill=WHITE,font=F(13),anchor="mm")
 img=img.crop((0,0,W,end+104)); d=ImageDraw.Draw(img)
 d.rectangle((0,end+84,W,end+104),fill=BG)
 d.rounded_rectangle((24,392,1000,end+92),radius=12,outline=(215,145,60),width=2)
@@ -156,7 +156,7 @@ e=steps(dl,24,95,952,400,fed=True)
 e=local_box(dl,24,e+26,976,14)-4
 dl.rounded_rectangle((24,e+24,976,e+92),radius=10,fill=CARD,outline=(215,145,60),width=1)
 dl.text((500,e+46),"Validated at TRL 5 in on-premise industrial edge pilots",fill=GOLD,font=F(16,True),anchor="mm")
-dl.text((500,e+72),"Vicky Foods (continuous bakery dough telemetry)   |   AKCOAT (chemical rheology & thermal curing)",fill=WHITE,font=F(13),anchor="mm")
+dl.text((500,e+72),"Vicky Foods (continuous bakery dough telemetry)   |   Industrial Pilot 2 (continuous polymer process: rheology & curing)",fill=WHITE,font=F(13),anchor="mm")
 left=left.crop((0,0,1000,e+110))
 right=Image.open("aura_bucle_4_etapas.png").convert("RGBA")
 ph=H-20-400-20

@@ -35,11 +35,11 @@ def draw_tech_blueprint():
     draw.rounded_rectangle((50, 140, 974, 320), radius=12, fill=(28, 22, 16, 255), outline=(215, 145, 60), width=2)
     draw.rounded_rectangle((70, 155, 160, 185), radius=6, fill=(195, 133, 40, 255))
     draw.text((115, 170), "LAYER A", fill=(15, 12, 10), font=font_card_body, anchor="mm")
-    draw.text((180, 170), "EUROHPC SUPERCOMPUTING & DATAHUB (BSC MARENOSTRUM 5)", fill=(248, 250, 252), font=font_section, anchor="ls")
+    draw.text((180, 170), "EUROHPC / AI FACTORY ACCESS & DATAHUB (BSC GUIDANCE)", fill=(248, 250, 252), font=font_section, anchor="ls")
 
-    draw.text((80, 220), "• MareNostrum 5 Supercomputing Access: Heavy industrial LLM / SLM fine-tuning & foundation training", fill=(220, 210, 200), font=font_card_body)
+    draw.text((80, 220), "• EuroHPC / AI Factory access obtained by the teams through the access calls: LLM / SLM fine-tuning", fill=(220, 210, 200), font=font_card_body)
     draw.text((80, 250), "• Pan-European Industrial Datahub: Multimodal dataset curation, benchmarking, & open-source weights distribution", fill=(220, 210, 200), font=font_card_body)
-    draw.text((80, 280), "• Key Partner Leadership: BSC MareNostrum (WP3) & Scientific Guidance (UA - WP2)", fill=(245, 197, 115), font=font_card_body)
+    draw.text((80, 280), "• BSC: access applications, HPC onboarding & training (WP3)  ·  Scientific & technical coordination (UA - WP2)", fill=(245, 197, 115), font=font_card_body)
 
     # Arrow Down
     draw.line([(512, 320), (512, 360)], fill=(215, 145, 60), width=3)
@@ -69,7 +69,7 @@ def draw_tech_blueprint():
     draw.rounded_rectangle((50, 650, 974, 980), radius=12, fill=(28, 22, 16, 255), outline=(215, 145, 60), width=2)
     draw.rounded_rectangle((70, 665, 160, 695), radius=6, fill=(160, 85, 50, 255))
     draw.text((115, 680), "LAYER C", fill=(255, 255, 255), font=font_card_body, anchor="mm")
-    draw.text((180, 680), "ON-PREMISE INDUSTRIAL EDGE & TRL 5 PILOTS (VICKY FOODS & AKCOAT)", fill=(248, 250, 252), font=font_section, anchor="ls")
+    draw.text((180, 680), "ON-PREMISE INDUSTRIAL EDGE & TRL 5 PILOTS (VICKY FOODS & INDUSTRIAL PILOT 2)", fill=(248, 250, 252), font=font_section, anchor="ls")
 
     # Pilot Boxes
     draw.rounded_rectangle((70, 715, 500, 840), radius=8, fill=(35, 26, 18, 255), outline=(215, 145, 60), width=1)
@@ -77,8 +77,8 @@ def draw_tech_blueprint():
     draw.text((85, 765), "• Continuous industrial bakery line telemetry\n• Viscosity, thermal baking curves & dough sensor logs\n• Real-time operator guidance & quality failure prevention", fill=(220, 210, 200), font=font_card_body)
 
     draw.rounded_rectangle((520, 715, 954, 840), radius=8, fill=(35, 26, 18, 255), outline=(225, 125, 85), width=1)
-    draw.text((535, 735), "Pilot 2: AKCOAT (Chemicals & Materials)", fill=(255, 160, 140), font=font_card_title)
-    draw.text((535, 765), "• Ceramic enamel & chemical coatings manufacturing\n• Physico-chemical rheology & thermal curing parameters\n• On-premise Edge GPU server for zero-latency inference", fill=(220, 210, 200), font=font_card_body)
+    draw.text((535, 735), "Pilot 2: Industrial Pilot 2 (Continuous Process)", fill=(255, 160, 140), font=font_card_title)
+    draw.text((535, 765), "• Continuous polymer process (extrusion, coating, curing)\n• Compound rheology, zone temperatures & energy profiles\n• On-premise Edge GPU server for zero-latency inference", fill=(220, 210, 200), font=font_card_body)
 
     # Knowledge Graph box
     draw.rounded_rectangle((70, 855, 954, 960), radius=8, fill=(35, 26, 18, 255), outline=(215, 145, 60), width=1)
@@ -145,7 +145,7 @@ def patch_edge_engine_projections():
             "• Real-time sensor log analysis",
             "• Predictive AI anomaly detection",
             "• Machine failure anticipation (>2h)",
-            "• Dough/enamel quality risk alerts",
+            "• Dough / compound quality alerts",
             "• Local GPU edge inference"
         ], (215, 145, 60)),
         ("STEP 2", "2. GUIDE", [
@@ -211,7 +211,7 @@ def patch_edge_engine_projections():
     # Bottom Validation Box
     draw.rounded_rectangle((50, 700, 974, 820), radius=10, fill=(28, 22, 16, 255), outline=(215, 145, 60), width=1)
     draw.text((w/2, 735), "Validated at TRL 5 in On-Premise Industrial Edge Pilots:", fill=(245, 197, 115), font=font_card_title, anchor="mm")
-    draw.text((w/2, 780), "Vicky Foods (Continuous Bakery Dough Telemetry)   |   AKCOAT (Chemical Rheology & Thermal Curing)", fill=(248, 250, 252), font=font_card_body, anchor="mm")
+    draw.text((w/2, 780), "Vicky Foods (Continuous Bakery Dough Telemetry)   |   Industrial Pilot 2 (Continuous Polymer Process)", fill=(248, 250, 252), font=font_card_body, anchor="mm")
 
     img.save("aura_edge_engine_4steps_dark.png")
     print("Rendered aura_edge_engine_4steps_dark.png")

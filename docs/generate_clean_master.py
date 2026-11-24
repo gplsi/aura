@@ -52,7 +52,7 @@ def render_master_architecture():
 
     # Card 3: EuroHPC BSC
     draw.rounded_rectangle((540, 218, 735, 390), radius=10, fill=(45, 32, 22, 255), outline=(180, 130, 80), width=1)
-    draw.text((637, 295), "EuroHPC BSC\nMareNostrum 5\nLLM Training", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
+    draw.text((637, 295), "EuroHPC /\nAI Factory access\n(BSC guidance)", fill=(248, 250, 252), font=font_card_title, anchor="mm", align="center")
 
     # Card 4: MLOps Pipeline
     draw.rounded_rectangle((780, 218, 955, 390), radius=10, fill=(175, 95, 65, 255), outline=(215, 135, 105), width=1)
@@ -61,7 +61,7 @@ def render_master_architecture():
     # 2. MIDDLE BARRIER (SOVEREIGNTY BOUNDARY)
     # Pilot plants card left
     draw.rounded_rectangle((98, 440, 250, 505), radius=8, fill=(160, 85, 50, 255))
-    draw.text((174, 472), "Pilot Plants\n(Vicky Foods\n& AKCOAT)", fill=(248, 250, 252), font=font_card_body, anchor="mm", align="center")
+    draw.text((174, 472), "Pilot Plants\n(Vicky Foods\n& Pilot 2)", fill=(248, 250, 252), font=font_card_body, anchor="mm", align="center")
 
     # Center Sovereignty Line
     draw.line([(75, 510), (975, 510)], fill=(225, 29, 72, 255), width=3)
